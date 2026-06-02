@@ -1,0 +1,40 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 300;
+    align-items: center;
+    justify-content: center;
+}
+.modal.active { display: flex; }
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+.close-btn { position: absolute; top: 10px; right: 15px; font-size: 28px; cursor: pointer; color: var(--secondary); }
+
+.category-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.tag-authoritarian-left { background: var(--bg-auth-left); color: var(--color-auth-left); }
+.tag-authoritarian-right { background: var(--bg-auth-right); color: var(--color-auth-right); }
+.tag-libertarian-left { background: var(--bg-lib-left); color: var(--color-lib-left); }
+.tag-libertarian-right { background: var(--bg-lib-right); color: var(--color-lib-right); }
+.tag-center { background: #f1f5f9; color: #475569; }

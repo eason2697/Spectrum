@@ -1,6 +1,13 @@
+const DEFAULT_SCALE = 0.3;
+const MAP_SIZE = 3000; // 畫布總尺寸 (px)
+const COORD_MAX = 100; // 坐標最大值
+const COORD_RANGE = COORD_MAX * 2; // 總量程 (200)
+const PIXELS_PER_UNIT = MAP_SIZE / COORD_RANGE; // 每 1 單位坐標對應的像素 (15px)
+const COMMUNITY_DATA_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR63yn8Fj_lQWN4WKVOO4DDlh5VGOAolux8Kv4nMtmP4O8Jqv6b1qjPDwwvRDskJ2RnN_KPMr1rl0cO/pub?output=csv';
+
 export const mapLogic = {
     ideologyData: [],
-    scale: 0.3, // 預設視角縮放比例，數值越小看見的範圍越廣
+    scale: DEFAULT_SCALE, // 預設視角縮放比例
     translateX: 0,
     translateY: 0,
     isDragging: false,
@@ -10,6 +17,8 @@ export const mapLogic = {
     initialTranslateY: 0,
     activeFilters: new Set(),
     renderedPoints: [],
+    showCommunityPoints: true,
+    communityData: [], // 存放全網歷史落點
     
     init(data) {
         this.ideologyData = data;
@@ -17,6 +26,7 @@ export const mapLogic = {
         this.initInteractions();
         this.initSearch();
         this.initFilters();
+        this.fetchCommunityData(); // 初始化時開始拉取雲端數據
     },
 
     initInteractions() {
@@ -272,7 +282,7 @@ export const mapLogic = {
     resetView() {
         this.enableTransition();
         // 重置為初始無縮放無位移狀態
-        this.scale = 0.3; // 確保點擊重置按鈕時也回到此比例
+        this.scale = DEFAULT_SCALE;
         this.translateX = 0;
         this.translateY = 0;
         this.updateTransform();
@@ -285,7 +295,7 @@ export const mapLogic = {
 
         // 重置縮放與位移
         this.renderedPoints = [];
-        this.scale = 0.3; // 確保重新渲染時也回到此比例
+        this.scale = DEFAULT_SCALE;
         this.translateX = 0;
         this.translateY = 0;
         this.updateTransform();
@@ -313,6 +323,9 @@ export const mapLogic = {
         mapArea.appendChild(vLine);
         mapArea.appendChild(hLine);
 
+        // 渲染歷史群體落點
+        this.renderCommunityPoints();
+
         // 渲染資料庫中的思想點
         this.ideologyData.forEach(item => {
             const point = this.createPoint(item);
@@ -322,6 +335,76 @@ export const mapLogic = {
         });
         
         this.applyFilters();
+    },
+
+    /**
+     * 從 Google 試算表拉取全網數據
+     */
+    async fetchCommunityData() {
+        try {
+            const response = await fetch(COMMUNITY_DATA_URL);
+            const csvText = await response.text();
+            
+            // 簡單解析 CSV (假設第一欄是時間戳, 第二欄是 X, 第三欄是 Y)
+            const rows = csvText.split('\n').slice(1); // 跳過標題列
+            this.communityData = rows.map(row => {
+                const cols = row.split(',');
+                return {
+                    x: parseFloat(cols[1]), 
+                    y: parseFloat(cols[2])
+                };
+            }).filter(pos => !isNaN(pos.x) && !isNaN(pos.y));
+
+            console.log(`成功載入 ${this.communityData.length} 筆全網歷史數據`);
+            this.renderCommunityPoints(); // 載入完成後立即更新一次畫面
+        } catch (error) {
+            console.error('無法讀取全網歷史數據:', error);
+        }
+    },
+
+    renderCommunityPoints() {
+        const canvas = document.getElementById('community-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        
+        // 清除畫布
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // 如果選擇關閉或數據尚未抵達
+        if (!this.showCommunityPoints || this.communityData.length === 0) return;
+
+        // 取得 CSS 變數中的顏色數值 (Canvas 需要具體的顏色字串)
+        const style = getComputedStyle(document.documentElement);
+        const colors = {
+            authLeft: style.getPropertyValue('--color-auth-left').trim() || '#2e511b',
+            authRight: style.getPropertyValue('--color-auth-right').trim() || '#8a2c0d',
+            libLeft: style.getPropertyValue('--color-lib-left').trim() || '#1e40af',
+            libRight: style.getPropertyValue('--color-lib-right').trim() || '#854d0e',
+            primary: style.getPropertyValue('--primary').trim() || '#3b82f6'
+        };
+
+        this.communityData.forEach(pos => {
+            const safeX = Math.max(-COORD_MAX, Math.min(COORD_MAX, pos.x));
+            const safeY = Math.max(-COORD_MAX, Math.min(COORD_MAX, pos.y));
+            
+            // 計算 Canvas 內的像素座標
+            const canvasX = ((safeX + COORD_MAX) / COORD_RANGE) * canvas.width;
+            const canvasY = ((COORD_MAX - safeY) / COORD_RANGE) * canvas.height;
+
+            // 根據象限決定顏色
+            let color = colors.primary;
+            if (safeX < 0 && safeY > 0) color = colors.authLeft;
+            else if (safeX >= 0 && safeY > 0) color = colors.authRight;
+            else if (safeX < 0 && safeY <= 0) color = colors.libLeft;
+            else if (safeX >= 0 && safeY <= 0) color = colors.libRight;
+
+            // 繪製圓點
+            ctx.beginPath();
+            ctx.arc(canvasX, canvasY, 4, 0, Math.PI * 2); // 半徑 4px
+            ctx.fillStyle = color;
+            ctx.globalAlpha = 0.4; // 設定半透明度
+            ctx.fill();
+        });
     },
 
     applyFilters() {
@@ -353,12 +436,12 @@ export const mapLogic = {
 
     focusOn(x, y, targetScale = 1.5) {
         this.enableTransition();
-        const safeX = Math.max(-100, Math.min(100, x));
-        const safeY = Math.max(-100, Math.min(100, y));
+        const safeX = Math.max(-COORD_MAX, Math.min(COORD_MAX, x));
+        const safeY = Math.max(-COORD_MAX, Math.min(COORD_MAX, y));
         
         this.scale = targetScale;
-        this.translateX = -safeX * 15 * this.scale;
-        this.translateY = safeY * 15 * this.scale;
+        this.translateX = -safeX * PIXELS_PER_UNIT * this.scale;
+        this.translateY = safeY * PIXELS_PER_UNIT * this.scale;
         
         this.updateTransform();
     },
@@ -375,12 +458,12 @@ export const mapLogic = {
         }
 
         // 確保 X, Y 限制在 -100 到 100 的合理範圍內，避免圓點超出地圖邊界
-        const safeX = Math.max(-100, Math.min(100, x));
-        const safeY = Math.max(-100, Math.min(100, y));
+        const safeX = Math.max(-COORD_MAX, Math.min(COORD_MAX, x));
+        const safeY = Math.max(-COORD_MAX, Math.min(COORD_MAX, y));
         
         // 映射到 0% - 100% 的 CSS 屬性
-        point.style.left = `${((safeX + 100) / 200) * 100}%`;
-        point.style.top = `${((-safeY + 100) / 200) * 100}%`;
+        point.style.left = `${((safeX + COORD_MAX) / COORD_RANGE) * 100}%`;
+        point.style.top = `${((-safeY + COORD_MAX) / COORD_RANGE) * 100}%`;
         point.title = ideology;
 
         // 新增名稱標籤

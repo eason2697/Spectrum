@@ -126,6 +126,11 @@ export const quizLogic = {
         document.getElementById('score-x').innerText = scoreX.toFixed(1);
         document.getElementById('score-y').innerText = scoreY.toFixed(1);
 
+        // 將本次結果存入 localStorage
+        if (window.app && window.app.saveUserResult) {
+            window.app.saveUserResult(scoreX, scoreY);
+        }
+
         // 更新進度條游標位置 (將 -100 ~ 100 映射為 0% ~ 100%)
         const percentX = (scoreX + 100) / 2;
         const percentY = (scoreY + 100) / 2;
@@ -141,7 +146,21 @@ export const quizLogic = {
         }));
         distances.sort((a, b) => a.distance - b.distance);
         
-        document.getElementById('closest-ideology').innerText = distances[0]?.ideology || '資料載入失敗';
+        const closest = distances[0];
+        const ideologyLabel = document.getElementById('closest-ideology');
+        
+        if (closest) {
+            ideologyLabel.innerText = closest.ideology;
+            
+            // 建立類別與 CSS 變數的映射表
+            const colorMap = {
+                'Authoritarian Left': '--color-auth-left',
+                'Authoritarian Right': '--color-auth-right',
+                'Libertarian Left': '--color-lib-left',
+                'Libertarian Right': '--color-lib-right'
+            };
+            ideologyLabel.style.color = `var(${colorMap[closest.category] || '--primary'})`;
+        }
 
         const topList = document.getElementById('top-ideologies-list');
         if (topList && distances.length >= 3) {

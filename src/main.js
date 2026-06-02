@@ -88,6 +88,9 @@ const app = {
         document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
         document.getElementById(viewId).classList.add('active');
 
+        // 重置動畫類別，避免殘留
+        document.querySelectorAll('.animate-enter').forEach(el => el.style.animation = 'none');
+
         // 定義各個 View 對應的 UI 狀態 (模組化配置)
         const uiStateConfig = {
             'home-view':   { filter: 'none',  home: 'none', map: 'flex', quiz: 'flex' },
@@ -106,6 +109,10 @@ const app = {
             'sidebar-btn-quiz': config.quiz
         };
 
+        if (viewId === 'map-view') {
+            mapLogic.renderCommunityPoints();
+        }
+
         Object.entries(uiElements).forEach(([id, display]) => {
             const el = document.getElementById(id);
             if (el) el.style.display = display;
@@ -121,6 +128,36 @@ const app = {
         }
         this.switchView('quiz-view');
         quizLogic.init(this.data, this.quizQuestions);
+    },
+
+    /**
+     * 將結果上傳至 Google 表單 (Serverless Backend)
+     */
+    async saveUserResult(x, y) {
+        const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdvRrR0fGcTauYY6imJlJMpZo9jx-8Bz8-C3k9ohRbu_YxiBA/formResponse';
+        const formData = new URLSearchParams();
+        
+        // 對應 Google 表單的 Entry ID
+        formData.append('entry.71681822', x);
+        formData.append('entry.1460016217', y);
+
+        try {
+            // 使用 no-cors 模式繞過 Google 表單的 CORS 限制（POST 會成功但無法讀取 Response）
+            await fetch(FORM_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formData
+            });
+            console.log('數據已成功傳送至雲端：', { x, y });
+        } catch (error) {
+            console.error('雲端儲存失敗:', error);
+        }
+    },
+
+    toggleCommunityPoints(isVisible) {
+        mapLogic.showCommunityPoints = isVisible;
+        mapLogic.renderCommunityPoints();
     },
 
     showUserOnMap() {

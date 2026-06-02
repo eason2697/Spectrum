@@ -1,0 +1,38 @@
+#progress-container { width: 100%; height: 10px; background: var(--border-color); border-radius: 5px; margin-bottom: 20px; overflow: hidden; }
+#progress-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.3s ease; }
+.question-box, #result-box {
+    background: white; padding: 60px 40px; border-radius: 20px; width: 100%;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1); text-align: center;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 65vh;
+}
+
+/* 測驗特定選項顏色 */
+.btn-strongly-agree { background: #22c55e; color: white; }
+.btn-agree { background: #86efac; color: #064e3b; }
+.btn-neutral { background: #e2e8f0; color: #334155; }
+.btn-disagree { background: #fca5a5; color: #7f1d1d; }
+.btn-strongly-disagree { background: #ef4444; color: white; }
+
+.question-number { font-size: 1.1rem; color: var(--secondary); font-weight: 600; margin-bottom: 10px; }
+.question-text { font-size: 1.6rem; margin: 20px 0 40px 0; font-weight: bold; line-height: 1.5; flex-grow: 1; display: flex; align-items: center; }
+.quiz-options { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; margin-bottom: 30px; }
+.quiz-options .btn { flex-grow: 1; min-width: 120px; padding: 14px 20px; }
+.quiz-controls { margin-top: auto; padding-top: 25px; border-top: 1px solid var(--border-color); width: 100%; display: flex; justify-content: center; gap: 15px; }
+
+/* 結果得分條 */
+.result-score-container { margin: 20px auto; width: 100%; max-width: 400px; text-align: left; }
+.score-bar { position: relative; width: 100%; height: 12px; border-radius: 6px; background: var(--border-color); }
+.eco-bar { background: linear-gradient(to right, #fca5a5 0%, #e2e8f0 50%, #93c5fd 100%); }
+.pol-bar { background: linear-gradient(to right, #86efac 0%, #e2e8f0 50%, #d8b4fe 100%); }
+.score-marker {
+    position: absolute; top: 50%; left: 50%; width: 16px; height: 16px; background: white;
+    border: 2px solid var(--text-color); border-radius: 50%; transform: translate(-50%, -50%);
+    transition: left 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@media (max-width: 600px) {
+    .question-box, #result-box { padding: 40px 20px; min-height: 75vh; }
+    .question-text { font-size: 1.3rem; }
+    .quiz-options { flex-direction: column; }
+    .quiz-controls { flex-direction: column; }
+}

@@ -1,0 +1,22 @@
+:root {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --secondary: #64748b;
+    --secondary-hover: #475569;
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --border-color: #e2e8f0;
+    --map-bg: #f1f5f9;
+
+    /* 象限代表色 - 深色 (用於點位、文字) */
+    --color-auth-left: #2e511b;
+    --color-auth-right: #8a2c0d;
+    --color-lib-left: #1e40af;
+    --color-lib-right: #854d0e;
+
+    /* 象限代表色 - 淺色 (用於背景、標籤) */
+    --bg-auth-left: #E2F0D9;
+    --bg-auth-right: #FCE4D6;
+    --bg-lib-left: #DDEBF7;
+    --bg-lib-right: #FFF2CC;
+}

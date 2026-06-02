@@ -24,6 +24,12 @@
                 <div id="sidebar-filter-section" class="sidebar-filter-section" style="display: none;">
                     <h3 class="filter-title">探索篩選</h3>
                     <div id="filter-tags" class="filter-tags"></div>
+                    <div class="sidebar-toggle-section">
+                        <label class="toggle-container">
+                            <input type="checkbox" id="toggle-community-points" checked onchange="window.app.toggleCommunityPoints(this.checked)">
+                            <span class="toggle-label">顯示群體落點分析</span>
+                        </label>
+                    </div>
                 </div>
 
                 <div class="sidebar-nav">
@@ -111,12 +117,16 @@
         <div id="map-view" class="view">
             <!-- Map container takes up the main space -->
             <div id="map-container">
-                <!-- 坐標軸標籤 -->
-                <span class="axis-label top">威權 (收緊)</span>
-                <span class="axis-label bottom">自由 (放寬)</span>
-                <span class="axis-label left">社會主義 (左)</span>
-                <span class="axis-label right">資本主義 (右)</span>
-                <div id="map-area"></div>
+                <div id="map-area">
+                    <!-- 坐標軸標籤移動至地圖區域內，以維持比例參考的一致性 -->
+                    <!-- 新增：全網數據畫布層，放置於軸線下方，背景上方 -->
+                    <canvas id="community-canvas" width="3000" height="3000"></canvas>
+                    
+                    <span class="axis-label top">威權 (收緊)</span>
+                    <span class="axis-label bottom">自由 (放寬)</span>
+                    <span class="axis-label left">社會主義 (左)</span>
+                    <span class="axis-label right">資本主義 (右)</span>
+                </div>
                 
                 <!-- 地圖搜尋框 -->
                 <div class="map-search-box">
