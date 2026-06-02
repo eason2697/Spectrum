@@ -18,6 +18,8 @@ export const mapLogic = {
     activeFilters: new Set(),
     renderedPoints: [],
     showCommunityPoints: true,
+    showFigures: true,
+    showParties: true,
     communityData: [], // 存放全網歷史落點
     
     init(data) {
@@ -331,9 +333,17 @@ export const mapLogic = {
             const point = this.createPoint(item);
             point.onclick = () => this.showModal(item);
             mapArea.appendChild(point);
-            this.renderedPoints.push({ element: point, tags: item.tags || [] });
+            // 儲存完整資料以便後續複雜篩選
+            this.renderedPoints.push({ element: point, data: item });
         });
         
+        this.applyFilters();
+    },
+
+    toggleTypeVisibility(type, isVisible) {
+        const typeLower = type.toLowerCase();
+        if (typeLower === 'figure') this.showFigures = isVisible;
+        if (typeLower === 'party') this.showParties = isVisible;
         this.applyFilters();
     },
 
@@ -408,14 +418,20 @@ export const mapLogic = {
     },
 
     applyFilters() {
-        if (this.activeFilters.size === 0) {
-            this.renderedPoints.forEach(p => p.element.classList.remove('filtered-out'));
-            return;
-        }
         this.renderedPoints.forEach(p => {
-            // 若該點包含任何一個目前被選中的標籤，就顯示它
-            const hasMatch = p.tags.some(tag => this.activeFilters.has(tag));
-            if (hasMatch) p.element.classList.remove('filtered-out');
+            const item = p.data;
+            const type = (item.type || 'ideology').toLowerCase();
+            
+            // 1. 型態過濾邏輯
+            let typeMatch = true;
+            if (type === 'figure' && !this.showFigures) typeMatch = false;
+            if (type === 'party' && !this.showParties) typeMatch = false;
+
+            // 2. 標籤過濾邏輯
+            const tagMatch = this.activeFilters.size === 0 || 
+                             (item.tags && item.tags.some(tag => this.activeFilters.has(tag)));
+
+            if (typeMatch && tagMatch) p.element.classList.remove('filtered-out');
             else p.element.classList.add('filtered-out');
         });
     },
@@ -447,14 +463,48 @@ export const mapLogic = {
     },
 
     createPoint(item) {
-        const { x, y, ideology, category } = item;
+        const { x, y, ideology, category, type, avatar } = item;
+        const normalizedType = (type || 'ideology').toLowerCase();
         const point = document.createElement('div');
         point.className = 'map-point';
         
+        // 加上型態標籤 (強制小寫以符合 CSS)
+        point.classList.add('type-' + normalizedType);
+
+        // 如果是人物或政黨，加上高亮標籤
+        if (normalizedType !== 'ideology') {
+            point.classList.add('highlight-point');
+            
+            // 建立裝飾徽章
+            const badge = document.createElement('div');
+            badge.className = 'point-badge';
+            if (normalizedType === 'figure') {
+                badge.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
+            } else if (normalizedType === 'party') {
+                badge.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>`; // 更改政黨圖示為盾牌/旗幟樣式，更具標誌性
+            }
+            point.appendChild(badge);
+        }
+
         // 根據分類加上對應的顏色 class
         if (category) {
             const pointClass = 'point-' + category.toLowerCase().replace(/\s+/g, '-');
             point.classList.add(pointClass);
+        }
+
+        // 處理頭像
+        if (avatar) {
+            // 使用引號包裹 URL 以處理特殊字元
+            point.style.backgroundImage = `url("${avatar}")`;
+            point.classList.add('has-avatar');
+            
+            // 建立圖片物件來檢查是否載入成功
+            const img = new Image();
+            img.src = avatar;
+            img.onerror = () => {
+                point.classList.remove('has-avatar');
+                point.classList.add('avatar-error');
+            };
         }
 
         // 確保 X, Y 限制在 -100 到 100 的合理範圍內，避免圓點超出地圖邊界
@@ -487,8 +537,8 @@ export const mapLogic = {
 
         // 處理動態圖片載入
         const imgEl = document.getElementById('modal-image');
-        if (item.image_url) {
-            imgEl.src = item.image_url;
+        if (item.avatar) {
+            imgEl.src = item.avatar;
             imgEl.style.display = 'block';
         } else {
             imgEl.style.display = 'none';

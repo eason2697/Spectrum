@@ -28,8 +28,12 @@ const app = {
             if (!response.ok) throw new Error('無法讀取資料檔');
             const jsonData = await response.json();
             
-            // 支援新舊格式相容性：如果是舊版 Array 則直接賦值，新版則讀取 ideologies 鍵值
-            this.data = jsonData.ideologies || (Array.isArray(jsonData) ? jsonData : []);
+            // 模組化數據處理：分別提取思想點與特殊實體 (如歷史人物、政黨)
+            const ideologies = jsonData.ideologies || (Array.isArray(jsonData) ? jsonData : []);
+            const specialEntities = jsonData.special_entities || [];
+            
+            // 合併所有資料供地圖渲染與搜尋功能使用，確保搜尋列能搜尋到人物與政黨
+            this.data = [...ideologies, ...specialEntities];
             this.quizQuestions = jsonData.questions || [];
             
             // 渲染首頁卡片
@@ -182,7 +186,9 @@ const app = {
     },
 
     shareWebsite() {
-        const text = `來看看這個政治思想測驗與光譜地圖吧！\n${window.location.origin}${window.location.pathname}`;
+        // 使用 window.location.href 並過濾掉雜訊（如 hash 或 query），確保連結乾淨
+        const siteUrl = window.location.origin + window.location.pathname;
+        const text = `來看看這個政治思想測驗與光譜地圖吧！\n${siteUrl}`;
         navigator.clipboard.writeText(text).then(() => alert('網站連結已複製到剪貼簿！'));
     }
 };

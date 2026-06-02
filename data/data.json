@@ -1,8 +1,8 @@
 {
   "ideologies": [
-  { "ideology": "波布主義", "tags": ["歷史流派", "激進主義"], "x": -100, "y": 100, "category": "Authoritarian Left", "description": "極端的農業共產主義與徹底的集權清洗，消滅所有城市與貨幣。", "history": "柬埔寨紅色高棉政權的恐怖實踐。" },
-  { "ideology": "史達林主義", "tags": ["歷史流派", "激進主義"], "x": -95, "y": 100, "category": "Authoritarian Left", "description": "高度集中化的指令經濟、無產階級專政與嚴格的社會監控。", "history": "蘇聯時期對馬列主義的硬性實踐。", "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Stalin_in_1915.jpg" },
-  { "ideology": "馬克思列寧主義", "tags": ["歷史流派", "激進主義"], "x": -90, "y": 90, "category": "Authoritarian Left", "description": "追求無產階級革命，由先鋒黨建立集權政府以過渡至共產主義。", "history": "列寧主義的延伸，20世紀共產陣營的核心。" },
+  { "ideology": "波布主義", "type": "ideology", "tags": ["歷史流派", "激進主義"], "x": -100, "y": 100, "category": "Authoritarian Left", "description": "極端的農業共產主義與徹底的集權清洗，消滅所有城市與貨幣。", "history": "柬埔寨紅色高棉政權的恐怖實踐。" },
+  { "ideology": "史達林主義", "type": "ideology", "tags": ["歷史流派", "激進主義"], "x": -95, "y": 100, "category": "Authoritarian Left", "description": "高度集中化的指令經濟、無產階級專政與嚴格的社會監控。", "history": "蘇聯時期對馬列主義的硬性實踐。", "avatar": "https://upload.wikimedia.org/wikipedia/commons/1/16/Stalin_in_1915.jpg" },
+  { "ideology": "馬克思列寧主義", "type": "ideology", "tags": ["歷史流派", "激進主義"], "x": -90, "y": 90, "category": "Authoritarian Left", "description": "追求無產階級革命，由先鋒黨建立集權政府以過渡至共產主義。", "history": "列寧主義的延伸，20世紀共產陣營的核心。" },
   { "ideology": "主體思想", "tags": ["當代主流", "激進主義"], "x": -85, "y": 95, "category": "Authoritarian Left", "description": "強調民族自力更生、絕對服從與領袖崇拜。", "history": "北韓的國家意識形態。" },
   { "ideology": "毛澤東思想", "tags": ["歷史流派", "激進主義"], "x": -80, "y": 85, "category": "Authoritarian Left", "description": "強調農村包圍城市、群眾路線與持續的階級鬥爭。", "history": "中國共產黨早期的指導思想。" },
   { "ideology": "霍查主義", "tags": ["歷史流派"], "x": -75, "y": 90, "category": "Authoritarian Left", "description": "強硬的斯大林主義繼承者，堅持高度隔離與反修正主義。", "history": "阿爾巴尼亞時期的統治意識形態。" },
@@ -118,7 +118,11 @@
   { "ideology": "喬治主義", "tags": ["經濟學派", "歷史流派"], "x": 10, "y": -40, "category": "Center", "description": "認為人類自己創造的財富應歸個人所有，但自然界與土地的價值應屬於全社會，主張僅徵收單一土地價值稅。", "history": "19世紀亨利·喬治提出，影響了許多現代土地改革理念。" },
   { "ideology": "社會信用論", "tags": ["經濟學派", "歷史流派"], "x": -15, "y": 15, "category": "Center", "description": "認為資本主義的問題在於購買力不足，主張政府應直接發放全民基本紅利，但不廢除私有制。", "history": "1920年代由C.H. 道格拉斯提出的獨特經濟改良方案。" },
   { "ideology": "功利主義", "tags": ["歷史流派"], "x": 0, "y": -10, "category": "Center", "description": "所有的政策與道德判斷，都應以是否能為「最大多數人帶來最大幸福」為唯一標準。", "history": "邊沁與彌爾奠定的倫理學，深刻影響現代公共政策評估。" },
-  { "ideology": "進步保守主義", "tags": ["當代主流"], "x": 15, "y": 15, "category": "Center", "description": "支持社會安全網與適度的環保法規，但認為這些改革必須在維護傳統社會秩序與制度的框架下循序漸進。", "history": "英國保守黨在一國保守主義時期的核心施政精神。" }
+  { "ideology": "進步保守主義", "tags": ["當代主流"], "x": 15, "y": 15, "category": "Center", "description": "支持社會安全網與適度的環保法規，但認為這些改革必須在維護傳統社會秩序與制度的框架下循序漸進。", "history": "英國保守黨在一國保守主義時期的核心施政精神。", "type": "ideology" }
+  ],
+  "special_entities": [
+    { "ideology": "甘地", "type": "figure", "avatar": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg", "tags": ["歷史人物", "和平主義"], "x": -10, "y": -80, "category": "Libertarian Left", "description": "印度國父，主張非暴力不合作運動。", "history": "帶領印度脫離英國殖民統治。" },
+    { "ideology": "美國共和黨", "type": "party", "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Republicanlogo.svg", "tags": ["當代政黨", "保守主義"], "x": 40, "y": 45, "category": "Authoritarian Right", "description": "美國兩大政黨之一，傾向自由市場與保守社會價值。", "history": "又稱大老黨 (GOP)。" }
   ],
   "questions": [
     { "text": "政府應該全面控制並計畫市場經濟，以確保財富平均分配。", "effect_x": -20, "effect_y": 5 },

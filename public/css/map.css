@@ -78,13 +78,61 @@
     z-index: 3; transition: transform 0.2s;
 }
 .map-point:hover { transform: translate(-50%, -50%) scale(1.5); z-index: 50; }
-.user-point { background: #ef4444; width: clamp(22px, 5vw, 32px); height: clamp(22px, 5vw, 32px); z-index: 10; }
 
-.community-point {
-    position: absolute; width: 6px; height: 6px; background: var(--primary);
-    border-radius: 50%; opacity: 0.35; pointer-events: none;
-    transform: translate(-50%, -50%); z-index: 2;
-    background-color: var(--primary); /* 作為 JS 失敗時的 fallback */
+/* 高亮點位核心樣式 */
+.map-point.highlight-point {
+    width: clamp(45px, 12vw, 65px); /* 大幅增加尺寸，使其具備強烈存在感 */
+    height: clamp(45px, 12vw, 65px);
+    z-index: 100; /* 確保絕對位於所有思想點與網格線之上 */
+    border-width: 4px; /* 增加邊框寬度 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3), inset 0 0 0 2px rgba(255,255,255,0.8); /* 外部陰影與內部白邊 */
+}
+
+/* 人物與政黨專屬配色 */
+.map-point.type-figure { border-color: #f59e0b; --pulse-color: 245, 158, 11; }
+.map-point.type-party { border-color: #10b981; --pulse-color: 16, 185, 129; }
+
+/* 頭像渲染 */
+.map-point.has-avatar {
+    background-size: cover; /* 確保圖片覆蓋整個圓點 */
+    background-position: center; /* 圖片置中 */
+    background-repeat: no-repeat; /* 防止圖片重複 */
+    background-color: #fff; /* 圖片載入失敗或透明時的白色背景 */
+    overflow: hidden; /* 確保圖片不會超出圓形邊界 */
+}
+
+/* 特殊點位徽章樣式 (SVG 圖示) - 合併後的唯一定義 */
+.map-point .point-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: inherit; /* 繼承父元素顏色，方便 JS 動態設定 */
+    padding: 2px;
+    z-index: 6; /* 確保在點位之上 */
+}
+.type-figure .point-badge { color: #f59e0b; }
+.type-party .point-badge { color: #10b981; }
+
+/* 圖片載入失敗時的備案：顯示思想/人物首字 - 保留自適應版本 */
+.map-point.avatar-error::after {
+    content: attr(title); /* 顯示 ideology 名稱 */
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 100%;
+    color: var(--text-color); /* 使用主題文字色 */
+    font-size: clamp(10px, 2.5vw, 16px); /* 根據點位大小自適應字體 */
+    font-weight: bold;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.1);
 }
 
 /* 新增：Canvas 畫布樣式 */
@@ -96,12 +144,21 @@
     pointer-events: none;
 }
 
-/* 分類顏色 */
-.map-point.point-authoritarian-left { background: var(--color-auth-left); }
-.map-point.point-authoritarian-right { background: var(--color-auth-right); }
-.map-point.point-libertarian-left { background: var(--color-lib-left); }
-.map-point.point-libertarian-right { background: var(--color-lib-right); }
-.map-point.point-center { background: #475569; }
+/* 分類顏色：使用 background-color 避免覆蓋圖片 */
+.map-point.point-authoritarian-left { background-color: var(--color-auth-left); }
+.map-point.point-authoritarian-right { background-color: var(--color-auth-right); }
+.map-point.point-libertarian-left { background-color: var(--color-lib-left); }
+.map-point.point-libertarian-right { background-color: var(--color-lib-right); }
+.map-point.point-center { background-color: #475569; }
+
+.user-point { background: #ef4444; width: clamp(22px, 5vw, 32px); height: clamp(22px, 5vw, 32px); z-index: 10; }
+
+.community-point {
+    position: absolute; width: 6px; height: 6px; background: var(--primary);
+    border-radius: 50%; opacity: 0.35; pointer-events: none;
+    transform: translate(-50%, -50%); z-index: 2;
+    background-color: var(--primary); /* 作為 JS 失敗時的 fallback */
+}
 
 .map-point.filtered-out { opacity: 0.15; pointer-events: none; filter: grayscale(100%); }
 

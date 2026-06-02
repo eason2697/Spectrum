@@ -1,5 +1,6 @@
 :root {
     --primary: #3b82f6;
+    --pulse-color: 59, 130, 246; /* 預設為 primary 藍色 */
     --primary-hover: #2563eb;
     --secondary: #64748b;
     --secondary-hover: #475569;

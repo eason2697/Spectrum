@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>政治思想測驗與光譜地圖</title>
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="./public/style.css">
 </head>
 <body>
     <div id="app">
         <!-- 全域共用側邊欄 -->
         <div id="app-sidebar" class="app-sidebar">
-            <button class="sidebar-toggle" onclick="window.app.toggleSidebar()">
+            <button class="sidebar-toggle" id="sidebar-toggle-btn">
                 <span class="icon-open">☰</span>
                 <span class="icon-close">&times;</span>
             </button>
@@ -26,26 +26,38 @@
                     <div id="filter-tags" class="filter-tags"></div>
                     <div class="sidebar-toggle-section">
                         <label class="toggle-container">
-                            <input type="checkbox" id="toggle-community-points" checked onchange="window.app.toggleCommunityPoints(this.checked)">
+                            <input type="checkbox" id="toggle-community-points" checked data-action="toggle-community">
                             <span class="toggle-label">顯示群體落點分析</span>
+                        </label>
+                    </div>
+                    <div class="sidebar-toggle-section">
+                        <label class="toggle-container">
+                            <input type="checkbox" id="toggle-figures" checked data-type="figure" class="filter-checkbox">
+                            <span class="toggle-label">顯示歷史人物</span>
+                        </label>
+                    </div>
+                    <div class="sidebar-toggle-section">
+                        <label class="toggle-container">
+                            <input type="checkbox" id="toggle-parties" checked data-type="party" class="filter-checkbox">
+                            <span class="toggle-label">顯示當代政黨</span>
                         </label>
                     </div>
                 </div>
 
                 <div class="sidebar-nav">
-                    <button id="sidebar-btn-home" class="btn-sidebar" onclick="window.app.switchView('home-view')" style="display: none;">
+                    <button id="sidebar-btn-home" class="btn-sidebar" data-view="home-view" style="display: none;">
                         <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                         <span>回首頁</span>
                     </button>
-                    <button id="sidebar-btn-map" class="btn-sidebar" onclick="window.app.switchView('map-view')">
+                    <button id="sidebar-btn-map" class="btn-sidebar" data-view="map-view">
                         <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
                         <span>查看地圖</span>
                     </button>
-                    <button id="sidebar-btn-quiz" class="btn-sidebar" onclick="window.app.startQuiz()">
+                    <button id="sidebar-btn-quiz" class="btn-sidebar">
                         <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                         <span>進入測驗</span>
                     </button>
-                    <button id="sidebar-btn-share" class="btn-sidebar" onclick="window.app.shareWebsite()">
+                    <button id="sidebar-btn-share" class="btn-sidebar">
                         <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
                         <span>分享網站</span>
                     </button>
@@ -136,9 +148,9 @@
 
                 <!-- 地圖控制按鈕 -->
                 <div class="map-controls">
-                    <button class="map-btn" onclick="window.mapLogic.zoomIn()" title="放大">+</button>
-                    <button class="map-btn" onclick="window.mapLogic.zoomOut()" title="縮小">-</button>
-                    <button class="map-btn reset-btn" onclick="window.mapLogic.resetView()" title="重置視角">重置</button>
+                    <button class="map-btn" id="map-zoom-in" title="放大">+</button>
+                    <button class="map-btn" id="map-zoom-out" title="縮小">-</button>
+                    <button class="map-btn reset-btn" id="map-reset" title="重置視角">重置</button>
                 </div>
 
                 <!-- 地圖圖例 -->
