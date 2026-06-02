@@ -101,6 +101,20 @@
     overflow: hidden; /* 確保圖片不會超出圓形邊界 */
 }
 
+/* 無照片特殊實體的代稱徽章 */
+.map-point.is-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.map-point.is-placeholder::before {
+    content: attr(data-initial);
+    font-size: clamp(18px, 5vw, 24px);
+    font-weight: 800;
+}
+
 /* 特殊點位徽章樣式 (SVG 圖示) - 合併後的唯一定義 */
 .map-point .point-badge {
     position: absolute;
@@ -121,19 +135,23 @@
 .type-figure .point-badge { color: #f59e0b; }
 .type-party .point-badge { color: #10b981; }
 
-/* 圖片載入失敗時的備案：顯示思想/人物首字 - 保留自適應版本 */
-.map-point.avatar-error::after {
-    content: attr(title); /* 顯示 ideology 名稱 */
-    display: flex; align-items: center; justify-content: center;
-    width: 100%; height: 100%;
-    color: var(--text-color); /* 使用主題文字色 */
-    font-size: clamp(10px, 2.5vw, 16px); /* 根據點位大小自適應字體 */
-    font-weight: bold;
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-    border-radius: 50%;
-    background-color: var(--secondary);
-    box-shadow: inset 0 0 0 2px rgba(0,0,0,0.1);
+/* 搜尋對焦時的高亮動畫 */
+@keyframes point-ping {
+    0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); transform: translate(-50%, -50%) scale(1.2); }
+    70% { box-shadow: 0 0 0 20px rgba(59, 130, 246, 0); transform: translate(-50%, -50%) scale(2); }
+    100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); transform: translate(-50%, -50%) scale(1.2); }
 }
+.search-focus-ping {
+    animation: point-ping 0.8s ease-in-out infinite;
+    z-index: 999 !important;
+}
+
+/* 補全圖例小圓點樣式 */
+.legend-dot {
+    width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1);
+}
+.legend-dot.ideology { background: var(--primary); }
+.legend-dot.user { background: #ef4444; }
 
 /* 新增：Canvas 畫布樣式 */
 #community-canvas {
@@ -163,10 +181,82 @@
 .map-point.filtered-out { opacity: 0.15; pointer-events: none; filter: grayscale(100%); }
 
 .map-point-label {
-    position: absolute; top: 100%; margin-top: 8px; font-size: 14px; font-weight: bold;
-    color: var(--text-color); background: rgba(255, 255, 255, 0.85);
-    padding: 4px 8px; border-radius: 4px; white-space: nowrap; pointer-events: none;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 10px);
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.92);
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+/* --- 資訊彈窗 (Modal) 佈局重構 --- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active { display: flex; }
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    /* 核心優化：解鎖寬度限制，讓容器隨圖片比例自動縮放 */
+    width: fit-content;
+    max-width: 80vw;
+    min-width: 320px; /* 確保在極窄圖片下仍有基本易讀寬度 */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    overflow-wrap: break-word;
+    text-align: left;
+    animation: modal-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modal-pop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+#modal-image {
+    display: none; /* 由 JS 載入後顯示 */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 55vh; /* 限制高度比例，確保長型圖片不超出視窗 */
+    object-fit: contain;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.modal-placeholder {
+    width: 300px;
+    height: 200px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
 }
 
 /* 搜尋與控制項 */

@@ -1,5 +1,6 @@
 import { quizLogic } from './quiz.js';
 import { mapLogic } from './map.js';
+import { GOOGLE_FORM_URL } from './config.js';
 
 const app = {
     data: [],
@@ -39,6 +40,9 @@ const app = {
             // 渲染首頁卡片
             this.renderHome();
 
+            // 初始化側邊欄事件代理，修復按鈕失效問題
+            this.initSidebarDelegation();
+
             // 初始化模組
             mapLogic.init(this.data);
             
@@ -63,6 +67,45 @@ const app = {
             console.error('資料載入失敗:', error);
             alert('無法載入政治思想資料庫，請確認 data/data.json 是否存在。');
         }
+    },
+
+    /**
+     * 實作事件代理：統一攔截側邊欄點擊行為
+     */
+    initSidebarDelegation() {
+        const sidebar = document.getElementById('app-sidebar');
+        if (!sidebar) return;
+
+        sidebar.addEventListener('click', (e) => {
+            // 攔截按鈕或切換開關，包含 SVG 圖示內部的點擊
+            const btn = e.target.closest('.btn-sidebar, .sidebar-toggle');
+            if (!btn) return;
+
+            try {
+                // 1. 處理側邊欄收合切換
+                if (btn.classList.contains('sidebar-toggle') || btn.id === 'sidebar-toggle-btn') {
+                    this.toggleSidebar();
+                    return;
+                }
+
+                // 2. 處理視圖切換 (根據 HTML data-view 屬性)
+                const targetView = btn.getAttribute('data-view');
+                if (targetView) {
+                    this.switchView(targetView);
+                    return;
+                }
+
+                // 3. 處理特殊功能邏輯
+                if (btn.id === 'sidebar-btn-quiz') {
+                    this.startQuiz();
+                } else if (btn.id === 'sidebar-btn-share') {
+                    this.shareWebsite();
+                }
+
+            } catch (error) {
+                console.error(`[SPA Framework Error] 執行側邊欄功能 (${btn.id || 'unknown'}) 時發生錯誤:`, error);
+            }
+        });
     },
 
     handleFeatureClick(id) {
@@ -138,7 +181,6 @@ const app = {
      * 將結果上傳至 Google 表單 (Serverless Backend)
      */
     async saveUserResult(x, y) {
-        const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdvRrR0fGcTauYY6imJlJMpZo9jx-8Bz8-C3k9ohRbu_YxiBA/formResponse';
         const formData = new URLSearchParams();
         
         // 對應 Google 表單的 Entry ID
@@ -147,7 +189,7 @@ const app = {
 
         try {
             // 使用 no-cors 模式繞過 Google 表單的 CORS 限制（POST 會成功但無法讀取 Response）
-            await fetch(FORM_URL, {
+            await fetch(GOOGLE_FORM_URL, {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
