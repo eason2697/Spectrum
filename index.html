@@ -19,16 +19,27 @@
                     <svg class="sidebar-logo" viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
                     <h2>政治思想光譜</h2>
                 </div>
+                
+                <!-- 新增篩選區塊 -->
+                <div id="sidebar-filter-section" class="sidebar-filter-section" style="display: none;">
+                    <h3 class="filter-title">探索篩選</h3>
+                    <div id="filter-tags" class="filter-tags"></div>
+                </div>
+
                 <div class="sidebar-nav">
-                    <button class="btn-sidebar" onclick="window.app.switchView('home-view')">
+                    <button id="sidebar-btn-home" class="btn-sidebar" onclick="window.app.switchView('home-view')" style="display: none;">
                         <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                         <span>回首頁</span>
                     </button>
-                    <button class="btn-sidebar" onclick="window.app.startQuiz()">
+                    <button id="sidebar-btn-map" class="btn-sidebar" onclick="window.app.switchView('map-view')">
+                        <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+                        <span>查看地圖</span>
+                    </button>
+                    <button id="sidebar-btn-quiz" class="btn-sidebar" onclick="window.app.startQuiz()">
                         <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                         <span>進入測驗</span>
                     </button>
-                    <button class="btn-sidebar" onclick="window.app.shareWebsite()">
+                    <button id="sidebar-btn-share" class="btn-sidebar" onclick="window.app.shareWebsite()">
                         <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
                         <span>分享網站</span>
                     </button>
@@ -38,13 +49,12 @@
 
         <!-- 首頁 -->
         <div id="home-view" class="view active">
-            <div id="home-box">
-                <h1>政治思想測驗與地圖</h1>
-                <p>探索你的政治與經濟傾向，並在光譜地圖上尋找你的位置。</p>
-                <div class="actions">
-                    <button class="btn btn-primary" onclick="window.app.startQuiz()">開始測驗</button>
-                    <button class="btn btn-secondary" onclick="window.app.switchView('map-view')">查看地圖</button>
+            <div class="home-container">
+                <div class="home-header">
+                    <h1>政治思想工具箱</h1>
+                    <p>探索、測驗並分析各種政治意識形態</p>
                 </div>
+                <section id="app-grid" class="app-grid"></section>
             </div>
         </div>
 

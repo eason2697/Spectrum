@@ -8,12 +8,15 @@ export const mapLogic = {
     startY: 0,
     initialTranslateX: 0,
     initialTranslateY: 0,
+    activeFilters: new Set(),
+    renderedPoints: [],
     
     init(data) {
         this.ideologyData = data;
         this.renderMap();
         this.initInteractions();
         this.initSearch();
+        this.initFilters();
     },
 
     initInteractions() {
@@ -122,6 +125,35 @@ export const mapLogic = {
         container.addEventListener('touchend', () => {
             this.isDragging = false;
             lastPinchDistance = null;
+        });
+    },
+
+    initFilters() {
+        const filterContainer = document.getElementById('filter-tags');
+        if (!filterContainer) return;
+
+        // 自動從資料庫提取所有出現過的不重複標籤
+        const allTags = new Set();
+        this.ideologyData.forEach(item => {
+            if (item.tags) item.tags.forEach(t => allTags.add(t));
+        });
+
+        filterContainer.innerHTML = '';
+        allTags.forEach(tag => {
+            const btn = document.createElement('button');
+            btn.className = 'filter-tag';
+            btn.innerText = `#${tag}`;
+            btn.onclick = () => {
+                if (this.activeFilters.has(tag)) {
+                    this.activeFilters.delete(tag);
+                    btn.classList.remove('active');
+                } else {
+                    this.activeFilters.add(tag);
+                    btn.classList.add('active');
+                }
+                this.applyFilters();
+            };
+            filterContainer.appendChild(btn);
         });
     },
 
@@ -252,6 +284,7 @@ export const mapLogic = {
         mapArea.innerHTML = ''; // 清空地圖以防止重複渲染
 
         // 重置縮放與位移
+        this.renderedPoints = [];
         this.scale = 0.3; // 確保重新渲染時也回到此比例
         this.translateX = 0;
         this.translateY = 0;
@@ -285,6 +318,22 @@ export const mapLogic = {
             const point = this.createPoint(item);
             point.onclick = () => this.showModal(item);
             mapArea.appendChild(point);
+            this.renderedPoints.push({ element: point, tags: item.tags || [] });
+        });
+        
+        this.applyFilters();
+    },
+
+    applyFilters() {
+        if (this.activeFilters.size === 0) {
+            this.renderedPoints.forEach(p => p.element.classList.remove('filtered-out'));
+            return;
+        }
+        this.renderedPoints.forEach(p => {
+            // 若該點包含任何一個目前被選中的標籤，就顯示它
+            const hasMatch = p.tags.some(tag => this.activeFilters.has(tag));
+            if (hasMatch) p.element.classList.remove('filtered-out');
+            else p.element.classList.add('filtered-out');
         });
     },
 

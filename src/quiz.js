@@ -2,43 +2,7 @@
  * 政治思想測驗 - 邏輯模組
  */
 export const quizLogic = {
-    questions: [
-        { text: "政府應該全面控制並計畫市場經濟，以確保財富平均分配。", effect_x: -20, effect_y: 5 },
-        { text: "為了國家安全與社會穩定，政府監控人民的隱私是必要的。", effect_x: 0, effect_y: 20 },
-        { text: "無論性別、宗教或種族，每個人都應該享有絕對的婚姻與言論自由。", effect_x: 0, effect_y: -20 },
-        { text: "企業應該能夠完全自由競爭，政府不該課徵重稅或干預。", effect_x: 20, effect_y: 0 },
-        { text: "應該對富人徵收重稅，以提供全民基本收入和免費醫療。", effect_x: -15, effect_y: 0 },
-        { text: "毒品使用是個人選擇，政府應該將其除罪化或合法化。", effect_x: 0, effect_y: -15 },
-        { text: "國家應該有強大的軍隊，並在必要時主動介入他國事務以維護利益。", effect_x: 5, effect_y: 15 },
-        { text: "跨國企業的剝削是當今世界不平等的主要原因，必須受到嚴格限制。", effect_x: -15, effect_y: 5 },
-        { text: "傳統價值觀和宗教道德是社會穩定的基石，政府應該予以保護和提倡。", effect_x: 0, effect_y: 15 },
-        { text: "所有的土地和自然資源都應該由全體人民共同擁有，而非私人壟斷。", effect_x: -15, effect_y: 5 },
-        { text: "槍枝管制只會剝奪好人保護自己的權利，符合條件的平民有權持有武器。", effect_x: 5, effect_y: -15 },
-        { text: "政府應該提供更多的補貼來幫助弱勢群體，即使這意味著增加國債。", effect_x: -15, effect_y: 0 },
-        { text: "任何形式的審查制度都是對言論自由的侵犯，即使是仇恨言論也不該被封禁。", effect_x: 0, effect_y: -15 },
-        { text: "為了經濟發展，適度犧牲環境和放寬環保法規是可接受的。", effect_x: 15, effect_y: 0 },
-        { text: "同性伴侶應該與異性伴侶享有完全相同的合法收養小孩的權利。", effect_x: 0, effect_y: -15 },
-        { text: "維護法律與秩序比保障嫌疑犯的權利更重要。", effect_x: 0, effect_y: 15 },
-        { text: "醫療保健是基本人權，不應該被當作營利事業來經營。", effect_x: -15, effect_y: 0 },
-        { text: "自由市場的自動調節能力遠勝過政府官僚的計畫經濟。", effect_x: 15, effect_y: -5 },
-        { text: "國家元首或領袖應該擁有更高的決策權，以提高施政效率。", effect_x: 0, effect_y: 15 },
-        { text: "學校的教育應該交由市場和家長決定，政府不該強制規定統一課綱。", effect_x: 10, effect_y: -15 },
-        { text: "工會勢力過大會阻礙企業發展，政府應該限制工會的罷工權。", effect_x: 15, effect_y: 10 },
-        { text: "政府應該積極干預並打破大型企業的壟斷，以保護小商家的生存空間。", effect_x: -10, effect_y: 5 },
-        { text: "無論國籍為何，所有和平的移民都應該有權自由跨越國界工作和生活。", effect_x: 5, effect_y: -15 },
-        { text: "犯罪者應該受到嚴厲的懲罰，死刑是維持社會正義的必要手段。", effect_x: 0, effect_y: 15 },
-        { text: "最低工資法只會導致失業率上升，應該由勞資雙方自由協商薪資。", effect_x: 15, effect_y: -5 },
-        { text: "國家應該直接分配工作或提供就業保障，不允許私人企業為了利潤隨意裁員。", effect_x: -15, effect_y: 10 },
-        { text: "罷工與激進的工會活動會擾亂社會秩序，應該受到政府的嚴格管控與限制。", effect_x: 10, effect_y: 15 },
-        { text: "所有的道路、橋樑等基礎設施都可以交由私人公司建設與自由收費。", effect_x: 20, effect_y: -5 },
-        { text: "工廠與企業應該由在裡面工作的員工民主共同管理，而不是全憑老闆或股東決定。", effect_x: -20, effect_y: -10 },
-        { text: "為了防止假新聞與極端思想傳播，政府有責任過濾並審查網際網路上的資訊。", effect_x: 0, effect_y: 20 },
-        { text: "房地產不該成為炒作的商品，政府應該嚴格管制房價或實行大規模的居住配給。", effect_x: -20, effect_y: 5 },
-        { text: "既然個人的身體屬於自己，那麼買賣器官或是自願安樂死都不該受到法律絕對禁止。", effect_x: 10, effect_y: -20 },
-        { text: "在國家遭遇重大危難或傳染病時，政府有權強制徵用平民的財產與限制人身自由。", effect_x: 0, effect_y: 20 },
-        { text: "專利與智慧財產權是保護創新的關鍵，政府應該嚴格執法打擊任何盜版與抄襲行為。", effect_x: 15, effect_y: 5 },
-        { text: "賣淫等性工作只要是出於成人自願，就應該被視為合法的勞動並全面除罪化。", effect_x: -5, effect_y: -15 }
-    ],
+    questions: [],
     currentQuestion: 0,
     userScore: { x: 0, y: 0 },
     scoreHistory: [],
@@ -46,8 +10,9 @@ export const quizLogic = {
     isAnimating: false,
     isReverse: false,
 
-    init(data) {
-        this.ideologyData = data;
+    init(ideologyData, questions) {
+        this.ideologyData = ideologyData;
+        this.questions = questions ? [...questions] : [];
         this.currentQuestion = 0;
         this.userScore = { x: 0, y: 0 };
         this.scoreHistory = [];
