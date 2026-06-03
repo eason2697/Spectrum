@@ -1085,9 +1085,9 @@
         "當代主流",
         "經濟學派"
       ],
-      "x": -25,
-      "y": -10,
-      "category": "Center",
+      "x": -55,
+      "y": -25,
+      "category": "Libertarian Left",
       "description": "結合自由市場資本主義與龐大的福利國家，依靠強大的工會與高稅收來實現高度的社會平權。",
       "history": "當代瑞典、挪威、丹麥等國實行的成功社會民主制度。"
     },
@@ -1447,6 +1447,141 @@
       "category": "Authoritarian Right",
       "description": "美國兩大政黨之一，傾向自由市場與保守社會價值。",
       "history": "又稱大老黨 (GOP)。"
+    },
+    {
+      "ideology": "民主進步黨 (DPP)",
+      "category": "Libertarian Left",
+      "type": "party",
+      "x": -30,
+      "y": -20,
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUGCnHhk42E36ss25XeQIA90f6oo6wXcsh5g&s",
+      "tags": [
+        "當代政黨",
+        "自由主義",
+        "台灣"
+      ],
+      "description": "台灣主要政黨之一，主張台灣本土意識、社會福利與進步價值。",
+      "history": "成立於 1986 年戒嚴時期，由黨外運動演變而來。"
+    },
+    {
+      "ideology": "中國國民黨 (KMT)",
+      "category": "Authoritarian Right",
+      "type": "party",
+      "x": 35,
+      "y": 25,
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtxPZwcWQP5wZL82C7zWHK9GBg2p9hrmKhxg&s",
+      "tags": [
+        "當代政黨",
+        "保守主義",
+        "台灣"
+      ],
+      "description": "台灣主要政黨之一，主張中華民國憲政體制、兩岸和平與傳統保守價值。",
+      "history": "由孫中山創立，曾長期在中國大陸及台灣執政。"
+    },
+    {
+      "ideology": "美國民主黨",
+      "category": "Center",
+      "type": "party",
+      "x": -15,
+      "y": -20,
+      "avatar": "https://m.media-amazon.com/images/I/61dLhl5ST3L._AC_UF894,1000_QL80_.jpg",
+      "tags": [
+        "當代政黨",
+        "社會自由主義",
+        "美國"
+      ],
+      "description": "美國兩大政黨之一，支持政府干預經濟以減少不平等，以及社會進步議題。",
+      "history": "世界上最古老的活躍政黨之一，自 20 世紀以來轉向現代自由主義。"
+    },
+    {
+      "ideology": "保守黨 (英國)",
+      "category": "Authoritarian Right",
+      "type": "party",
+      "x": 45,
+      "y": 15,
+      "avatar": "https://webfile.rti.org.tw/web/rti.org.tw/tw/code/public/assets/images/2024/01/17/cd16550b7108d402b5db7f2b86022311.jpg",
+      "tags": [
+        "當代政黨",
+        "自由市場",
+        "英國"
+      ],
+      "description": "英國主要中右翼政黨，強調經濟自由、減稅與國家主權。",
+      "history": "通稱托利黨 (Tory)，是 19 與 20 世紀影響英國政壇的主導力量。"
+    },
+    {
+      "ideology": "工黨 (英國)",
+      "category": "",
+      "type": "party",
+      "x": -40,
+      "y": -10,
+      "avatar": "https://logores.yrucd.com/wp-content/uploads/2024/03/Labour-Party-Logo-PNG_004.png!a",
+      "tags": [
+        "當代政黨",
+        "社會民主主義",
+        "英國"
+      ],
+      "description": "英國主要中左翼政黨，代表勞工利益，支持公共服務與財富重分配。",
+      "history": "20 世紀初起源於工會運動，曾推動建立國民保健署 (NHS)。"
+    },
+    {
+      "ideology": "自由民主黨 (LDP)",
+      "category": "Authoritarian Right",
+      "type": "party",
+      "x": 40,
+      "y": 35,
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Liberal_Democratic_Party_%28Japan%29_Flag.svg/250px-Liberal_Democratic_Party_%28Japan%29_Flag.svg.png",
+      "tags": [
+        "當代政黨",
+        "保守主義",
+        "日本"
+      ],
+      "description": "日本長期執政黨，主張親美外交、振興經濟與修改憲法。",
+      "history": "1955 年成立，幾乎主導了戰後日本的所有政治發展。"
+    },
+    {
+      "ideology": "德國社會民主黨 (SPD)",
+      "category": "",
+      "type": "party",
+      "x": -35,
+      "y": -5,
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_the_Social_Democratic_Party_of_Germany.svg/250px-Flag_of_the_Social_Democratic_Party_of_Germany.svg.png",
+      "tags": [
+        "當代政黨",
+        "社會民主主義",
+        "德國"
+      ],
+      "description": "德國最古老的政黨之一，強調社會公平、工人權利與歐洲一體化。",
+      "history": "19 世紀末成立，是世界社會民主主義運動的先驅。"
+    },
+    {
+      "ideology": "中國共產黨 (CCP)",
+      "category": "Authoritarian Left",
+      "type": "party",
+      "x": -70,
+      "y": 90,
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jRfjI9SH8zn6-J_1upO2mImDNv2jMsWWNw&s",
+      "tags": [
+        "執政黨",
+        "馬克思列寧主義",
+        "中國"
+      ],
+      "description": "中華人民共和國唯一執政黨，實行一黨專政與中國特色社會主義。",
+      "history": "1921 年成立，1949 年建立政權，現為全球規模最大的政黨之一。"
+    },
+    {
+      "ideology": "共同民主黨 (韓國)",
+      "category": "",
+      "type": "party",
+      "x": -25,
+      "y": -5,
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Democratic_Party_of_South_Korea_banner.svg/250px-Democratic_Party_of_South_Korea_banner.svg.png",
+      "tags": [
+        "當代政黨",
+        "自由主義",
+        "韓國"
+      ],
+      "description": "韓國主要自由派政黨，主張對北韓和談、擴大社會福利與改革財閥。",
+      "history": "多次更名與整合，曾支持金大中與文在寅等總統。"
     }
   ],
   "questions": [
