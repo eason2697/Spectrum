@@ -38,3 +38,32 @@
 .tag-libertarian-left { background: var(--bg-lib-left); color: var(--color-lib-left); }
 .tag-libertarian-right { background: var(--bg-lib-right); color: var(--color-lib-right); }
 .tag-center { background: #f1f5f9; color: #475569; }
+
+/* --- 圖片顯示邏輯內聚於 CSS --- */
+
+/* 預設無內容時，圖片槽位必須徹底物理性塌陷，不留寬高與背景 */
+#modal-image-slot {
+    display: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 0 !important;
+    width: 100%;
+    text-align: center;
+}
+
+/* 只有當加上 .has-content 時，才允許恢復顯示，並由內部的圖片或徽章撐開寬高 */
+#modal-image-slot.has-content {
+    display: block !important;
+    height: auto !important;
+    margin-bottom: 15px;
+}
+
+#modal-image {
+    max-width: 100%;
+    max-height: 300px;      /* 限制圖片最大高度，避免撐破彈窗 */
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0 auto;
+}

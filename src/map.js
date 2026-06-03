@@ -62,9 +62,32 @@ export const mapLogic = {
     },
 
     setupControlButtons() {
+        // 地圖縮放與重置
         document.getElementById('map-zoom-in')?.addEventListener('click', () => this.zoomIn());
         document.getElementById('map-zoom-out')?.addEventListener('click', () => this.zoomOut());
         document.getElementById('map-reset')?.addEventListener('click', () => this.resetView());
+
+        // 彈窗控制
+        document.getElementById('modal-close-btn')?.addEventListener('click', () => this.closeModal());
+        
+        // 測驗結果頁面跳轉
+        document.getElementById('result-btn-map')?.addEventListener('click', () => {
+            if (window.app) window.app.showUserOnMap();
+        });
+        document.getElementById('result-btn-home')?.addEventListener('click', () => {
+            if (window.app) window.app.switchView('home-view');
+        });
+
+        // 彈窗搜尋按鈕
+        const modalSearchBtn = document.getElementById('modal-search-btn');
+        if (modalSearchBtn) {
+            modalSearchBtn.addEventListener('click', () => {
+                const title = document.getElementById('modal-title')?.innerText;
+                if (title) {
+                    window.open(`<https://www.google.com/search?q=${encodeURIComponent(title> + ' 政治思想')}`, '_blank');
+                }
+            });
+        }
     },
 
     setupWheelInteraction(container) {
@@ -106,7 +129,6 @@ export const mapLogic = {
     },
 
     setupDragInteraction(container) {
-        // 預先綁定 Context 並儲存引用，確保 removeEventListener 有效
         this._boundMouseMove = this.handleDragMove.bind(this);
         this._boundMouseUp = this.handleDragEnd.bind(this);
 
@@ -207,7 +229,6 @@ export const mapLogic = {
         const searchInput = document.getElementById('map-search-input');
         const searchResults = document.getElementById('map-search-results');
         
-        // 防止重複初始化搜尋監聽器
         if (!searchInput || !searchResults || searchInput.dataset.initialized) return;
         searchInput.dataset.initialized = 'true';
         
@@ -270,7 +291,6 @@ export const mapLogic = {
             items[currentFocus].scrollIntoView({ block: 'nearest' });
         };
 
-        // 使用具名函式處理 document 點擊，避免重複掛載
         this._onDocumentClick = (e) => {
             if (!e.target.closest('.map-search-box')) {
                 const results = document.getElementById('map-search-results');
@@ -464,6 +484,10 @@ export const mapLogic = {
         point.className = 'map-point';
         point.classList.add('type-' + normalizedType);
 
+        const avatarUrl = (avatar || '').toString().trim();
+        const hasValidAvatar = avatarUrl !== "" && 
+                               !['null', 'undefined', 'none', 'false'].includes(avatarUrl.toLowerCase());
+
         if (normalizedType !== 'ideology') {
             point.classList.add('highlight-point');
             const badge = document.createElement('div');
@@ -481,13 +505,10 @@ export const mapLogic = {
             point.classList.add(pointClass);
         }
 
-        // 背景預載管線 (Preloading Pipeline)
-        if (avatar && avatar.trim() !== "") {
-            const proxiedUrl = getProxiedImageUrl(avatar, true);
+        if (hasValidAvatar) {
+            const proxiedUrl = getProxiedImageUrl(avatarUrl, true);
             const img = new Image();
-            
             img.onload = () => {
-                // 只有確定成功後，才注入視覺樣式
                 point.style.backgroundImage = `url('${proxiedUrl}')`;
                 point.style.backgroundSize = 'cover';
                 point.style.backgroundPosition = 'center';
@@ -495,12 +516,10 @@ export const mapLogic = {
                 point.classList.remove('is-placeholder');
             };
             img.onerror = () => {
-                // 確定破圖時，才退化為文字徽章
                 this.applyPlaceholder(point, ideology);
             };
             img.src = proxiedUrl;
         } else if (normalizedType !== 'ideology') {
-            // 如果沒有頭像且不是一般思想點（即人物或政黨），則直接套用佔位徽章
             this.applyPlaceholder(point, ideology);
         }
 
@@ -526,61 +545,83 @@ export const mapLogic = {
     },
 
     showModal(item) {
+        // --- 第一部分：文字內容填充 ---
         document.getElementById('modal-title').innerText = item.ideology;
         const categoryText = item.category || '未分類';
-        const normalizedType = (item.type || 'ideology').toLowerCase();
         const categoryEl = document.getElementById('modal-category');
         categoryEl.innerText = categoryText;
         const categoryClass = 'tag-' + categoryText.toLowerCase().replace(/\s+/g, '-');
         categoryEl.className = 'category-tag ' + categoryClass;
 
+        // --- 第二部分：彈窗圖片渲染重構 ---
         const imgEl = document.getElementById('modal-image');
+        const imgSlot = document.getElementById('modal-image-slot');
         
-        // 清除舊的佔位符與錯誤處理器
-        const oldPlaceholder = document.getElementById('modal-placeholder');
-        if (oldPlaceholder) oldPlaceholder.remove();
-        imgEl.onerror = null; 
-
-        // 資訊彈窗渲染邏輯
-        if (item.avatar && item.avatar.trim() !== "") {
-            const proxiedUrl = getProxiedImageUrl(item.avatar, false);
-            imgEl.style.display = 'block';
-            imgEl.src = proxiedUrl; 
-            imgEl.crossOrigin = "anonymous";
-            
-            imgEl.onerror = () => {
-                imgEl.style.display = 'none';
-                if (normalizedType !== 'ideology') {
-                    this.injectModalPlaceholder(imgEl, item.ideology);
-                }
-            };
-        } else {
-            // 隱藏圖片標籤，若非一般思想點（人物/政黨）則顯示佔位徽章
-            imgEl.style.display = 'none';
-            imgEl.src = '';
-            if (normalizedType !== 'ideology') {
-                this.injectModalPlaceholder(imgEl, item.ideology);
-            }
+        // 1. 【絕對初始化】
+        // 立即移除 has-content 類名（由 CSS 執行隱藏），並物理性抹除所有舊徽章色塊
+        if (imgSlot) {
+            imgSlot.classList.remove('has-content');
+            imgSlot.style.backgroundColor = 'transparent';
+            imgSlot.style.backgroundImage = 'none';
+            imgSlot.querySelectorAll('.modal-placeholder').forEach(el => el.remove());
         }
 
+        if (imgEl) {
+            imgEl.style.display = 'none'; // 預設隱藏圖片標籤
+            imgEl.onerror = null;
+            imgEl.onload = null;
+            imgEl.src = '';
+        }
+
+        // 2. 【嚴格頭像校驗 (Strict Image Check)】
+        // 排除所有字串類型的偽空值 (null, none, false)
+        const avatarUrl = (item.avatar || '').toString().trim();
+        const hasValidAvatar = avatarUrl !== "" && 
+                               !['null', 'undefined', 'none', 'false'].includes(avatarUrl.toLowerCase());
+
+        if (hasValidAvatar) {
+            const proxiedUrl = getProxiedImageUrl(avatarUrl, false);
+            imgEl.crossOrigin = "anonymous";
+            
+            // 只有圖片真正載入成功，才由 CSS 開啟 Slot 容器
+            imgEl.onload = () => {
+                imgSlot.classList.add('has-content');
+                imgEl.style.display = 'block';
+            };
+            
+            // 只有「有網址但失效」時，才降級為徽章並顯示 Slot
+            imgEl.onerror = () => {
+                imgSlot.classList.add('has-content');
+                imgEl.style.display = 'none';
+                this.injectModalPlaceholder(imgEl, item.ideology);
+            };
+
+            imgEl.src = proxiedUrl;
+        } 
+        // 若 hasValidAvatar 為 false (如胡安·庇隆)，則保持隱藏，不執行任何徽章注入
+
+        // --- 第三部分：其餘資料顯示 ---
         document.getElementById('modal-desc').innerText = item.description || '暫無敘述';
         document.getElementById('modal-history').innerText = item.history || '無相關歷史資料';
         document.getElementById('modal-score-x').innerText = item.x;
         document.getElementById('modal-score-y').innerText = item.y;
 
-        const searchBtn = document.getElementById('modal-search-btn');
-        searchBtn.onclick = () => window.open(`https://www.google.com/search?q=${encodeURIComponent(item.ideology + ' 政治思想')}`, '_blank');
-        document.getElementById('ideology-modal').classList.add('active');
+        document.getElementById('ideology-modal')?.classList.add('active');
+    },
+
+    closeModal() {
+        document.getElementById('ideology-modal')?.classList.remove('active');
     },
 
     injectModalPlaceholder(targetImg, name) {
-        if (document.getElementById('modal-placeholder')) return;
+        const container = targetImg.parentElement;
+        if (container.querySelector('.modal-placeholder')) return;
+        
         const { color, initial } = getPlaceholderStyle(name);
         const placeholder = document.createElement('div');
-        placeholder.id = 'modal-placeholder';
         placeholder.className = 'modal-placeholder';
         placeholder.style.backgroundColor = color;
         placeholder.setAttribute('data-initial', initial);
-        targetImg.parentNode.insertBefore(placeholder, targetImg);
+        container.insertBefore(placeholder, targetImg);
     }
 };
