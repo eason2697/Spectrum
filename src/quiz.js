@@ -1,6 +1,7 @@
 /**
  * 政治思想測驗 - 邏輯模組
  */
+import { i18n } from './i18n.js';
 export const quizLogic = {
     questions: [],
     currentQuestion: 0,
@@ -35,6 +36,7 @@ export const quizLogic = {
         quizContainer.innerHTML = '';
         const index = this.currentQuestion;
         const q = this.questions[index];
+        const lang = window.mapLogic.currentLang; // 獲取當前語言
         
         const progressFill = document.getElementById('progress-fill');
         if (progressFill) progressFill.style.width = ((index / this.questions.length) * 100) + '%';
@@ -43,20 +45,20 @@ export const quizLogic = {
         const enterClass = this.isReverse ? 'animate-enter-reverse' : 'animate-enter';
         box.className = `question-box active ${enterClass}`;
         box.innerHTML = `
-            <div class="question-number">第 ${index + 1} / ${this.questions.length} 題</div>
+            <div class="question-number">${i18n[lang].questionPrefix} ${index + 1} / ${this.questions.length} ${i18n[lang].questionSuffix}</div>
             <div class="question-text">${q.text}</div>
             <div class="quiz-options">
-                <button class="btn btn-strongly-agree" onclick="window.quizLogic.answer(1)">強烈喜歡</button>
-                <button class="btn btn-agree" onclick="window.quizLogic.answer(0.6)">喜歡</button>
-                <button class="btn btn-neutral" onclick="window.quizLogic.answer(0)">中立 / 跳過</button>
-                <button class="btn btn-disagree" onclick="window.quizLogic.answer(-0.6)">不喜歡</button>
-                <button class="btn btn-strongly-disagree" onclick="window.quizLogic.answer(-1)">強烈不喜歡</button>
+                <button class="btn btn-strongly-agree" onclick="window.quizLogic.answer(1)">${i18n[lang].stronglyLike}</button>
+                <button class="btn btn-agree" onclick="window.quizLogic.answer(0.6)">${i18n[lang].like}</button>
+                <button class="btn btn-neutral" onclick="window.quizLogic.answer(0)">${i18n[lang].neutralSkip}</button>
+                <button class="btn btn-disagree" onclick="window.quizLogic.answer(-0.6)">${i18n[lang].dislike}</button>
+                <button class="btn btn-strongly-disagree" onclick="window.quizLogic.answer(-1)">${i18n[lang].stronglyDislike}</button>
             </div>
             
             <div class="quiz-controls">
-                ${index > 0 ? `<button class="btn btn-secondary" onclick="window.quizLogic.prev()">🔙 上一題</button>` : ''}
-                <button class="btn btn-secondary" onclick="window.app.startQuiz()">🔄 重置</button>
-                <button class="btn btn-secondary" onclick="window.quizLogic.skip()">🗺️ 跳過測驗</button>
+                ${index > 0 ? `<button class="btn btn-secondary" onclick="window.quizLogic.prev()">${i18n[lang].prevQuestion}</button>` : ''}
+                <button class="btn btn-secondary" onclick="window.app.startQuiz()">${i18n[lang].resetQuiz}</button>
+                <button class="btn btn-secondary" onclick="window.quizLogic.skip()">${i18n[lang].skipQuiz}</button>
             </div>
         `;
         quizContainer.appendChild(box);
@@ -148,6 +150,7 @@ export const quizLogic = {
         
         const closest = distances[0];
         const ideologyLabel = document.getElementById('closest-ideology');
+        const lang = window.mapLogic.currentLang;
         
         if (closest) {
             ideologyLabel.innerText = closest.ideology;
@@ -165,8 +168,8 @@ export const quizLogic = {
         const topList = document.getElementById('top-ideologies-list');
         if (topList && distances.length >= 3) {
             topList.innerHTML = `
-                <div style="margin-bottom: 8px; color: var(--secondary-hover);">🥈 第二相似：<strong>${distances[1].ideology}</strong></div>
-                <div style="color: var(--secondary-hover);">🥉 第三相似：<strong>${distances[2].ideology}</strong></div>
+                <div style="margin-bottom: 8px; color: var(--secondary-hover);">🥈 ${i18n[lang].secondMatch}：<strong>${distances[1].ideology}</strong></div>
+                <div style="color: var(--secondary-hover);">🥉 ${i18n[lang].thirdMatch}：<strong>${distances[2].ideology}</strong></div>
             `;
         }
     },
@@ -175,7 +178,8 @@ export const quizLogic = {
         const ideology = document.getElementById('closest-ideology').innerText;
         const x = document.getElementById('score-x').innerText;
         const y = document.getElementById('score-y').innerText;
-        const text = `我的政治立場是「${ideology}」！(經濟: ${x}, 權力: ${y})\n測驗地址：${window.location.href}`;
+        const lang = window.mapLogic.currentLang;
+        const text = `${i18n[lang].closestMatch.replace('：', '')}「${ideology}」！(${i18n[lang].ecoLabel.split(' ')[0]}: ${x}, ${i18n[lang].polLabel.split(' ')[0]}: ${y})\n${i18n[lang].siteSubTitle}：${window.location.href}`;
         
         const urls = {
             line: `https://line.me/R/msg/text/?${encodeURIComponent(text)}`,
@@ -184,11 +188,11 @@ export const quizLogic = {
         };
 
         if (platform === 'copy') {
-            navigator.clipboard.writeText(text).then(() => alert('已複製到剪貼簿！'));
+            navigator.clipboard.writeText(text).then(() => alert(i18n[lang].shareCopyText));
         } else if (urls[platform]) {
             window.open(urls[platform], '_blank');
         } else if (platform === 'ig') {
-            alert('Instagram 不支援直接分享文字，已將結果複製到剪貼簿，您可以直接貼上。');
+            alert(i18n[lang].shareIGWarning);
             navigator.clipboard.writeText(text);
         }
     }

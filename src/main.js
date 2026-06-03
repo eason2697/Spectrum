@@ -1,5 +1,6 @@
 import { quizLogic } from './quiz.js';
 import { mapLogic } from './map.js';
+import { i18n } from './i18n.js';
 import { GOOGLE_FORM_URL } from './config.js';
 
 const app = {
@@ -9,15 +10,15 @@ const app = {
     features: [
         {
             id: 'quiz',
-            title: '思想傾向測驗',
-            desc: '透過系列問答，定位你在政治與經濟光譜上的位置。',
+            titleKey: 'quizFeatureTitle', // 使用 i18n key
+            descKey: 'quizFeatureDesc',   // 使用 i18n key
             icon: '<svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>',
             action: () => window.app.startQuiz()
         },
         {
             id: 'map',
-            title: '意識形態地圖',
-            desc: '直觀瀏覽各項政治思想分佈，查看詳細的核心理念與背景。',
+            titleKey: 'mapFeatureTitle', // 使用 i18n key
+            descKey: 'mapFeatureDesc',   // 使用 i18n key
             icon: '<svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>',
             action: () => window.app.switchView('map-view')
         }
@@ -63,6 +64,15 @@ const app = {
                     this.closeModal();
                 }
             });
+
+            // 綁定語系切換按鈕
+            // 首次載入時，根據當前語系更新按鈕文字
+            const langToggleBtn = document.getElementById('lang-toggle-btn');
+            if (langToggleBtn) langToggleBtn.innerText = mapLogic.currentLang === 'zh' ? 'EN / 中文' : '中文 / EN';
+
+            document.getElementById('lang-toggle-btn').addEventListener('click', () => {
+                this.toggleLanguage();
+            });
         } catch (error) {
             console.error('資料載入失敗:', error);
             alert('無法載入政治思想資料庫，請確認 data/data.json 是否存在。');
@@ -74,20 +84,24 @@ const app = {
      */
     initSidebarDelegation() {
         const sidebar = document.getElementById('app-sidebar');
+        const toggleBtn = document.getElementById('sidebar-toggle-btn');
+
+        // 獨立為外部按鈕綁定點擊事件
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleSidebar();
+            });
+        }
+
         if (!sidebar) return;
 
         sidebar.addEventListener('click', (e) => {
-            // 攔截按鈕或切換開關，包含 SVG 圖示內部的點擊
-            const btn = e.target.closest('.btn-sidebar, .sidebar-toggle');
+            // 攔截側邊欄內的導航按鈕或標題區域
+            const btn = e.target.closest('.btn-sidebar, .sidebar-brand');
             if (!btn) return;
 
             try {
-                // 1. 處理側邊欄收合切換
-                if (btn.classList.contains('sidebar-toggle') || btn.id === 'sidebar-toggle-btn') {
-                    this.toggleSidebar();
-                    return;
-                }
-
                 // 2. 處理視圖切換 (根據 HTML data-view 屬性)
                 const targetView = btn.getAttribute('data-view');
                 if (targetView) {
@@ -108,6 +122,33 @@ const app = {
         });
     },
 
+    toggleLanguage() {
+        const newLang = mapLogic.currentLang === 'zh' ? 'en' : 'zh';
+        mapLogic.currentLang = newLang;
+        this.updateStaticTexts();
+        mapLogic.renderMap(); // 重新渲染地圖上的點
+        mapLogic.initFilters(); // 重新渲染標籤
+        this.renderHome(); // 重新渲染首頁卡片
+    },
+
+    updateStaticTexts() {
+        const lang = mapLogic.currentLang;
+        // 更新所有帶有 data-i18n 屬性的元素
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (i18n[lang][key]) el.innerText = i18n[lang][key];
+        });
+        // 更新所有帶有 data-i18n-title 屬性的元素
+        document.querySelectorAll('[data-i18n-title]').forEach(el => {
+            const key = el.getAttribute('data-i18n-title');
+            if (i18n[lang][key]) el.title = i18n[lang][key];
+        });
+        // 更新特殊元素，如 title 和 placeholder
+        document.title = i18n[lang].siteTitle;
+        document.getElementById('map-search-input').placeholder = i18n[lang].searchPlaceholder;
+        document.getElementById('lang-toggle-btn').innerText = lang === 'zh' ? 'EN / 中文' : '中文 / EN';
+    },
+
     handleFeatureClick(id) {
         const feature = this.features.find(f => f.id === id);
         if (feature && typeof feature.action === 'function') {
@@ -119,16 +160,22 @@ const app = {
         const grid = document.getElementById('app-grid');
         if (!grid) return;
 
-        grid.innerHTML = this.features.map(feat => `
+        const lang = mapLogic.currentLang;
+        grid.innerHTML = this.features.map(feat => {
+            const title = i18n[lang][feat.titleKey] || feat.title; // 優先使用 i18n，否則回退到原始 title
+            const desc = i18n[lang][feat.descKey] || feat.desc;     // 優先使用 i18n，否則回退到原始 desc
+            const enterNowText = i18n[lang].enterNow;
+            return `
             <div class="app-card" onclick="window.app.handleFeatureClick('${feat.id}')">
                 <div class="app-card-icon">${feat.icon}</div>
                 <div class="app-card-content">
-                    <h3>${feat.title}</h3>
-                    <p>${feat.desc}</p>
-                    <div class="app-card-footer">立即進入 →</div>
+                    <h3>${title}</h3>
+                    <p>${desc}</p>
+                    <div class="app-card-footer">${enterNowText}</div>
                 </div>
             </div>
-        `).join('');
+            `;
+        }).join('');
     },
 
     switchView(viewId) {
@@ -216,22 +263,27 @@ const app = {
     },
 
     toggleSidebar() {
-        document.getElementById('app-sidebar').classList.toggle('open');
+        const sidebar = document.getElementById('app-sidebar');
+        const btn = document.getElementById('sidebar-toggle-btn');
+        sidebar?.classList.toggle('open');
+        btn?.classList.toggle('open'); // 同步更新按鈕狀態，以便切換圖示
     },
 
     closeSidebar() {
         // 只有在手機版（螢幕寬度小於 769px）時，切換頁面才自動收合側邊欄
         if (window.innerWidth < 769) {
             const sidebar = document.getElementById('app-sidebar');
+            const btn = document.getElementById('sidebar-toggle-btn');
             if (sidebar) sidebar.classList.remove('open');
+            if (btn) btn.classList.remove('open');
         }
     },
 
     shareWebsite() {
         // 使用 window.location.href 並過濾掉雜訊（如 hash 或 query），確保連結乾淨
         const siteUrl = window.location.origin + window.location.pathname;
-        const text = `來看看這個政治思想測驗與光譜地圖吧！\n${siteUrl}`;
-        navigator.clipboard.writeText(text).then(() => alert('網站連結已複製到剪貼簿！'));
+        const text = `${i18n[mapLogic.currentLang].siteSubTitle}！\n${siteUrl}`; // 使用 i18n 的副標題作為分享文案
+        navigator.clipboard.writeText(text).then(() => alert(i18n[mapLogic.currentLang].shareSiteText));
     }
 };
 

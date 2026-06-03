@@ -6,6 +6,7 @@ import {
     PIXELS_PER_UNIT, 
     COMMUNITY_DATA_URL 
 } from './config.js';
+import { i18n, getI18nText } from './i18n.js';
 import { getProxiedImageUrl, getPlaceholderStyle } from './utils.js';
 
 export const mapLogic = {
@@ -24,6 +25,7 @@ export const mapLogic = {
     showFigures: true,
     showParties: true,
     communityData: [], 
+    currentLang: 'zh',
     
     init(data) {
         this.ideologyData = data;
@@ -74,8 +76,8 @@ export const mapLogic = {
         document.getElementById('result-btn-map')?.addEventListener('click', () => {
             if (window.app) window.app.showUserOnMap();
         });
-        document.getElementById('result-btn-home')?.addEventListener('click', () => {
-            if (window.app) window.app.switchView('home-view');
+        document.getElementById('result-btn-home')?.addEventListener('click', () => { // 這裡的 homeBtn 已經有 data-i18n 了
+            if (window.app) window.app.switchView('home-view'); 
         });
 
         // 彈窗搜尋按鈕
@@ -83,7 +85,7 @@ export const mapLogic = {
         if (modalSearchBtn) {
             modalSearchBtn.addEventListener('click', () => {
                 const title = document.getElementById('modal-title')?.innerText;
-                if (title) {
+                if (title) { // 這裡的 title 已經是 i18n 處理過的了
                     // 修正：移除不必要的角括號，並將 encodeURIComponent 的括號正確閉合
                     window.open(`https://www.google.com/search?q=${encodeURIComponent(title)} 政治思想`, '_blank');
                 }
@@ -252,7 +254,8 @@ export const mapLogic = {
                 matches.forEach(item => {
                     const div = document.createElement('div');
                     div.className = 'search-result-item';
-                    div.innerText = item.ideology;
+                    // 使用語系安全讀取
+                    div.innerText = getI18nText(item, 'ideology', this.currentLang);
                     div.onclick = () => {
                         this.focusOn(item.x, item.y);
                         this.showModal(item);
@@ -454,8 +457,8 @@ export const mapLogic = {
     showUserResult(x, y) {
         const mapArea = document.getElementById('map-area');
         const oldMarker = document.getElementById('user-marker');
-        if (oldMarker) oldMarker.remove();
-        const point = this.createPoint({ x, y, ideology: '你的位置' });
+        if (oldMarker) oldMarker.remove(); // 移除舊的用戶標記
+        const point = this.createPoint({ x, y, ideology: i18n[this.currentLang].userLocation }); // 使用 i18n 翻譯
         point.id = 'user-marker';
         point.classList.add('user-point');
         mapArea.appendChild(point);
@@ -479,7 +482,8 @@ export const mapLogic = {
     },
 
     createPoint(item) {
-        const { x, y, ideology, category, type, avatar } = item;
+        const { x, y, category, type, avatar } = item;
+        const ideology = getI18nText(item, 'ideology', this.currentLang); // 這裡已經處理了 data.json 的 i18n
         const normalizedType = (type || 'ideology').toLowerCase();
         const point = document.createElement('div');
         point.className = 'map-point';
@@ -547,9 +551,9 @@ export const mapLogic = {
 
     showModal(item) {
         // --- 第一部分：文字內容填充 ---
-        document.getElementById('modal-title').innerText = item.ideology;
-        const categoryText = item.category || '未分類';
-        const categoryEl = document.getElementById('modal-category');
+        document.getElementById('modal-title').innerText = getI18nText(item, 'ideology', this.currentLang);
+        const categoryText = getI18nText(item, 'category', this.currentLang) || '未分類';
+        const categoryEl = document.getElementById('modal-category'); // 這裡的 categoryText 已經處理了 data.json 的 i18n
         categoryEl.innerText = categoryText;
         const categoryClass = 'tag-' + categoryText.toLowerCase().replace(/\s+/g, '-');
         categoryEl.className = 'category-tag ' + categoryClass;
@@ -606,8 +610,8 @@ export const mapLogic = {
         }
 
         // --- 第三部分：其餘資料顯示 ---
-        document.getElementById('modal-desc').innerText = item.description || '暫無敘述';
-        document.getElementById('modal-history').innerText = item.history || '無相關歷史資料';
+        document.getElementById('modal-desc').innerText = getI18nText(item, 'description', this.currentLang) || i18n[this.currentLang].noDesc;
+        document.getElementById('modal-history').innerText = getI18nText(item, 'history', this.currentLang) || i18n[this.currentLang].noHistory;
         document.getElementById('modal-score-x').innerText = item.x;
         document.getElementById('modal-score-y').innerText = item.y;
 
