@@ -6,6 +6,11 @@
     <title data-i18n-title="siteTitle">政治思想測驗與光譜地圖</title>
     <link rel="stylesheet" href="./public/style.css">
     <style>
+        /* 屏蔽手機連點放大，提升點擊反應速度並防止意外縮放 */
+        html, body {
+            touch-action: manipulation;
+        }
+
         /* 側邊欄與按鈕佈局補丁 */
         .app-sidebar {
             display: flex;
@@ -36,26 +41,39 @@
             opacity: 0.8;
         }
 
-        /* 測驗回答按鈕橫向佈局優化：確保所有選項平分寬度，地位相等 */
+        /* 測驗回答按鈕響應式佈局：手機預設直列，大螢幕橫列 */
         .quiz-options {
             display: flex !important;
-            flex-direction: row;
-            flex-wrap: nowrap; /* 強制不換行 */
-            gap: 8px;
+            flex-direction: column; /* 手機版預設直列 */
+            gap: 12px;
             width: 100%;
-            max-width: 900px; /* 增加最大寬度以容納橫向英文 */
-            margin: 35px auto; /* 調整上下間距，使其在題目與導航按鈕間更居中 */
+            max-width: 500px;
+            margin: 30px auto;
             justify-content: center;
         }
+
         .quiz-options .btn {
-            flex: 1; /* 核心修正：讓所有按鈕強制平分剩餘空間 */
-            min-height: 60px;
-            padding: 8px 4px !important;
-            font-size: 0.85rem; /* 稍微縮小字體以確保英文單字不會溢出 */
+            width: 100% !important;
+            min-height: 50px;
+            padding: 12px !important;
             line-height: 1.2;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0 !important;
+        }
+
+        /* 平板與電腦版 (寬度 > 768px) 切換回橫向 */
+        @media (min-width: 769px) {
+            .quiz-options {
+                flex-direction: row; /* 橫向排列 */
+                max-width: 900px;
+                gap: 8px;
+            }
+            .quiz-options .btn {
+                flex: 1; /* 平分空間 */
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
