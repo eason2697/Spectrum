@@ -84,7 +84,8 @@ export const mapLogic = {
             modalSearchBtn.addEventListener('click', () => {
                 const title = document.getElementById('modal-title')?.innerText;
                 if (title) {
-                    window.open(`<https://www.google.com/search?q=${encodeURIComponent(title> + ' 政治思想')}`, '_blank');
+                    // 修正：移除不必要的角括號，並將 encodeURIComponent 的括號正確閉合
+                    window.open(`https://www.google.com/search?q=${encodeURIComponent(title)} 政治思想`, '_blank');
                 }
             });
         }
@@ -553,28 +554,29 @@ export const mapLogic = {
         const categoryClass = 'tag-' + categoryText.toLowerCase().replace(/\s+/g, '-');
         categoryEl.className = 'category-tag ' + categoryClass;
 
-        // --- 第二部分：彈窗圖片渲染重構 ---
+        // --- 第二部分：彈窗圖片渲染（對齊 modal.css 的 .has-content 機制） ---
         const imgEl = document.getElementById('modal-image');
         const imgSlot = document.getElementById('modal-image-slot');
         
         // 1. 【絕對初始化】
-        // 立即移除 has-content 類名（由 CSS 執行隱藏），並物理性抹除所有舊徽章色塊
+        // 立即物理性隱藏槽位並移除所有殘留徽章，確保「無照片」時文字直接靠頂
         if (imgSlot) {
-            imgSlot.classList.remove('has-content');
+            imgSlot.classList.remove('has-content'); // 恢復 CSS 預設的 display: none
             imgSlot.style.backgroundColor = 'transparent';
-            imgSlot.style.backgroundImage = 'none';
+            imgSlot.style.backgroundImage = 'none'; // 保持上一動校正：抹除行內背景圖
             imgSlot.querySelectorAll('.modal-placeholder').forEach(el => el.remove());
         }
 
+        // 2. 清理圖片標籤本身的所有狀態
         if (imgEl) {
-            imgEl.style.display = 'none'; // 預設隱藏圖片標籤
+            imgEl.style.display = 'none';
             imgEl.onerror = null;
             imgEl.onload = null;
             imgEl.src = '';
+            imgEl.removeAttribute('src');
         }
 
-        // 2. 【嚴格頭像校驗 (Strict Image Check)】
-        // 排除所有字串類型的偽空值 (null, none, false)
+        // 3. 【嚴格頭像校驗】
         const avatarUrl = (item.avatar || '').toString().trim();
         const hasValidAvatar = avatarUrl !== "" && 
                                !['null', 'undefined', 'none', 'false'].includes(avatarUrl.toLowerCase());
@@ -583,22 +585,25 @@ export const mapLogic = {
             const proxiedUrl = getProxiedImageUrl(avatarUrl, false);
             imgEl.crossOrigin = "anonymous";
             
-            // 只有圖片真正載入成功，才由 CSS 開啟 Slot 容器
+            // 只有「確定圖片像素已成功下載」，才加上 .has-content 打開 Slot 容器
             imgEl.onload = () => {
-                imgSlot.classList.add('has-content');
+                imgSlot.classList.add('has-content'); // 👈 對齊 CSS，解鎖顯示！
                 imgEl.style.display = 'block';
             };
             
-            // 只有「有網址但失效」時，才降級為徽章並顯示 Slot
+            // 只有「原本有網址但失效（破圖）」時，才安全降級為徽章
             imgEl.onerror = () => {
-                imgSlot.classList.add('has-content');
+                imgSlot.classList.add('has-content'); // 👈 破圖也需要加上類名來顯示徽章容器
                 imgEl.style.display = 'none';
                 this.injectModalPlaceholder(imgEl, item.ideology);
             };
 
             imgEl.src = proxiedUrl;
-        } 
-        // 若 hasValidAvatar 為 false (如胡安·庇隆)，則保持隱藏，不執行任何徽章注入
+        } else {
+            // avatar 不存在 (如胡安·庇隆、美國共和黨、艾茵·蘭德)：
+            // 保持 imgSlot 沒有 .has-content，觸發 CSS 的 display: none !important。
+            // 這樣文字區域會自動向上流動，完美靠頂，絕不留大色塊。
+        }
 
         // --- 第三部分：其餘資料顯示 ---
         document.getElementById('modal-desc').innerText = item.description || '暫無敘述';
@@ -614,6 +619,7 @@ export const mapLogic = {
     },
 
     injectModalPlaceholder(targetImg, name) {
+        // 確保不會重複注入
         const container = targetImg.parentElement;
         if (container.querySelector('.modal-placeholder')) return;
         

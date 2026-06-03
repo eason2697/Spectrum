@@ -67,3 +67,26 @@
     object-fit: cover;
     margin: 0 auto;
 }
+
+/* --- 修正彈窗破圖降級徽章的物理形狀 --- */
+.modal-placeholder {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 50% !important; /* 強制裁切成精美圓形徽章 */
+    margin: 10px auto !important;   /* 在彈窗頂端完美居中 */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-size: 36px !important;
+    font-weight: bold !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* 利用虛擬元素將 data-initial 的名字縮寫优雅地畫在圓圈正中央 */
+.modal-placeholder::before {
+    content: attr(data-initial);
+    position: absolute;
+    font-family: inherit;
+}
