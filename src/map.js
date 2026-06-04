@@ -204,22 +204,39 @@ export const mapLogic = {
     initFilters() {
         const filterContainer = document.getElementById('filter-tags');
         if (!filterContainer) return;
-        const allTags = new Set();
+        
+        // 使用 Map 來儲存 唯一標籤Key(中文) -> 完整標籤物件
+        const uniqueTags = new Map(); 
+        
         this.ideologyData.forEach(item => {
             const tags = item.tags || [];
-            tags.forEach(t => allTags.add(t));
+            tags.forEach(t => {
+                const zhKey = typeof t === 'object' ? t.zh : t;
+                if (!uniqueTags.has(zhKey)) {
+                    uniqueTags.set(zhKey, t);
+                }
+            });
         });
+
         filterContainer.innerHTML = '';
-        allTags.forEach(tag => {
+        uniqueTags.forEach((tagData, zhKey) => {
             const btn = document.createElement('button');
             btn.className = 'filter-tag';
-            btn.innerText = `#${tag}`;
+            
+            // 根據目前語系決定顯示文字
+            const displayText = typeof tagData === 'object' 
+                ? (tagData[this.currentLang] || tagData.zh) 
+                : tagData;
+                
+            btn.innerText = `#${displayText}`;
+            if (this.activeFilters.has(zhKey)) btn.classList.add('active');
+
             btn.onclick = () => {
-                if (this.activeFilters.has(tag)) {
-                    this.activeFilters.delete(tag);
+                if (this.activeFilters.has(zhKey)) {
+                    this.activeFilters.delete(zhKey);
                     btn.classList.remove('active');
                 } else {
-                    this.activeFilters.add(tag);
+                    this.activeFilters.add(zhKey);
                     btn.classList.add('active');
                 }
                 this.applyFilters();
@@ -245,10 +262,13 @@ export const mapLogic = {
                 searchResults.style.display = 'none';
                 return;
             }
-            const matches = this.ideologyData.filter(item => 
-                item.ideology.toLowerCase().includes(keyword) || 
-                (item.category && item.category.toLowerCase().includes(keyword))
-            );
+            const matches = this.ideologyData.filter(item => {
+                const nameZH = getI18nText(item, 'ideology', 'zh').toLowerCase();
+                const nameEN = getI18nText(item, 'ideology', 'en').toLowerCase();
+                const category = (item.category || "").toLowerCase();
+                
+                return nameZH.includes(keyword) || nameEN.includes(keyword) || category.includes(keyword);
+            });
             if (matches.length > 0) {
                 searchResults.style.display = 'block';
                 matches.forEach(item => {
@@ -442,8 +462,14 @@ export const mapLogic = {
             let typeMatch = true;
             if (type === 'figure' && !this.showFigures) typeMatch = false;
             if (type === 'party' && !this.showParties) typeMatch = false;
+            
             const itemTags = item.tags || []; 
-            const tagMatch = this.activeFilters.size === 0 || itemTags.some(tag => this.activeFilters.has(tag));
+            const tagMatch = this.activeFilters.size === 0 || itemTags.some(tagObj => {
+                // 統一使用中文 Key 進行匹配檢查
+                const zhKey = typeof tagObj === 'object' ? tagObj.zh : tagObj;
+                return this.activeFilters.has(zhKey);
+            });
+            
             if (typeMatch && tagMatch) {
                 p.element.classList.remove('filtered-out');
                 p.element.style.pointerEvents = 'auto';

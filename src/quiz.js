@@ -1,7 +1,7 @@
 /**
  * 政治思想測驗 - 邏輯模組
  */
-import { i18n } from './i18n.js';
+import { i18n, getI18nText } from './i18n.js';
 export const quizLogic = {
     questions: [],
     currentQuestion: 0,
@@ -46,7 +46,7 @@ export const quizLogic = {
         box.className = `question-box active ${enterClass}`;
         box.innerHTML = `
             <div class="question-number">${i18n[lang].questionPrefix} ${index + 1} / ${this.questions.length} ${i18n[lang].questionSuffix}</div>
-            <div class="question-text">${q.text}</div>
+            <div class="question-text">${getI18nText(q, 'text', lang)}</div>
             <div class="quiz-options">
                 <button class="btn btn-strongly-agree" onclick="window.quizLogic.answer(1)">${i18n[lang].stronglyLike}</button>
                 <button class="btn btn-agree" onclick="window.quizLogic.answer(0.6)">${i18n[lang].like}</button>
@@ -153,7 +153,7 @@ export const quizLogic = {
         const lang = window.mapLogic.currentLang;
         
         if (closest) {
-            ideologyLabel.innerText = closest.ideology;
+            ideologyLabel.innerText = getI18nText(closest, 'ideology', lang);
             
             // 建立類別與 CSS 變數的映射表
             const colorMap = {
@@ -167,9 +167,11 @@ export const quizLogic = {
 
         const topList = document.getElementById('top-ideologies-list');
         if (topList && distances.length >= 3) {
+            const name2 = getI18nText(distances[1], 'ideology', lang);
+            const name3 = getI18nText(distances[2], 'ideology', lang);
             topList.innerHTML = `
-                <div style="margin-bottom: 8px; color: var(--secondary-hover);">🥈 ${i18n[lang].secondMatch}：<strong>${distances[1].ideology}</strong></div>
-                <div style="color: var(--secondary-hover);">🥉 ${i18n[lang].thirdMatch}：<strong>${distances[2].ideology}</strong></div>
+                <div style="margin-bottom: 8px; color: var(--secondary-hover);">🥈 ${i18n[lang].secondMatch}：<strong>${name2}</strong></div>
+                <div style="color: var(--secondary-hover);">🥉 ${i18n[lang].thirdMatch}：<strong>${name3}</strong></div>
             `;
         }
     },

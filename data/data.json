@@ -1,1762 +1,3030 @@
 {
   "ideologies": [
     {
-      "ideology": "波布主義",
+      "ideology": {
+        "zh": "波布主義",
+        "en": "Pol Potism"
+      },
       "type": "ideology",
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -100,
       "y": 100,
       "category": "Authoritarian Left",
-      "description": "極端的農業共產主義與徹底的集權清洗，消滅所有城市與貨幣。",
-      "history": "柬埔寨紅色高棉政權的恐怖實踐。"
+      "description": {
+        "zh": "極端的農業共產主義與徹底的集權清洗，消滅所有城市與貨幣。",
+        "en": "Extreme agrarian communism with total totalitarian cleansing, abolishing all cities and currency."
+      },
+      "history": {
+        "zh": "柬埔寨紅色高棉政權的恐怖實踐。",
+        "en": "The horrific practice of the Khmer Rouge regime in Cambodia."
+      }
     },
     {
-      "ideology": "馬克思列寧主義",
+      "ideology": {
+        "zh": "馬克思列寧主義",
+        "en": "Marxism-Leninism"
+      },
       "type": "ideology",
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -90,
       "y": 90,
       "category": "Authoritarian Left",
-      "description": "追求無產階級革命，由先鋒黨建立集權政府以過渡至共產主義。",
-      "history": "列寧主義的延伸，20世紀共產陣營的核心。"
+      "description": {
+        "zh": "追求無產階級革命，由先鋒黨建立集權政府以過渡至共產主義。",
+        "en": "Pursues proletarian revolution, establishing a centralized government led by a vanguard party to transition to communism."
+      },
+      "history": {
+        "zh": "列寧主義的延伸，20世紀共產陣營的核心。",
+        "en": "An extension of Leninism, the core of the 20th-century communist bloc."
+      }
     },
     {
-      "ideology": "生態威權主義",
+      "ideology": {
+        "zh": "生態威權主義",
+        "en": "Eco-Authoritarianism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": -60,
       "y": 80,
       "category": "Authoritarian Left",
-      "description": "認為必須透過強勢政府來強制執行環保政策，以挽救氣候危機。",
-      "history": "應對現代環境危機的強硬左派理論。"
+      "description": {
+        "zh": "認為必須透過強勢政府來強制執行環保政策，以挽救氣候危機。",
+        "en": "Believes that a strong government must enforce environmental policies to save the climate crisis."
+      },
+      "history": {
+        "zh": "應對現代環境危機的強硬左派理論。",
+        "en": "A hard-left theory responding to the modern environmental crisis."
+      }
     },
     {
-      "ideology": "左翼民族主義",
+      "ideology": {
+        "zh": "左翼民族主義",
+        "en": "Left-wing Nationalism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -40,
       "y": 50,
       "category": "Authoritarian Left",
-      "description": "結合國家獨立與財富重分配，抵制外國資本入侵。",
-      "history": "多見於拉丁美洲與反殖民運動。"
+      "description": {
+        "zh": "結合國家獨立與財富重分配，抵制外國資本入侵。",
+        "en": "Combines national independence with wealth redistribution, resisting foreign capital invasion."
+      },
+      "history": {
+        "zh": "多見於拉丁美洲與反殖民運動。",
+        "en": "Commonly found in Latin America and anti-colonial movements."
+      }
     },
     {
-      "ideology": "家長式社會主義",
+      "ideology": {
+        "zh": "家長式社會主義",
+        "en": "Paternalistic Socialism"
+      },
       "tags": [
         "歷史流派"
       ],
       "x": -40,
       "y": 30,
       "category": "Authoritarian Left",
-      "description": "國家如父親般照顧人民福祉，但同時嚴格限制社會自由與道德。",
-      "history": "多見於蘇聯解體後的東歐部分保守政權。"
+      "description": {
+        "zh": "國家如父親般照顧人民福祉，但同時嚴格限制社會自由與道德。",
+        "en": "The state cares for the welfare of the people like a father, but at the same time strictly limits social freedom and morality."
+      },
+      "history": {
+        "zh": "多見於蘇聯解體後的東歐部分保守政權。",
+        "en": "Commonly found in some conservative regimes in Eastern Europe after the collapse of the Soviet Union."
+      }
     },
     {
-      "ideology": "阿拉伯社會主義",
+      "ideology": {
+        "zh": "阿拉伯社會主義",
+        "en": "Arab Socialism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -30,
       "y": 60,
       "category": "Authoritarian Left",
-      "description": "結合民族主義與社會主義，強調阿拉伯統一。",
-      "history": "復興黨與納賽爾主義的核心。"
+      "description": {
+        "zh": "結合民族主義與社會主義，強調阿拉伯統一。",
+        "en": "Combines nationalism with socialism, emphasizing Arab unity."
+      },
+      "history": {
+        "zh": "復興黨與納賽爾主義的核心。",
+        "en": "The core of the Ba'ath Party and Nasserism."
+      }
     },
     {
-      "ideology": "絕對君主制",
+      "ideology": {
+        "zh": "絕對君主制",
+        "en": "Absolute Monarchy"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 20,
       "y": 80,
       "category": "Authoritarian Right",
-      "description": "國家權力絕對集中於世襲君主一身，無憲法或議會限制。",
-      "history": "近代歐洲啟蒙時代以前最普遍的統治模式。"
+      "description": {
+        "zh": "國家權力絕對集中於世襲君主一身，無憲法或議會限制。",
+        "en": "National power is absolutely concentrated in a hereditary monarch, with no constitutional or parliamentary limits."
+      },
+      "history": {
+        "zh": "近代歐洲啟蒙時代以前最普遍的統治模式。",
+        "en": "The most common mode of rule before the Enlightenment era in modern Europe."
+      }
     },
     {
-      "ideology": "神權政治",
+      "ideology": {
+        "zh": "神權政治",
+        "en": "Theocracy"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 10,
       "y": 90,
       "category": "Authoritarian Right",
-      "description": "以神聖教義作為世俗法律，由宗教領袖實質統治國家。",
-      "history": "歷史上與當代部分中東國家的政治結構。"
+      "description": {
+        "zh": "以神聖教義作為世俗法律，由宗教領袖實質統治國家。",
+        "en": "Using sacred doctrines as secular law, where religious leaders substantially rule the state."
+      },
+      "history": {
+        "zh": "歷史上與當代部分中東國家的政治結構。",
+        "en": "The political structure of some Middle Eastern countries historically and today."
+      }
     },
     {
-      "ideology": "反動主義",
+      "ideology": {
+        "zh": "反動主義",
+        "en": "Reactionaryism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 40,
       "y": 85,
       "category": "Authoritarian Right",
-      "description": "強烈敵視啟蒙運動與現代進步價值，渴望恢復過去的傳統階級與社會秩序。",
-      "history": "對法國大革命的反撲與極端保守主義延伸。"
+      "description": {
+        "zh": "強烈敵視啟蒙運動與現代進步價值，渴望恢復過去的傳統階級與社會秩序。",
+        "en": "Strongly hostile to the Enlightenment and modern progressive values, desiring to restore traditional social hierarchies and order."
+      },
+      "history": {
+        "zh": "對法國大革命的反撲與極端保守主義延伸。",
+        "en": "A backlash against the French Revolution and an extension of extreme conservatism."
+      }
     },
     {
-      "ideology": "威權資本主義",
+      "ideology": {
+        "zh": "威權資本主義",
+        "en": "Authoritarian Capitalism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 80,
       "y": 80,
       "category": "Authoritarian Right",
-      "description": "經濟高度市場化並保護大財團，但政治上嚴格打壓民主與言論自由。",
-      "history": "部分亞洲與拉美新興工業化國家的發展模式。"
+      "description": {
+        "zh": "經濟高度市場化並保護大財團，但政治上嚴格打壓民主與言論自由。",
+        "en": "Highly marketized economy protecting large conglomerates, but strictly suppressing democracy and freedom of speech politically."
+      },
+      "history": {
+        "zh": "部分亞洲與拉美新興工業化國家的發展模式。",
+        "en": "A development model for some emerging industrialized countries in Asia and Latin America."
+      }
     },
     {
-      "ideology": "企業統治",
+      "ideology": {
+        "zh": "企業統治",
+        "en": "Corporatocracy"
+      },
       "tags": [
-        "激進主義",
-        "經濟學派"
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 100,
       "y": 90,
       "category": "Authoritarian Right",
-      "description": "大型跨國壟斷企業擁有絕對武力並實質取代了國家政權，人民淪為純粹的資產。",
-      "history": "賽博龐克科幻中常見的極右翼反烏托邦情境。"
+      "description": {
+        "zh": "大型跨國壟斷企業擁有絕對武力並實質取代了國家政權，人民淪為純粹的資產。",
+        "en": "Large multinational monopolies possess absolute force and substantially replace state power; people become pure assets."
+      },
+      "history": {
+        "zh": "賽博龐克科幻中常見的極右翼反烏托邦情境。",
+        "en": "A common far-right dystopian scenario in cyberpunk science fiction."
+      }
     },
     {
-      "ideology": "長槍黨主義",
+      "ideology": {
+        "zh": "長槍黨主義",
+        "en": "Falangism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 20,
       "y": 70,
       "category": "Authoritarian Right",
-      "description": "帶有法西斯色彩的西班牙民族工團主義運動。",
-      "history": "西班牙內戰時期的主要右翼力量。"
+      "description": {
+        "zh": "帶有法西斯色彩的西班牙民族工團主義運動。",
+        "en": "A Spanish national syndicalist movement with fascist elements."
+      },
+      "history": {
+        "zh": "西班牙內戰時期的主要右翼力量。",
+        "en": "The main right-wing force during the Spanish Civil War."
+      }
     },
     {
-      "ideology": "新保守主義",
+      "ideology": {
+        "zh": "新保守主義",
+        "en": "Neoconservatism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 50,
       "y": 60,
       "category": "Authoritarian Right",
-      "description": "在國內堅持傳統道德與市場經濟，在海外強烈主張以軍事力量輸出民主。",
-      "history": "戰後美國外交政策的鷹派主流。"
+      "description": {
+        "zh": "在國內堅持傳統道德與市場經濟，在海外強烈主張以軍事力量輸出民主。",
+        "en": "Upholds traditional morality and market economy domestically, while strongly advocating the export of democracy through military force abroad."
+      },
+      "history": {
+        "zh": "戰後美國外交政策的鷹派主流。",
+        "en": "The hawkish mainstream of post-war U.S. foreign policy."
+      }
     },
     {
-      "ideology": "民族資本主義",
+      "ideology": {
+        "zh": "民族資本主義",
+        "en": "National Capitalism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 60,
       "y": 50,
       "category": "Authoritarian Right",
-      "description": "國家扶植本國的私人資本企業，並以強烈民族主義對抗外部經濟競爭。",
-      "history": "部分右翼獨裁國家的富國強兵策略。"
+      "description": {
+        "zh": "國家扶植本國的私人資本企業，並以強烈民族主義對抗外部經濟競爭。",
+        "en": "The state supports domestic private enterprises and uses strong nationalism to counter external economic competition."
+      },
+      "history": {
+        "zh": "部分右翼獨裁國家的富國強兵策略。",
+        "en": "A strategy for strengthening the nation and military used by some right-wing dictatorships."
+      }
     },
     {
-      "ideology": "家長式保守主義",
+      "ideology": {
+        "zh": "家長式保守主義",
+        "en": "Paternalistic Conservatism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 20,
       "y": 40,
       "category": "Authoritarian Right",
-      "description": "認為菁英階層有義務照顧底層人民（貴族義務），以防止社會主義蔓延並維持階級和諧。",
-      "history": "19世紀英國保守黨的妥協路線。"
+      "description": {
+        "zh": "認為菁英階層有義務照顧底層人民（貴族義務），以防止社會主義蔓延並維持階級和諧。",
+        "en": "Believes the elite have an obligation to care for the lower classes (noblesse oblige) to prevent socialism and maintain class harmony."
+      },
+      "history": {
+        "zh": "19世紀英國保守黨的妥協路線。",
+        "en": "The compromise route of the 19th-century British Conservative Party."
+      }
     },
     {
-      "ideology": "右翼民粹主義",
+      "ideology": {
+        "zh": "右翼民粹主義",
+        "en": "Right-wing Populism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 30,
       "y": 30,
       "category": "Authoritarian Right",
-      "description": "以反建制、反移民為號召，結合自由市場與強勢民族主義，迎合基層藍領。",
-      "history": "21世紀初席捲歐美的保守派新浪潮。"
+      "description": {
+        "zh": "以反建制、反移民為號召，結合自由市場與強勢民族主義，迎合基層藍領。",
+        "en": "Calls for anti-establishment and anti-immigration, combining free markets with strong nationalism to appeal to working-class blue-collar workers."
+      },
+      "history": {
+        "zh": "21世紀初席捲歐美的保守派新浪潮。",
+        "en": "A new wave of conservatism that swept through Europe and America in the early 21st century."
+      }
     },
     {
-      "ideology": "無政府共產主義",
+      "ideology": {
+        "zh": "無政府共產主義",
+        "en": "Anarcho-Communism"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -100,
       "y": -100,
       "category": "Libertarian Left",
-      "description": "主張徹底廢除國家、貨幣與私有制，由自願的互助公社按需分配資源。",
-      "history": "克魯泡特金等思想家奠定的極端左翼無政府主義。"
+      "description": {
+        "zh": "主張徹底廢除國家、貨幣與私有制，由自願的互助公社按需分配資源。",
+        "en": "Advocates the complete abolition of the state, currency, and private property, with resources distributed according to need by voluntary mutual aid communes."
+      },
+      "history": {
+        "zh": "克魯泡特金等思想家奠定的極端左翼無政府主義。",
+        "en": "Extreme left-wing anarchism established by thinkers like Kropotkin."
+      }
     },
     {
-      "ideology": "無政府工團主義",
+      "ideology": {
+        "zh": "無政府工團主義",
+        "en": "Anarcho-Syndicalism"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -90,
       "y": -80,
       "category": "Libertarian Left",
-      "description": "透過革命性總罷工癱瘓資本主義，由工會直接接管全社會的政治與經濟生產。",
-      "history": "1936年西班牙內戰期間的 CNT 組織實踐。"
+      "description": {
+        "zh": "透過革命性總罷工癱瘓資本主義，由工會直接接管全社會的政治與經濟生產。",
+        "en": "Paralyzing capitalism through revolutionary general strikes, with labor unions directly taking over the political and economic production of society."
+      },
+      "history": {
+        "zh": "1936年西班牙內戰期間的 CNT 組織實踐。",
+        "en": "The organizational practice of the CNT during the 1936 Spanish Civil War."
+      }
     },
     {
-      "ideology": "生態無政府主義",
+      "ideology": {
+        "zh": "生態無政府主義",
+        "en": "Eco-Anarchism"
+      },
       "tags": [
-        "當代主流",
-        "激進主義"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -80,
       "y": -90,
       "category": "Libertarian Left",
-      "description": "認為資本主義與國家權力是破壞地球的元凶，主張瓦解工業文明，回歸小規模生態公社。",
-      "history": "激進環保主義與無政府主義的深度結合。"
+      "description": {
+        "zh": "認為資本主義與國家權力是破壞地球的元凶，主張瓦解工業文明，回歸小規模生態公社。",
+        "en": "Believes capitalism and state power are the culprits destroying the Earth, advocating for the collapse of industrial civilization and a return to small-scale ecological communes."
+      },
+      "history": {
+        "zh": "激進環保主義與無政府主義的深度結合。",
+        "en": "A deep combination of radical environmentalism and anarchism."
+      }
     },
     {
-      "ideology": "自由意志社會主義",
+      "ideology": {
+        "zh": "自由意志社會主義",
+        "en": "Libertarian Socialism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": -70,
       "y": -70,
       "category": "Libertarian Left",
-      "description": "反對蘇聯式的極權計畫經濟，強調生產資料公有且必須由工作場所的工人直接民主管理。",
-      "history": "西方去中心化左派運動的理論總稱。"
+      "description": {
+        "zh": "反對蘇聯式的極權計畫經濟，強調生產資料公有且必須由工作場所的工人直接民主管理。",
+        "en": "Opposes Soviet-style totalitarian planned economies, emphasizing public ownership of the means of production and direct democratic management by workers in the workplace."
+      },
+      "history": {
+        "zh": "西方去中心化左派運動的理論總稱。",
+        "en": "A general term for the theories of Western decentralized left-wing movements."
+      }
     },
     {
-      "ideology": "互助主義",
+      "ideology": {
+        "zh": "互助主義",
+        "en": "Mutualism"
+      },
       "tags": [
-        "經濟學派"
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": -50,
       "y": -60,
       "category": "Libertarian Left",
-      "description": "「財產即竊盜」，反對資本剝削，但保留自由市場讓勞工等價交換勞動成果。",
-      "history": "皮埃爾-約瑟夫·普魯東開創的早期無政府體系。"
+      "description": {
+        "zh": "「財產即竊盜」，反對資本剝削，但保留自由市場讓勞工等價交換勞動成果。",
+        "en": "'Property is theft,' opposing capital exploitation but retaining a free market for workers to exchange the fruits of their labor equivalently."
+      },
+      "history": {
+        "zh": "皮埃爾-約瑟夫·普魯東開創的早期無政府體系。",
+        "en": "An early anarchist system founded by Pierre-Joseph Proudhon."
+      }
     },
     {
-      "ideology": "社會生態學",
+      "ideology": {
+        "zh": "社會生態學",
+        "en": "Social Ecology"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": -60,
       "y": -50,
       "category": "Libertarian Left",
-      "description": "認為人類對自然的宰制源於人對人的宰制，必須以地方基層的直接民主取代國家機器。",
-      "history": "穆瑞·布克欽提出的社會與生態解放哲學。"
+      "description": {
+        "zh": "認為人類對自然的宰制源於人對人的宰制，必須以地方基層的直接民主取代國家機器。",
+        "en": "Believes human domination of nature stems from human domination of humans, advocating for direct democracy at the local level to replace the state machinery."
+      },
+      "history": {
+        "zh": "穆瑞·布克欽提出的社會與生態解放哲學。",
+        "en": "A philosophy of social and ecological liberation proposed by Murray Bookchin."
+      }
     },
     {
-      "ideology": "工團主義",
+      "ideology": {
+        "zh": "工團主義",
+        "en": "Syndicalism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -50,
       "y": -40,
       "category": "Libertarian Left",
-      "description": "認為工會才是工人階級解放的唯一有效工具，反對透過傳統政黨議會路線奪權。",
-      "history": "20世紀初勞工運動的激進派別。"
+      "description": {
+        "zh": "認為工會才是工人階級解放的唯一有效工具，反對透過傳統政黨議會路線奪權。",
+        "en": "Believes labor unions are the only effective tool for working-class liberation, opposing power seizure through traditional political party parliamentary routes."
+      },
+      "history": {
+        "zh": "20世紀初勞工運動的激進派別。",
+        "en": "A radical faction of the early 20th-century labor movement."
+      }
     },
     {
-      "ideology": "左翼自由意志主義",
+      "ideology": {
+        "zh": "左翼自由意志主義",
+        "en": "Left-libertarianism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": -40,
       "y": -60,
       "category": "Libertarian Left",
-      "description": "強烈捍衛個人自由與自由市場，但認為自然資源屬於全人類，反對大企業對土地的私有壟斷。",
-      "history": "結合了古典自由主義與社會正義分配。"
+      "description": {
+        "zh": "強烈捍衛個人自由與自由市場，但認為自然資源屬於全人類，反對大企業對土地的私有壟斷。",
+        "en": "Strongly defends individual liberty and free markets, but believes natural resources belong to all humanity, opposing private monopolies of land by large corporations."
+      },
+      "history": {
+        "zh": "結合了古典自由主義與社會正義分配。",
+        "en": "Combines classical liberalism with social justice distribution."
+      }
     },
     {
-      "ideology": "基督教共產主義",
+      "ideology": {
+        "zh": "基督教共產主義",
+        "en": "Christian Communism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -70,
       "y": -30,
       "category": "Libertarian Left",
-      "description": "基於耶穌的教導與早期教會實踐，主張信徒應共享所有財富，反對資本主義貪婪。",
-      "history": "宗教左派中要求回歸初代教會公社理念的運動。"
+      "description": {
+        "zh": "基於耶穌的教導與早期教會實踐，主張信徒應共享所有財富，反對資本主義貪婪。",
+        "en": "Based on the teachings of Jesus and early church practices, advocating that believers should share all wealth and opposing capitalist greed."
+      },
+      "history": {
+        "zh": "宗教左派中要求回歸初代教會公社理念的運動。",
+        "en": "A movement within the religious left calling for a return to the communal ideals of the early church."
+      }
     },
     {
-      "ideology": "薩帕塔主義",
+      "ideology": {
+        "zh": "薩帕塔主義",
+        "en": "Zapatismo"
+      },
       "tags": [
-        "當代主流",
-        "激進主義"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -80,
       "y": -50,
       "category": "Libertarian Left",
-      "description": "以武裝保衛原住民社區，實踐去中心化、蒙面且不謀求國家政權的草根自治體系。",
-      "history": "1994年墨西哥 EZLN 起義所震撼世界的實踐。"
+      "description": {
+        "zh": "以武裝保衛原住民社區，實踐去中心化、蒙面且不謀求國家政權的草根自治體系。",
+        "en": "Defending indigenous communities with arms, practicing a decentralized, masked grassroots autonomy system that does not seek state power."
+      },
+      "history": {
+        "zh": "1994年墨西哥 EZLN 起義所震撼世界的實踐。",
+        "en": "The practice that shocked the world during the 1994 EZLN uprising in Mexico."
+      }
     },
     {
-      "ideology": "民主邦聯主義",
+      "ideology": {
+        "zh": "民主邦聯主義",
+        "en": "Democratic Confederalism"
+      },
       "tags": [
-        "當代主流",
-        "激進主義"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -75,
       "y": -65,
       "category": "Libertarian Left",
-      "description": "主張以去中心化的基層民主、環保與女性主義委員會，來取代壓迫性的民族國家。",
-      "history": "由庫德族領袖奧賈蘭提出，現於敘利亞羅賈瓦實踐。"
+      "description": {
+        "zh": "主張以去中心化的基層民主、環保與女性主義委員會，來取代壓迫性的民族國家。",
+        "en": "Advocates replacing oppressive nation-states with decentralized grassroots democracy, environmentalism, and feminist committees."
+      },
+      "history": {
+        "zh": "由庫德族領袖奧賈蘭提出，現於敘利亞羅賈瓦實踐。",
+        "en": "Proposed by Kurdish leader Abdullah Öcalan, currently practiced in Rojava, Syria."
+      }
     },
     {
-      "ideology": "民主社會主義",
+      "ideology": {
+        "zh": "民主社會主義",
+        "en": "Democratic Socialism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": -40,
       "y": -20,
       "category": "Libertarian Left",
-      "description": "主張在民主體制內透過選舉合法取得政權，逐步將核心產業社會化，取代資本主義。",
-      "history": "與社會民主主義不同，其最終目標仍是消滅資本主義。"
+      "description": {
+        "zh": "主張在民主體制內透過選舉合法取得政權，逐步將核心產業社會化，取代資本主義。",
+        "en": "Advocates achieving power legally through elections within a democratic system, gradually socializing core industries to replace capitalism."
+      },
+      "history": {
+        "zh": "與社會民主主義不同，其最終目標仍是消滅資本主義。",
+        "en": "Unlike social democracy, its ultimate goal remains the abolition of capitalism."
+      }
     },
     {
-      "ideology": "綠色政治",
+      "ideology": {
+        "zh": "綠色政治",
+        "en": "Green Politics"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": -30,
       "y": -30,
       "category": "Libertarian Left",
-      "description": "以環境保護、生態永續、社會正義與非暴力基層民主為四大支柱的政治運動。",
-      "history": "20世紀後期的環保運動成功進入多國國會的結果。"
+      "description": {
+        "zh": "以環境保護、生態永續、社會正義與非暴力基層民主為四大支柱的政治運動。",
+        "en": "A political movement based on the four pillars of environmental protection, ecological sustainability, social justice, and non-violent grassroots democracy."
+      },
+      "history": {
+        "zh": "20世紀後期的環保運動成功進入多國國會的結果。",
+        "en": "The result of environmental movements successfully entering parliaments in multiple countries in the late 20th century."
+      }
     },
     {
-      "ideology": "烏托邦社會主義",
+      "ideology": {
+        "zh": "烏托邦社會主義",
+        "en": "Utopian Socialism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -60,
       "y": -20,
       "category": "Libertarian Left",
-      "description": "不訴諸階級鬥爭，而是透過建立自願性的合作社或理想社區來示範社會主義的優越性。",
-      "history": "馬克思主義出現前的早期和平社會主義流派。"
+      "description": {
+        "zh": "不訴諸階級鬥爭，而是透過建立自願性的合作社或理想社區來示範社會主義的優越性。",
+        "en": "Instead of resorting to class struggle, it demonstrates the superiority of socialism by establishing voluntary cooperatives or ideal communities."
+      },
+      "history": {
+        "zh": "馬克思主義出現前的早期和平社會主義流派。",
+        "en": "Early peaceful socialist schools that appeared before Marxism."
+      }
     },
     {
-      "ideology": "無政府資本主義",
+      "ideology": {
+        "zh": "無政府資本主義",
+        "en": "Anarcho-Capitalism"
+      },
       "tags": [
-        "經濟學派",
-        "激進主義"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 100,
       "y": -100,
       "category": "Libertarian Right",
-      "description": "認為國家本質上是合法化的黑幫，主張將警察、法院與軍隊完全交由自由市場的私營公司競爭提供。",
-      "history": "羅斯巴德與奧地利經濟學派推演出的極右翼無政府境界。"
+      "description": {
+        "zh": "認為國家本質上是合法化的黑幫，主張將警察、法院與軍隊完全交由自由市場的私營公司競爭提供。",
+        "en": "Believes the state is essentially a legalized mafia, advocating that police, courts, and the military should be provided entirely by competing private companies in a free market."
+      },
+      "history": {
+        "zh": "羅斯巴德與奧地利經濟學派推演出的極右翼無政府境界。",
+        "en": "The far-right anarchist vision deduced by Rothbard and the Austrian School of economics."
+      }
     },
     {
-      "ideology": "阿哥拉主義",
+      "ideology": {
+        "zh": "阿哥拉主義",
+        "en": "Agorism"
+      },
       "tags": [
-        "經濟學派",
-        "激進主義"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 90,
       "y": -90,
       "category": "Libertarian Right",
-      "description": "鼓勵人們將所有經濟活動轉入黑市，藉由徹底餓死政府的稅收系統來和平推翻國家。",
-      "history": "塞繆爾·康金提出的「反經濟學」革命戰術。"
+      "description": {
+        "zh": "鼓勵人們將所有經濟活動轉入黑市，藉由徹底餓死政府的稅收系統來和平推翻國家。",
+        "en": "Encourages people to move all economic activity into the black market to peacefully overthrow the state by starving its tax system."
+      },
+      "history": {
+        "zh": "塞繆爾·康金提出的「反經濟學」革命戰術。",
+        "en": "A 'counter-economic' revolutionary tactic proposed by Samuel Konkin."
+      }
     },
     {
-      "ideology": "商業無政府主義",
+      "ideology": {
+        "zh": "商業無政府主義",
+        "en": "Commercial Anarchism"
+      },
       "tags": [
-        "經濟學派",
-        "激進主義"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 95,
       "y": -80,
       "category": "Libertarian Right",
-      "description": "國家被視為最大的市場干預者，主張以純粹的商業合約與交易邏輯取代所有的政治與社會關係。",
-      "history": "將極端經濟學套用於政治秩序的理論模型。"
+      "description": {
+        "zh": "國家被視為最大的市場干預者，主張以純粹的商業合約與交易邏輯取代所有的政治與社會關係。",
+        "en": "The state is seen as the greatest market distorter, advocating for the replacement of all political and social relations with pure commercial contracts and trade logic."
+      },
+      "history": {
+        "zh": "將極端經濟學套用於政治秩序的理論模型。",
+        "en": "A theoretical model applying extreme economics to political order."
+      }
     },
     {
-      "ideology": "加密無政府主義",
+      "ideology": {
+        "zh": "加密無政府主義",
+        "en": "Crypto-anarchism"
+      },
       "tags": [
-        "當代主流",
-        "激進主義"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 85,
       "y": -85,
       "category": "Libertarian Right",
-      "description": "主張利用強大的不可逆密碼學（如加密貨幣）來隱藏身分與交易，從技術上徹底廢除政府徵稅與監管的能力。",
-      "history": "伴隨密碼龐克與比特幣誕生的數位反抗運動。"
+      "description": {
+        "zh": "主張利用強大的不可逆密碼學（如加密貨幣）來隱藏身分與交易，從技術上徹底廢除政府徵稅與監管的能力。",
+        "en": "Advocates the use of strong irreversible cryptography (such as cryptocurrencies) to hide identity and transactions, technically abolishing the government's ability to tax and regulate."
+      },
+      "history": {
+        "zh": "伴隨密碼龐克與比特幣誕生的數位反抗運動。",
+        "en": "A digital resistance movement born alongside cypherpunks and Bitcoin."
+      }
     },
     {
-      "ideology": "最小政府主義",
+      "ideology": {
+        "zh": "最小政府主義",
+        "en": "Minarchism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 70,
       "y": -60,
       "category": "Libertarian Right",
-      "description": "承認需要國家的存在，但其功能應被嚴格限制在僅提供國防、治安與司法，其餘一切交由市場。",
-      "history": "自由意志主義在現實中最具影響力的主流政治分支。"
+      "description": {
+        "zh": "承認需要國家的存在，但其功能應被嚴格限制在僅提供國防、治安與司法，其餘一切交由市場。",
+        "en": "Acknowledges the need for a state, but its functions should be strictly limited to providing defense, policing, and justice, with everything else left to the market."
+      },
+      "history": {
+        "zh": "自由意志主義在現實中最具影響力的主流政治分支。",
+        "en": "The most influential mainstream political branch of libertarianism in reality."
+      }
     },
     {
-      "ideology": "無政府邊疆主義",
+      "ideology": {
+        "zh": "無政府邊疆主義",
+        "en": "Anarcho-frontierism"
+      },
       "tags": [
-        "激進主義"
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 70,
       "y": -80,
       "category": "Libertarian Right",
-      "description": "認為真正的自由只存在於國家管轄不到的邊疆（如荒野、公海或外太空），主張在這些地方建立無管制社會。",
-      "history": "美國拓荒神話在無政府右翼中的浪漫化投射。"
+      "description": {
+        "zh": "認為真正的自由只存在於國家管轄不到的邊疆（如荒野、公海或外太空），主張在這些地方建立無管制社會。",
+        "en": "Believes true freedom exists only in frontiers beyond state jurisdiction (such as wilderness, the high seas, or outer space), advocating for the establishment of unregulated societies there."
+      },
+      "history": {
+        "zh": "美國拓荒神話在無政府右翼中的浪漫化投射。",
+        "en": "A romanticized projection of the American frontier myth within right-wing anarchism."
+      }
     },
     {
-      "ideology": "地理自由意志主義",
+      "ideology": {
+        "zh": "地理自由意志主義",
+        "en": "Geolibertarianism"
+      },
       "tags": [
-        "經濟學派"
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 50,
       "y": -60,
       "category": "Libertarian Right",
-      "description": "絕對支持自由市場與個人勞動所得，但認為土地等自然資源是全人類共有，因此僅對土地徵收單一稅。",
-      "history": "亨利·喬治經濟學與右派自由意志的完美融合。"
+      "description": {
+        "zh": "絕對支持自由市場與個人勞動所得，但認為土地等自然資源是全人類共有，因此僅對土地徵收單一稅。",
+        "en": "Absolutely supports free markets and individual labor income, but believes natural resources like land belong to all humanity, thus advocating only a single tax on land."
+      },
+      "history": {
+        "zh": "亨利·喬治經濟學與右派自由意志的完美融合。",
+        "en": "The perfect fusion of Georgist economics and right-libertarianism."
+      }
     },
     {
-      "ideology": "蒼白自由意志主義",
+      "ideology": {
+        "zh": "蒼白自由意志主義",
+        "en": "Paleolibertarianism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 75,
       "y": -50,
       "category": "Libertarian Right",
-      "description": "在經濟上極度自由，但在文化與社會議題上極端保守，甚至支持私有社區有權驅逐異議份子。",
-      "history": "美國右派將自由市場與傳統基督教保守價值縫合的流派。"
+      "description": {
+        "zh": "在經濟上極度自由，但在文化與社會議題上極端保守，甚至支持私有社區有權驅逐異議份子。",
+        "en": "Extremely free in economic matters, but extremely conservative in cultural and social issues, even supporting the right of private communities to expel dissidents."
+      },
+      "history": {
+        "zh": "美國右派將自由市場與傳統基督教保守價值縫合的流派。",
+        "en": "A school in the American right that stitches free markets with traditional Christian conservative values."
+      }
     },
     {
-      "ideology": "科技自由意志主義",
+      "ideology": {
+        "zh": "科技自由意志主義",
+        "en": "Technolibertarianism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 80,
       "y": -40,
       "category": "Libertarian Right",
-      "description": "狂熱相信不受任何政府管制的科技創新與商業擴張，是解決全人類問題並邁向進化的唯一解方。",
-      "history": "矽谷創投圈與科技巨頭常見的政治哲學。"
+      "description": {
+        "zh": "狂熱相信不受任何政府管制的科技創新與商業擴張，是解決全人類問題並邁向進化的唯一解方。",
+        "en": "Fanatically believes that technological innovation and commercial expansion free from any government regulation are the only solutions to all human problems and the path toward evolution."
+      },
+      "history": {
+        "zh": "矽谷創投圈與科技巨頭常見的政治哲學。",
+        "en": "A common political philosophy within Silicon Valley venture capital and tech giants."
+      }
     },
     {
-      "ideology": "粉紅資本主義",
+      "ideology": {
+        "zh": "粉紅資本主義",
+        "en": "Pink Capitalism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 60,
       "y": -40,
       "category": "Libertarian Right",
-      "description": "在極度自由的市場架構中，大企業積極擁抱並將LGBTQ+等進步社會議題進行徹底的商業化與行銷。",
-      "history": "21世紀後現代資本主義高度適應平權運動的現象。"
+      "description": {
+        "zh": "在極度自由的市場架構中，大企業積極擁抱並將LGBTQ+等進步社會議題進行徹底的商業化與行銷。",
+        "en": "Within an extremely free market framework, large corporations actively embrace and thoroughly commercialize and market progressive social issues like LGBTQ+."
+      },
+      "history": {
+        "zh": "21世紀後現代資本主義高度適應平權運動的現象。",
+        "en": "The phenomenon of 21st-century postmodern capitalism highly adapting to equality movements."
+      }
     },
     {
-      "ideology": "流血心自由意志主義",
+      "ideology": {
+        "zh": "流血心自由意志主義",
+        "en": "Bleeding-heart Libertarianism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 40,
       "y": -40,
       "category": "Libertarian Right",
-      "description": "支持自由市場與有限政府，但其出發點是認為「自由市場才是最能幫助社會底層脫貧的機制」，帶有關懷弱勢的色彩。",
-      "history": "試圖在右翼經濟與左翼社會正義間尋找平衡的現代流派。"
+      "description": {
+        "zh": "支持自由市場與有限政府，但其出發點是認為「自由市場才是最能幫助社會底層脫貧的機制」，帶有關懷弱勢的色彩。",
+        "en": "Supports free markets and limited government, but starting from the belief that 'free markets are the best mechanism for helping the poor escape poverty,' adding a layer of concern for the vulnerable."
+      },
+      "history": {
+        "zh": "試圖在右翼經濟與左翼社會正義間尋找平衡的現代流派。",
+        "en": "A modern school attempting to find balance between right-wing economics and left-wing social justice."
+      }
     },
     {
-      "ideology": "古典自由主義",
+      "ideology": {
+        "zh": "古典自由主義",
+        "en": "Classical Liberalism"
+      },
       "tags": [
-        "歷史流派",
-        "經濟學派"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 60,
       "y": -30,
       "category": "Libertarian Right",
-      "description": "堅持個人生命、自由與財產為天賦人權，主張自由貿易並防範政府權力過度擴張。",
-      "history": "啟蒙時代洛克與亞當·斯密奠定的現代民主基石。"
+      "description": {
+        "zh": "堅持個人生命、自由與財產為天賦人權，主張自由貿易並防範政府權力過度擴張。",
+        "en": "Upholds individual life, liberty, and property as natural rights, advocating free trade and guarding against the excessive expansion of state power."
+      },
+      "history": {
+        "zh": "啟蒙時代洛克與亞當·斯密奠定的現代民主基石。",
+        "en": "The cornerstone of modern democracy established by Locke and Adam Smith during the Enlightenment."
+      }
     },
     {
-      "ideology": "新自由意志主義",
+      "ideology": {
+        "zh": "新自由意志主義",
+        "en": "Neolibertarianism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 50,
       "y": -20,
       "category": "Libertarian Right",
-      "description": "在國內堅持極端的自由市場與減稅，但在外交上卻支持積極的軍事干預以推翻全球獨裁者。",
-      "history": "911事件後部分美國右翼的鷹派轉向。"
+      "description": {
+        "zh": "在國內堅持極端的自由市場與減稅，但在外交上卻支持積極的軍事干預以推翻全球獨裁者。",
+        "en": "Maintains extreme free markets and tax cuts domestically, while advocating active military intervention abroad to overthrow global dictators."
+      },
+      "history": {
+        "zh": "911事件後部分美國右翼的鷹派轉向。",
+        "en": "A hawkish turn among part of the American right after the 9/11 attacks."
+      }
     },
     {
-      "ideology": "激進中間派",
+      "ideology": {
+        "zh": "激進中間派",
+        "en": "Radical Centrism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 0,
       "y": 0,
       "category": "Center",
-      "description": "強烈拒絕傳統左右派的教條綁架，主張大膽結合各方最務實、甚至極端的政策來解決社會問題。",
-      "history": "20世紀末崛起的務實且不拘一格的政治哲學。"
+      "description": {
+        "zh": "強烈拒絕傳統左右派的教條綁架，主張大膽結合各方最務實、甚至極端的政策來解決社會問題。",
+        "en": "Strongly rejects being held hostage by traditional left-right dogmas, advocating for the bold combination of the most pragmatic, or even extreme, policies from all sides to solve social problems."
+      },
+      "history": {
+        "zh": "20世紀末崛起的務實且不拘一格的政治哲學。",
+        "en": "A pragmatic and eclectic political philosophy that emerged in the late 20th century."
+      }
     },
     {
-      "ideology": "社會民主主義",
+      "ideology": {
+        "zh": "社會民主主義",
+        "en": "Social Democracy"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": -20,
       "y": 0,
       "category": "Center",
-      "description": "放棄推翻資本主義，轉而在民主的市場經濟架構中，透過高稅收實行高福利，追求社會公平與勞工保障。",
-      "history": "北歐模式的核心，當代歐洲中左翼的主流。"
+      "description": {
+        "zh": "放棄推翻資本主義，轉而在民主的市場經濟架構中，透過高稅收實行高福利，追求社會公平與勞工保障。",
+        "en": "Abandons the overthrow of capitalism, working instead within a democratic market economy framework to implement high welfare through high taxes, pursuing social equity and labor protection."
+      },
+      "history": {
+        "zh": "北歐模式的核心，當代歐洲中左翼的主流。",
+        "en": "The core of the Nordic model and the mainstream of contemporary European center-left."
+      }
     },
     {
-      "ideology": "第三條道路",
+      "ideology": {
+        "zh": "第三條道路",
+        "en": "Third Way"
+      },
       "tags": [
-        "歷史流派",
-        "當代主流"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 20,
       "y": 0,
       "category": "Center",
-      "description": "試圖調和右派的經濟效率（擁抱自由市場）與左派的社會公平（提供機會均等而非結果均等）。",
-      "history": "1990年代英國布萊爾與美國克林頓政府的標誌性路線。"
+      "description": {
+        "zh": "試圖調和右派的經濟效率（擁抱自由市場）與左派的社會公平（提供機會均等而非結果均等）。",
+        "en": "Attempts to reconcile right-wing economic efficiency (embracing free markets) with left-wing social equity (providing equality of opportunity rather than equality of outcome)."
+      },
+      "history": {
+        "zh": "1990年代英國布萊爾與美國克林頓政府的標誌性路線。",
+        "en": "The landmark route of the 1990s Blair and Clinton administrations in the UK and US."
+      }
     },
     {
-      "ideology": "新自由主義",
+      "ideology": {
+        "zh": "新自由主義",
+        "en": "Neoliberalism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 40,
       "y": 10,
       "category": "Center",
-      "description": "推崇全面去管制、國營企業私有化與全球自由貿易，認為市場機制能解決大多數的社會與經濟問題。",
-      "history": "1980年代雷根與柴契爾夫人所主導的全球經濟轉型。"
+      "description": {
+        "zh": "推崇全面去管制、國營企業私有化與全球自由貿易，認為市場機制能解決大多數的社會與經濟問題。",
+        "en": "Advocates total deregulation, privatization of state-owned enterprises, and global free trade, believing market mechanisms can solve most social and economic problems."
+      },
+      "history": {
+        "zh": "1980年代雷根與柴契爾夫人所主導的全球經濟轉型。",
+        "en": "The global economic transformation led by Reagan and Thatcher in the 1980s."
+      }
     },
     {
-      "ideology": "基督教民主主義",
+      "ideology": {
+        "zh": "基督教民主主義",
+        "en": "Christian Democracy"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 10,
       "y": 20,
       "category": "Center",
-      "description": "在社會議題上秉持保守的天主教傳統價值，但在經濟上支持勞工權益與社會市場經濟。",
-      "history": "戰後德國與多數西歐國家的執政穩定基石。"
+      "description": {
+        "zh": "在社會議題上秉持保守的天主教傳統價值，但在經濟上支持勞工權益與社會市場經濟。",
+        "en": "Upholds conservative Catholic traditional values on social issues, while supporting labor rights and a social market economy."
+      },
+      "history": {
+        "zh": "戰後德國與多數西歐國家的執政穩定基石。",
+        "en": "The cornerstone of governance stability in post-war Germany and most Western European countries."
+      }
     },
     {
-      "ideology": "技術官僚主義",
+      "ideology": {
+        "zh": "技術官僚主義",
+        "en": "Technocracy"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 0,
       "y": 40,
       "category": "Center",
-      "description": "認為國家治理不應交由無知的群眾或政客投票，而應交由具備科學與工程專業的菁英專家理性決策。",
-      "history": "20世紀初因應工業化複雜性而生的社會工程學運動。"
+      "description": {
+        "zh": "認為國家治理不應交由無知的群眾或政客投票，而應交由具備科學與工程專業的菁英專家理性決策。",
+        "en": "Believes state governance should not be left to the votes of ignorant masses or politicians, but to elite experts with scientific and engineering expertise for rational decision-making."
+      },
+      "history": {
+        "zh": "20世紀初因應工業化複雜性而生的社會工程學運動。",
+        "en": "A social engineering movement born in the early 20th century in response to the complexity of industrialization."
+      }
     },
     {
-      "ideology": "分配主義",
+      "ideology": {
+        "zh": "分配主義",
+        "en": "Distributism"
+      },
       "tags": [
-        "經濟學派"
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 0,
       "y": 20,
       "category": "Center",
-      "description": "反對財產集中在少數資本家或極權政府手中，主張生產工具應該盡可能廣泛地分配給每個家庭與小生產者。",
-      "history": "基於天主教社會教義提出的第三種經濟路線。"
+      "description": {
+        "zh": "反對財產集中在少數資本家或極權政府手中，主張生產工具應該盡可能廣泛地分配給每個家庭與小生產者。",
+        "en": "Opposes concentration of property in the hands of a few capitalists or totalitarian governments, advocating for the means of production to be distributed as widely as possible among families and small producers."
+      },
+      "history": {
+        "zh": "基於天主教社會教義提出的第三種經濟路線。",
+        "en": "A third economic route proposed based on Catholic social teaching."
+      }
     },
     {
-      "ideology": "農業主義",
+      "ideology": {
+        "zh": "農業主義",
+        "en": "Agrarianism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -10,
       "y": -10,
       "category": "Center",
-      "description": "認為農業與土地是社會財富與道德的唯一真正來源，強烈推崇農村生活、小農地產與傳統社區價值。",
-      "history": "面對工業化與城市化衝擊時的農民自保與懷舊運動。"
+      "description": {
+        "zh": "認為農業與土地是社會財富與道德的唯一真正來源，強烈推崇農村生活、小農地產與傳統社區價值。",
+        "en": "Believes agriculture and land are the only true sources of social wealth and morality, strongly promoting rural life, small-scale land ownership, and traditional community values."
+      },
+      "history": {
+        "zh": "面對工業化與城市化衝擊時的農民自保與懷舊運動。",
+        "en": "A movement of farmer self-preservation and nostalgia in the face of industrialization and urbanization."
+      }
     },
     {
-      "ideology": "世界聯邦主義",
+      "ideology": {
+        "zh": "世界聯邦主義",
+        "en": "World Federalism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 0,
       "y": -20,
       "category": "Center",
-      "description": "主張在各國政府之上，建立一個擁有實質軍事與法律權力的全球民主聯邦，以徹底終結人類戰爭與氣候危機。",
-      "history": "愛因斯坦與康德等人曾積極呼籲的終極和平願景。"
+      "description": {
+        "zh": "主張在各國政府之上，建立一個擁有實質軍事與法律權力的全球民主聯邦，以徹底終結人類戰爭與氣候危機。",
+        "en": "Advocates the establishment of a global democratic federation above national governments, with substantial military and legal powers, to end human warfare and the climate crisis."
+      },
+      "history": {
+        "zh": "愛因斯坦與康德等人曾積極呼籲的終極和平願景。",
+        "en": "An ultimate vision of peace actively called for by figures like Einstein and Kant."
+      }
     },
     {
-      "ideology": "社會自由主義",
+      "ideology": {
+        "zh": "社會自由主義",
+        "en": "Social Liberalism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 10,
       "y": -20,
       "category": "Center",
-      "description": "堅定支持自由市場與個人權利，但認為政府有責任提供醫療、教育等社會安全網，確保每個人都有平等的發展起點。",
-      "history": "20世紀中葉因應經濟大蕭條而修正的現代自由主義。"
+      "description": {
+        "zh": "堅定支持自由市場與個人權利，但認為政府有責任提供醫療、教育等社會安全網，確保每個人都有平等的發展起點。",
+        "en": "Firmly supports free markets and individual rights, but believes the government has a responsibility to provide social safety nets like healthcare and education to ensure everyone has an equal starting point."
+      },
+      "history": {
+        "zh": "20世紀中葉因應經濟大蕭條而修正的現代自由主義。",
+        "en": "Modern liberalism revised in the 20th century in response to the Great Depression."
+      }
     },
     {
-      "ideology": "海盜政治",
+      "ideology": {
+        "zh": "海盜政治",
+        "en": "Pirate Politics"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 0,
       "y": -40,
       "category": "Center",
-      "description": "強烈主張改革版權法、廢除專利制度、保護網路隱私並確保知識與資訊的絕對自由流通。",
-      "history": "起源於2006年瑞典海盜黨的數位時代全球性運動。"
+      "description": {
+        "zh": "強烈主張改革版權法、廢除專利制度、保護網路隱私並確保知識與資訊的絕對自由流通。",
+        "en": "Strongly advocates for copyright reform, abolition of the patent system, protection of online privacy, and ensuring the absolute free flow of knowledge and information."
+      },
+      "history": {
+        "zh": "起源於2006年瑞典海盜黨的數位時代全球性運動。",
+        "en": "A global digital age movement originating from the Swedish Pirate Party in 2006."
+      }
     },
     {
-      "ideology": "直接民主",
+      "ideology": {
+        "zh": "直接民主",
+        "en": "Direct Democracy"
+      },
       "tags": [
         "當代主流"
       ],
       "x": 0,
       "y": -50,
       "category": "Center",
-      "description": "摒棄腐敗的代議士與政黨，主張所有的公共事務與法案，皆應透過數位科技交由全體公民直接投票決定。",
-      "history": "源於古雅典，現因區塊鏈與網路技術而重新復甦的治理想像。"
+      "description": {
+        "zh": "摒棄腐敗的代議士與政黨，主張所有的公共事務與法案，皆應透過數位科技交由全體公民直接投票決定。",
+        "en": "Rejects corrupt representatives and parties, advocating that all public affairs and bills should be decided through direct voting by all citizens using digital technology."
+      },
+      "history": {
+        "zh": "源於古雅典，現因區塊鏈與網路技術而重新復甦的治理想像。",
+        "en": "Originating in ancient Athens, now a vision of governance resurgent due to blockchain and internet technology."
+      }
     },
     {
-      "ideology": "正統馬克思主義",
+      "ideology": {
+        "zh": "正統馬克思主義",
+        "en": "Orthodox Marxism"
+      },
       "tags": [
-        "歷史流派",
-        "經濟學派"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": -80,
       "y": 0,
       "category": "Center-Left",
-      "description": "嚴格遵循馬克思的歷史唯物主義，認為資本主義必然因其內部矛盾而崩潰。",
-      "history": "19世紀末至20世紀初第二國際的主流思想。"
+      "description": {
+        "zh": "嚴格遵循馬克思的歷史唯物主義，認為資本主義必然因其內部矛盾而崩潰。",
+        "en": "Strictly follows Marx's historical materialism, believing capitalism will inevitably collapse due to its internal contradictions."
+      },
+      "history": {
+        "zh": "19世紀末至20世紀初第二國際的主流思想。",
+        "en": "The mainstream ideology of the Second International from the late 19th to early 20th century."
+      }
     },
     {
-      "ideology": "左翼民粹主義",
+      "ideology": {
+        "zh": "左翼民粹主義",
+        "en": "Left-wing Populism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": -50,
       "y": 10,
       "category": "Center-Left",
-      "description": "訴諸底層群眾，反對財團與政治菁英，主張財富重分配與社會福利。",
-      "history": "近年在南美洲與南歐興起的左派政治運動。"
+      "description": {
+        "zh": "訴諸底層群眾，反對財團與政治菁英，主張財富重分配與社會福利。",
+        "en": "Appeals to the lower classes, opposing corporations and political elites, advocating wealth redistribution and social welfare."
+      },
+      "history": {
+        "zh": "近年在南美洲與南歐興起的左派政治運動。",
+        "en": "A left-wing political movement that has emerged in South America and Southern Europe in recent years."
+      }
     },
     {
-      "ideology": "盧森堡主義",
+      "ideology": {
+        "zh": "盧森堡主義",
+        "en": "Luxemburgism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -85,
       "y": -20,
       "category": "Libertarian Left",
-      "description": "支持無產階級革命，但強烈反對列寧的先鋒黨獨裁，強調工人自發性與大眾民主。",
-      "history": "羅莎·盧森堡對蘇聯革命模式的經典批判。"
+      "description": {
+        "zh": "支持無產階級革命，但強烈反對列寧的先鋒黨獨裁，強調工人自發性與大眾民主。",
+        "en": "Supports proletarian revolution but strongly opposes Lenin's vanguard party dictatorship, emphasizing worker spontaneity and mass democracy."
+      },
+      "history": {
+        "zh": "羅莎·盧森堡對蘇聯革命模式的經典批判。",
+        "en": "Rosa Luxemburg's classic critique of the Soviet revolutionary model."
+      }
     },
     {
-      "ideology": "德萊昂主義",
+      "ideology": {
+        "zh": "德萊昂主義",
+        "en": "De Leonism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -60,
       "y": -10,
       "category": "Libertarian Left",
-      "description": "結合馬克思主義與工團主義，主張透過產業工會來接管生產工具並建立社會主義。",
-      "history": "美國早期馬克思主義者丹尼爾·德萊昂的理論。"
+      "description": {
+        "zh": "結合馬克思主義與工團主義，主張透過產業工會來接管生產工具並建立社會主義。",
+        "en": "Combines Marxism with syndicalism, advocating the takeover of the means of production through industrial unions to establish socialism."
+      },
+      "history": {
+        "zh": "美國早期馬克思主義者丹尼爾·德萊昂的理論。",
+        "en": "The theory of early American Marxist Daniel De Leon."
+      }
     },
     {
-      "ideology": "泛無政府主義",
+      "ideology": {
+        "zh": "泛無政府主義",
+        "en": "Panarchy"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 0,
       "y": -90,
       "category": "Libertarian Center",
-      "description": "主張任何人都有權在同一領土上，自由選擇並加入自己想要的任何政府或無政府體制。",
-      "history": "1860年代由保羅·埃米爾·德·普伊德提出。"
+      "description": {
+        "zh": "主張任何人都有權在同一領土上，自由選擇並加入自己想要的任何政府或無政府體制。",
+        "en": "Advocates that anyone has the right to freely choose and join any government or non-governmental system they desire within the same territory."
+      },
+      "history": {
+        "zh": "1860年代由保羅·埃米爾·德·普伊德提出。",
+        "en": "Proposed in the 1860s by Paul Émile de Puydt."
+      }
     },
     {
-      "ideology": "個人無政府主義",
+      "ideology": {
+        "zh": "個人無政府主義",
+        "en": "Individualist Anarchism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -10,
       "y": -85,
       "category": "Libertarian Center",
-      "description": "極度強調個體意志，反對任何外部力量（無論是國家、宗教或社會多數）對個人的干涉。",
-      "history": "無政府主義中抗拒集體主義的另一大分支。"
+      "description": {
+        "zh": "極度強調個體意志，反對任何外部力量（無論是國家、宗教或社會多數）對個人的干涉。",
+        "en": "Extremely emphasizes individual will, opposing interference in the individual by any external force, be it the state, religion, or social majority."
+      },
+      "history": {
+        "zh": "無政府主義中抗拒集體主義的另一大分支。",
+        "en": "Another major branch of anarchism that resists collectivism."
+      }
     },
     {
-      "ideology": "利己無政府主義",
+      "ideology": {
+        "zh": "利己無政府主義",
+        "en": "Egoist Anarchism"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 0,
       "y": -95,
       "category": "Libertarian Center",
-      "description": "認為道德、法律、國家甚至社會都是虛幻的「幽靈」，唯一真實的只有自我的利益與力量。",
-      "history": "馬克思·施蒂納哲學的極端體現。"
+      "description": {
+        "zh": "認為道德、法律、國家甚至社會都是虛幻的「幽靈」，唯一真實的只有自我的利益與力量。",
+        "en": "Believes morality, law, the state, and even society are illusory 'spooks,' and the only reality is one's own interests and power."
+      },
+      "history": {
+        "zh": "馬克思·施蒂納哲學的極端體現。",
+        "en": "The extreme manifestation of Max Stirner's philosophy."
+      }
     },
     {
-      "ideology": "芝加哥學派",
+      "ideology": {
+        "zh": "芝加哥學派",
+        "en": "Chicago School"
+      },
       "tags": [
-        "經濟學派",
-        "當當代主流"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 70,
       "y": -10,
       "category": "Libertarian Right",
-      "description": "強烈支持自由市場與貨幣主義，認為政府對經濟的干預往往帶來更壞的結果。",
-      "history": "以米爾頓·傅利曼為首的當代主流經濟學派。"
+      "description": {
+        "zh": "強烈支持自由市場與貨幣主義，認為政府對經濟的干預往往帶來更壞的結果。",
+        "en": "Strongly supports free markets and monetarism, believing that government intervention in the economy often yields worse results."
+      },
+      "history": {
+        "zh": "以米爾頓·傅利曼為首的當代主流經濟學派。",
+        "en": "A contemporary mainstream school of economics led by Milton Friedman."
+      }
     },
     {
-      "ideology": "奧地利學派",
+      "ideology": {
+        "zh": "奧地利學派",
+        "en": "Austrian School"
+      },
       "tags": [
-        "經濟學派",
-        "歷史流派"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 80,
       "y": -30,
       "category": "Libertarian Right",
-      "description": "反對任何中央計畫與法幣制度，強調主觀價值論與完全的市場自發秩序。",
-      "history": "海耶克與米塞斯等人奠定的自由市場理論。"
+      "description": {
+        "zh": "反對任何中央計畫與法幣制度，強調主觀價值論與完全的市場自發秩序。",
+        "en": "Opposes any central planning and fiat currency systems, emphasizing subjectivism and spontaneous market order."
+      },
+      "history": {
+        "zh": "海耶克與米塞斯等人奠定的自由市場理論。",
+        "en": "The free-market theory established by Hayek, Mises, and others."
+      }
     },
     {
-      "ideology": "國家資本主義",
+      "ideology": {
+        "zh": "國家資本主義",
+        "en": "State Capitalism"
+      },
       "tags": [
-        "經濟學派",
-        "當代主流"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 70,
       "y": 40,
       "category": "Authoritarian Right",
-      "description": "國家掌握核心產業與資源，但在其餘領域實行資本主義市場機制，以極大化國家利益。",
-      "history": "許多現代威權國家與重商主義國家的實質經濟模式。"
+      "description": {
+        "zh": "國家掌握核心產業與資源，但在其餘領域實行資本主義市場機制，以極大化國家利益。",
+        "en": "The state controls core industries and resources, while implementing capitalist market mechanisms in other areas to maximize national interest."
+      },
+      "history": {
+        "zh": "許多現代威權國家與重商主義國家的實質經濟模式。",
+        "en": "The substantive economic model of many modern authoritarian and mercantilist states."
+      }
     },
     {
-      "ideology": "自由市場保守主義",
+      "ideology": {
+        "zh": "自由市場保守主義",
+        "en": "Free-market Conservatism"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 60,
       "y": 20,
       "category": "Right",
-      "description": "在經濟上擁抱完全的自由競爭與去管制，但在社會議題上堅持傳統的道德與秩序。",
-      "history": "英美右翼政黨內部最普遍的核心意識形態。"
+      "description": {
+        "zh": "在經濟上擁抱完全的自由競爭與去管制，但在社會議題上堅持傳統的道德與秩序。",
+        "en": "Embraces complete free competition and deregulation in economics, but insists on traditional morality and order on social issues."
+      },
+      "history": {
+        "zh": "英美右翼政黨內部最普遍的核心意識形態。",
+        "en": "The most common core ideology within British and American right-wing parties."
+      }
     },
     {
-      "ideology": "新反動主義",
+      "ideology": {
+        "zh": "新反動主義",
+        "en": "Neoreactionaryism"
+      },
       "tags": [
-        "當代主流",
-        "激進主義"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 60,
       "y": 70,
       "category": "Authoritarian Right",
-      "description": "認為民主必然導致平庸與混亂，主張國家應像企業一樣由單一CEO實行絕對理性的專制統治。",
-      "history": "矽谷部分邊緣右翼科技菁英的當代極端哲學 (NRx)。"
+      "description": {
+        "zh": "認為民主內容必然導致平庸與混亂，主張國家應像企業一樣由單一CEO實行絕對理性的專制統治。",
+        "en": "Believes democracy inevitably leads to mediocrity and chaos, advocating that the state should be run like a corporation with absolute rational autocratic rule by a single CEO."
+      },
+      "history": {
+        "zh": "矽谷部分邊緣右翼科技菁英的當代極端哲學 (NRx)。",
+        "en": "A contemporary extreme philosophy (NRx) among some fringe right-wing tech elites in Silicon Valley."
+      }
     },
     {
-      "ideology": "歐多自由主義",
+      "ideology": {
+        "zh": "歐多自由主義",
+        "en": "Ordoliberalism"
+      },
       "tags": [
-        "經濟學派",
-        "歷史流派"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 30,
       "y": -10,
       "category": "Center",
-      "description": "主張國家有責任建立和維持公平的市場競爭秩序，防止壟斷，但不過度干預價格。",
-      "history": "二戰後西德「社會市場經濟」的理論基礎。"
+      "description": {
+        "zh": "主張國家有責任建立和維持公平的市場競爭秩序，防止壟斷，但不過度干預價格。",
+        "en": "Advocates that the state has a responsibility to establish and maintain a fair order of market competition, preventing monopolies but without excessive price intervention."
+      },
+      "history": {
+        "zh": "二戰後西德「社會市場經濟」的理論基礎。",
+        "en": "The theoretical basis for West Germany's 'social market economy' after WWII."
+      }
     },
     {
-      "ideology": "委員會共產主義",
+      "ideology": {
+        "zh": "委員會共產主義",
+        "en": "Council Communism"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -85,
       "y": -60,
       "category": "Libertarian Left",
-      "description": "反對列寧主義的先鋒黨獨裁，主張由基層工人委員會直接控制生產與社會運作。",
-      "history": "1920年代荷蘭與德國左翼馬克思主義者的理論。"
+      "description": {
+        "zh": "反對列寧主義的先鋒黨獨裁，主張由基層工人委員會直接控制生產與社會運作。",
+        "en": "Opposes Leninist vanguard party dictatorship, advocating for direct control of production and social operation by grassroots workers' councils."
+      },
+      "history": {
+        "zh": "1920年代荷蘭與德國左翼馬克思主義者的理論。",
+        "en": "A theory from 1920s Dutch and German left-wing Marxists."
+      }
     },
     {
-      "ideology": "生態女性主義",
+      "ideology": {
+        "zh": "生態女性主義",
+        "en": "Ecofeminism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": -65,
       "y": -45,
       "category": "Libertarian Left",
-      "description": "認為父權制對女性的壓迫與資本主義對自然的破壞同源，必須同時推翻兩者。",
-      "history": "1970年代將激進環保與第二波女性主義結合的思潮。"
+      "description": {
+        "zh": "認為父權制對女性的壓迫與資本主義對自然的破壞同源，必須同時推翻兩者。",
+        "en": "Believes the oppression of women by patriarchy and the destruction of nature by capitalism share the same root, and both must be overthrown together."
+      },
+      "history": {
+        "zh": "1970年代將激進環保與第二波女性主義結合的思潮。",
+        "en": "A school of thought from the 1970s that combined radical environmentalism with second-wave feminism."
+      }
     },
     {
-      "ideology": "市民民族主義",
+      "ideology": {
+        "zh": "市民民族主義",
+        "en": "Civic Nationalism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 10,
       "y": -10,
       "category": "Center",
-      "description": "以共同的政治價值觀、憲法和法律作為國家認同的基礎，而非血統或種族。",
-      "history": "法國大革命與美國建國理念中的包容性民族建構。"
+      "description": {
+        "zh": "以共同的政治價值觀、憲法和法律作為國家認同的基礎，而非血統或種族。",
+        "en": "Uses shared political values, a constitution, and laws as the basis for national identity, rather than lineage or race."
+      },
+      "history": {
+        "zh": "法國大革命與美國建國理念中的包容性民族建構。",
+        "en": "Inclusive nation-building within the ideals of the French Revolution and the founding of the United States."
+      }
     },
     {
-      "ideology": "自願主義",
+      "ideology": {
+        "zh": "自願主義",
+        "en": "Voluntaryism"
+      },
       "tags": [
-        "經濟學派",
-        "激進主義"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 85,
       "y": -95,
       "category": "Libertarian Right",
-      "description": "認為所有人類交往都必須基於自願同意，強烈反對任何形式的國家強制力與稅收。",
-      "history": "無政府資本主義與自由意志主義的倫理學基石。"
+      "description": {
+        "zh": "認為所有人類交往都必須基於自願同意，強烈反對任何形式的國家強制力與稅收。",
+        "en": "Believes all human interactions must be based on voluntary consent, strongly opposing any form of state coercion and taxation."
+      },
+      "history": {
+        "zh": "無政府資本主義與自由意志主義的倫理學基石。",
+        "en": "The ethical cornerstone of anarcho-capitalism and libertarianism."
+      }
     },
     {
-      "ideology": "波薩達斯主義",
+      "ideology": {
+        "zh": "波薩達斯主義",
+        "en": "Posadism"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -95,
       "y": 95,
       "category": "Authoritarian Left",
-      "description": "極端荒誕的托派分支，主張發動核戰以毀滅資本主義，並期待外星共產主義者降臨協助。",
-      "history": "20世紀中葉由阿根廷托派學者 J. 波薩達斯提出。"
+      "description": {
+        "zh": "極端荒誕的托派分支，主張發動核戰以毀滅資本主義，並期待外星共產主義者降臨協助。",
+        "en": "An extremely absurd Trotskyist offshoot advocating for nuclear war to destroy capitalism and expecting extraterrestrial communists to intervene."
+      },
+      "history": {
+        "zh": "20世紀中葉由阿根廷托派學者 J. 波薩達斯提出。",
+        "en": "Proposed in the mid-20th century by Argentine Trotskyist J. Posadas."
+      }
     },
     {
-      "ideology": "非洲社會主義",
+      "ideology": {
+        "zh": "非洲社會主義",
+        "en": "African Socialism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -50,
       "y": 40,
       "category": "Authoritarian Left",
-      "description": "拒絕蘇聯模式，主張回歸非洲傳統的集體互助與村落公社，並由強勢國家推動發展。",
-      "history": "1960年代非殖民化後多國領袖（如尼雷爾的烏賈馬）的實驗。"
+      "description": {
+        "zh": "拒絕蘇聯模式，主張回歸非洲傳統的集體互助與村落公社，並由強勢國家推動發展。",
+        "en": "Rejects the Soviet model, advocating for a return to traditional African collective mutual aid and village communes, driven by a strong state."
+      },
+      "history": {
+        "zh": "1960年代非殖民化後多國領袖（如尼雷爾的烏賈馬）的實驗。",
+        "en": "An experiment by multiple leaders (like Nyerere's Ujamaa) after the decolonization of the 1960s."
+      }
     },
     {
-      "ideology": "復興黨主義",
+      "ideology": {
+        "zh": "復興黨主義",
+        "en": "Ba'athism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -30,
       "y": 70,
       "category": "Authoritarian Left",
-      "description": "結合阿拉伯民族主義、世俗主義與國家社會主義，建立一黨專制政權。",
-      "history": "曾統治伊拉克（海珊）與敘利亞（阿薩德家族）的核心理念。"
+      "description": {
+        "zh": "結合阿拉伯民族主義、世俗主義與國家社會主義，建立一黨專制政權。",
+        "en": "Combines Arab nationalism, secularism, and state socialism to establish a one-party authoritarian regime."
+      },
+      "history": {
+        "zh": "曾統治伊拉克（海珊）與敘利亞（阿薩德家族）的核心理念。",
+        "en": "The core ideology that ruled Iraq (Saddam) and Syria (the Assad family)."
+      }
     },
     {
-      "ideology": "勞工錫安主義",
+      "ideology": {
+        "zh": "勞工錫安主義",
+        "en": "Labor Zionism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -40,
       "y": 10,
       "category": "Center-Left",
-      "description": "相信猶太人必須透過自我勞動與集體農業（基布茲）來建國，融合民族主義與社會主義。",
-      "history": "以色列建國初期的主流政治力量。"
+      "description": {
+        "zh": "相信猶太人必須透過自我勞動與集體農業（基布茲）來建國，融合民族主義與社會主義。",
+        "en": "Believes Jews must build a nation through self-labor and collective farming (Kibbutz), merging nationalism with socialism."
+      },
+      "history": {
+        "zh": "以色列建國初期的主流政治力量。",
+        "en": "The mainstream political force in the early days of Israel's founding."
+      }
     },
     {
-      "ideology": "昭和國家主義",
+      "ideology": {
+        "zh": "昭和國家主義",
+        "en": "Showa Statism"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 40,
       "y": 90,
       "category": "Authoritarian Right",
-      "description": "極端尊皇攘夷、軍國主義擴張與反西方思想的結合，實施嚴密的國內統制。",
-      "history": "二戰期間大日本帝國的法西斯化意識形態。"
+      "description": {
+        "zh": "極端尊皇攘夷、軍國主義擴張與反西方思想的結合，實施嚴密的國內統制。",
+        "en": "A combination of extreme reverence for the Emperor, militaristic expansion, and anti-Western thought, implementing strict domestic control."
+      },
+      "history": {
+        "zh": "二戰期間大日本帝國的法西斯化意識形態。",
+        "en": "The fascist ideology of the Empire of Japan during WWII."
+      }
     },
     {
-      "ideology": "教權法西斯主義",
+      "ideology": {
+        "zh": "教權法西斯主義",
+        "en": "Clerical Fascism"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 20,
       "y": 95,
       "category": "Authoritarian Right",
-      "description": "將法西斯獨裁體制與狂熱的宗教教義相結合，神職人員在政權中扮演核心角色。",
-      "history": "如克羅埃西亞的烏斯塔沙與早期的奧地利教權法西斯。"
+      "description": {
+        "zh": "將法西斯獨裁體制與狂熱的宗教教義相結合，神職人員在政權中扮演核心角色。",
+        "en": "Combines a fascist dictatorship with fanatical religious doctrine, where clergy play a core role in the regime."
+      },
+      "history": {
+        "zh": "如克羅埃西亞的烏斯塔沙與早期的奧地利教權法西斯。",
+        "en": "Examples include Croatia's Ustaše and early Austrian Clerical Fascism."
+      }
     },
     {
-      "ideology": "整合主義",
+      "ideology": {
+        "zh": "整合主義",
+        "en": "Integralism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 10,
       "y": 85,
       "category": "Authoritarian Right",
-      "description": "主張社會應像人體器官一樣各司其職，由國家或教會統一指揮，反對個人主義與階級鬥爭。",
-      "history": "20世紀初流行於葡萄牙、巴西等天主教國家的右翼運動。"
+      "description": {
+        "zh": "主張社會應像人體器官一樣各司其職，由國家或教會統一指揮，反對個人主義與階級鬥爭。",
+        "en": "Advocates that society should function like human organs, each with its duty, unified under the command of the state or church, opposing individualism and class struggle."
+      },
+      "history": {
+        "zh": "20世紀初流行於葡萄牙、巴西等天主教國家的右翼運動。",
+        "en": "A right-wing movement popular in early 20th-century Catholic countries like Portugal and Brazil."
+      }
     },
     {
-      "ideology": "印度教民族主義",
+      "ideology": {
+        "zh": "印度教民族主義",
+        "en": "Hindu Nationalism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 30,
       "y": 65,
       "category": "Authoritarian Right",
-      "description": "主張印度應以印度教文化與價值為國族核心，對非印度教徒採取排斥或同化政策。",
-      "history": "印度人民黨 (BJP) 與國民志願服務團 (RSS) 的核心理念。"
+      "description": {
+        "zh": "主張印度應以印度教文化與價值為國族核心，對非印度教徒採取排斥或同化政策。",
+        "en": "Advocates that India should use Hindu culture and values as its national core, with policies of exclusion or assimilation for non-Hindus."
+      },
+      "history": {
+        "zh": "印度人民黨 (BJP) 與國民志願服務團 (RSS) 的核心理念。",
+        "en": "The core ideology of the Bharatiya Janata Party (BJP) and the Rashtriya Swayamsevak Sangh (RSS)."
+      }
     },
     {
-      "ideology": "卡洛斯主義",
+      "ideology": {
+        "zh": "卡洛斯主義",
+        "en": "Carlism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 15,
       "y": 80,
       "category": "Authoritarian Right",
-      "description": "西班牙的傳統主義運動，堅守「上帝、祖國、國王」，反對任何形式的現代自由主義。",
-      "history": "引發19世紀西班牙多次內戰的保皇派思潮。"
+      "description": {
+        "zh": "西班牙的傳統主義運動，堅守「上帝、祖國、國王」，反對任何形式的現代自由主義。",
+        "en": "A Spanish traditionalist movement upholding 'God, Fatherland, King,' opposing any form of modern liberalism."
+      },
+      "history": {
+        "zh": "引發19世紀西班牙多次內戰的保皇派思潮。",
+        "en": "A monarchist school of thought that triggered several civil wars in 19th-century Spain."
+      }
     },
     {
-      "ideology": "沙皇專制",
+      "ideology": {
+        "zh": "沙皇專制",
+        "en": "Tsarist Autocracy"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 25,
       "y": 95,
       "category": "Authoritarian Right",
-      "description": "君權神授的絕對獨裁，皇帝掌握所有世俗與宗教（東正教）權力，沒有憲法制衡。",
-      "history": "俄羅斯帝國直至1917年革命前的統治模式。"
+      "description": {
+        "zh": "君權神授的絕對獨裁，皇帝掌握所有世俗與宗教（東正教）權力，沒有憲法制衡。",
+        "en": "Absolute dictatorship by divine right, where the Tsar holds all secular and religious (Orthodox) power without constitutional checks."
+      },
+      "history": {
+        "zh": "俄羅斯帝國直至1917年革命前的統治模式。",
+        "en": "The mode of rule for the Russian Empire until the 1917 Revolution."
+      }
     },
     {
-      "ideology": "不自由的民主",
+      "ideology": {
+        "zh": "不自由的民主",
+        "en": "Illiberal Democracy"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 20,
       "y": 50,
       "category": "Authoritarian Right",
-      "description": "雖有定期的民主選舉，但政府透過控制媒體與司法系統來實質打壓反對派與公民自由。",
-      "history": "當代如匈牙利等部分民主倒退國家的現象。"
+      "description": {
+        "zh": "雖有定期的民主選舉，但政府透過控制媒體與司法系統來實質打壓反對派與公民自由。",
+        "en": "Despite regular democratic elections, the government uses control over the media and justice system to substantially suppress opposition and civic liberties."
+      },
+      "history": {
+        "zh": "當代如匈牙利等部分民主倒退國家的現象。",
+        "en": "A phenomenon in some contemporary countries with democratic backsliding, such as Hungary."
+      }
     },
     {
-      "ideology": "霍普主義",
+      "ideology": {
+        "zh": "霍普主義",
+        "en": "Hoppeanism"
+      },
       "tags": [
-        "當代主流",
-        "激進主義"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 80,
       "y": -60,
       "category": "Libertarian Right",
-      "description": "極端自由市場無政府主義，主張透過私有產權排斥異己，甚至可以建立「不容忍民主與左派」的私有契約社區。",
-      "history": "漢斯-赫爾曼·霍普提出的極右翼無政府資本主義分支。"
+      "description": {
+        "zh": "極端自由市場無政府主義，主張透過私有產權排斥異己，甚至可以建立「不容忍民主與左派」的私有契約社區。",
+        "en": "Extreme free-market anarchism advocating for the exclusion of dissidents through private property, even supporting private contract communities that do not tolerate democracy or the left."
+      },
+      "history": {
+        "zh": "漢斯-赫爾曼·霍普提出的極右翼無政府資本主義分支。",
+        "en": "A branch of far-right anarcho-capitalism proposed by Hans-Hermann Hoppe."
+      }
     },
     {
-      "ideology": "市場無政府主義",
+      "ideology": {
+        "zh": "市場無政府主義",
+        "en": "Market Anarchism"
+      },
       "tags": [
-        "經濟學派",
-        "激進主義"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 95,
       "y": -85,
       "category": "Libertarian Right",
-      "description": "相信所有社會服務（包含法律與治安）都可以且應該由自由市場中的營利機構提供。",
-      "history": "將資本主義邏輯推演至極致的理論模型。"
+      "description": {
+        "zh": "相信所有社會服務（包含法律與治安）都可以且應該由自由市場中的營利機構提供。",
+        "en": "Believes all social services (including law and policing) can and should be provided by profit-making institutions in a free market."
+      },
+      "history": {
+        "zh": "將資本主義邏輯推演至極致的理論模型。",
+        "en": "A theoretical model pushing capitalist logic to its absolute limit."
+      }
     },
     {
-      "ideology": "自由放任主義",
+      "ideology": {
+        "zh": "自由放任主義",
+        "en": "Laissez-faire"
+      },
       "tags": [
-        "經濟學派",
-        "歷史流派"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 75,
       "y": -45,
       "category": "Libertarian Right",
-      "description": "反對政府對經濟的任何干預、補貼或關稅，認為純粹的市場競爭能帶來最大繁榮。",
-      "history": "19世紀古典經濟學的核心經濟政策主張。"
+      "description": {
+        "zh": "反對政府對經濟的任何干預、補貼或關稅，認為純粹的市場競爭能帶來最大繁榮。",
+        "en": "Opposes any government intervention, subsidies, or tariffs in the economy, believing pure market competition brings maximum prosperity."
+      },
+      "history": {
+        "zh": "19世紀古典經濟學的核心經濟政策主張。",
+        "en": "The core economic policy advocacy of 19th-century classical economics."
+      }
     },
     {
-      "ideology": "左翼羅斯巴德主義",
+      "ideology": {
+        "zh": "左翼羅斯巴德主義",
+        "en": "Left-Rothbardianism"
+      },
       "tags": [
-        "經濟學派",
-        "激進主義"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": 60,
       "y": -70,
       "category": "Libertarian Right",
-      "description": "結合無政府資本主義與左派反權威精神，認為國家特權才是導致大企業剝削的主因，自由市場會帶來平等。",
-      "history": "試圖橋接極端自由市場與社會正義的獨特學派。"
+      "description": {
+        "zh": "結合無政府資本主義與左派反權威精神，認為國家特權才是導致大企業剝削的主因，自由市場會帶來平等。",
+        "en": "Combines anarcho-capitalism with a left-wing anti-authoritarian spirit, believing state privilege is the main cause of corporate exploitation, and that free markets bring equality."
+      },
+      "history": {
+        "zh": "試圖橋接極端自由市場與社會正義的獨特學派。",
+        "en": "A unique school attempting to bridge extreme free markets and social justice."
+      }
     },
     {
-      "ideology": "財產權主義",
+      "ideology": {
+        "zh": "財產權主義",
+        "en": "Properitarianism"
+      },
       "tags": [
-        "經濟學派"
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": 85,
       "y": -50,
       "category": "Libertarian Right",
-      "description": "認為所有的人權（包含言論自由）本質上都是財產權的延伸，產權不可侵犯是唯一道德標準。",
-      "history": "部分美國自由意志主義者的核心倫理觀。"
+      "description": {
+        "zh": "認為所有的人權（包含言論自由）本質上都是財產權的延伸，產權不可侵犯是唯一道德標準。",
+        "en": "Believes all human rights (including freedom of speech) are essentially extensions of property rights, and that the inviolability of property is the only moral standard."
+      },
+      "history": {
+        "zh": "部分美國自由意志主義者的核心倫理觀。",
+        "en": "The core ethical view of some American libertarians."
+      }
     },
     {
-      "ideology": "無政府和平主義",
+      "ideology": {
+        "zh": "無政府和平主義",
+        "en": "Anarcho-pacifism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -85,
       "y": -85,
       "category": "Libertarian Left",
-      "description": "拒絕一切形式的暴力（包含國家的強制力與武裝革命），主張以和平不合作運動來推翻統治。",
-      "history": "受托爾斯泰與甘地影響的非暴力無政府流派。"
+      "description": {
+        "zh": "拒絕一切形式的暴力（包含國家的強制力與武裝革命），主張以和平不合作運動來推翻統治。",
+        "en": "Rejects all forms of violence (including state coercion and armed revolution), advocating for peaceful non-cooperation to overthrow rule."
+      },
+      "history": {
+        "zh": "受托爾斯泰與甘地影響的非暴力無政府流派。",
+        "en": "A non-violent anarchist school influenced by Tolstoy and Gandhi."
+      }
     },
     {
-      "ideology": "無政府原始主義",
+      "ideology": {
+        "zh": "無政府原始主義",
+        "en": "Anarcho-primitivism"
+      },
       "tags": [
-        "激進主義"
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -90,
       "y": -90,
       "category": "Libertarian Left",
-      "description": "認為工業文明與農業社會本身就是壓迫的根源，主張人類應回歸採集狩獵的原始部落生活。",
-      "history": "對現代科技與文明最極端的批判與反思。"
+      "description": {
+        "zh": "認為工業文明與農業社會本身就是壓迫的根源，主張人類應回歸採集狩獵的原始部落生活。",
+        "en": "Believes industrial civilization and agrarian society are themselves the roots of oppression, advocating for humanity to return to hunter-gatherer primitive tribal life."
+      },
+      "history": {
+        "zh": "對現代科技與文明最極端的批判與反思。",
+        "en": "The most extreme critique and reflection on modern technology and civilization."
+      }
     },
     {
-      "ideology": "自治馬克思主義",
+      "ideology": {
+        "zh": "自治馬克思主義",
+        "en": "Autonomist Marxism"
+      },
       "tags": [
-        "歷史流派",
-        "經濟學派"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": -75,
       "y": -55,
       "category": "Libertarian Left",
-      "description": "強調工人階級在日常生活中對資本的自發性反抗，不依賴政黨與工會的領導。",
-      "history": "1960年代義大利左翼運動中興起的理論。"
+      "description": {
+        "zh": "強調工人階級在日常生活中對資本的自發性反抗，不依賴政黨與工會的領導。",
+        "en": "Emphasizes the spontaneous resistance of the working class to capital in everyday life, not relying on the leadership of parties and unions."
+      },
+      "history": {
+        "zh": "1960年代義大利左翼運動中興起的理論。",
+        "en": "A theory that emerged in the 1960s Italian left-wing movements."
+      }
     },
     {
-      "ideology": "綱領主義",
+      "ideology": {
+        "zh": "綱領主義",
+        "en": "Platformism"
+      },
       "tags": [
-        "歷史流派",
-        "激進主義"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "激進主義", "en": "Radicalism" }
       ],
       "x": -85,
       "y": -70,
       "category": "Libertarian Left",
-      "description": "認為無政府主義者必須組織成一個擁有嚴格紀律與共同行動綱領的政治實體，以對抗國家機器。",
-      "history": "馬赫諾等人在俄國革命失敗後提出的組織理論。"
+      "description": {
+        "zh": "認為無政府主義者必須組織成一個擁有嚴格紀律與共同行動綱領的政治實體，以對抗國家機器。",
+        "en": "Believes anarchists must organize into a political entity with strict discipline and a common platform of action to combat the state machinery."
+      },
+      "history": {
+        "zh": "馬赫諾等人在俄國革命失敗後提出的組織理論。",
+        "en": "The organizational theory proposed by Makhno and others after the failure of the Russian Revolution."
+      }
     },
     {
-      "ideology": "基爾特社會主義",
+      "ideology": {
+        "zh": "基爾特社會主義",
+        "en": "Guild Socialism"
+      },
       "tags": [
-        "歷史流派",
-        "經濟學派"
+        { "zh": "歷史流派", "en": "Historical School" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": -60,
       "y": -30,
       "category": "Libertarian Left",
-      "description": "主張企業應交由工會（基爾特）內部民主管理，而國家僅作為協調消費者與生產者的仲裁機構。",
-      "history": "20世紀初英國盛行的去中心化社會主義方案。"
+      "description": {
+        "zh": "主張企業應交由工會（基爾特）內部民主管理，而國家僅作為協調消費者與生產者的仲裁機構。",
+        "en": "Advocates that enterprises should be democratically managed within labor unions (guilds), with the state acting only as an arbitration body coordinating consumers and producers."
+      },
+      "history": {
+        "zh": "20世紀初英國盛行的去中心化社會主義方案。",
+        "en": "A decentralized socialist scheme popular in the UK in the early 20th century."
+      }
     },
     {
-      "ideology": "農業社會主義",
+      "ideology": {
+        "zh": "農業社會主義",
+        "en": "Agrarian Socialism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -55,
       "y": -15,
       "category": "Libertarian Left",
-      "description": "反對工業化帶來的異化，主張以農村互助公社為基礎，平均分配土地與資源。",
-      "history": "前工業化國家（如俄國社會革命黨）常見的左派農民運動。"
+      "description": {
+        "zh": "反對工業化帶來的異化，主張以農村互助公社為基礎，平均分配土地與資源。",
+        "en": "Opposes the alienation caused by industrialization, advocating for rural mutual aid communes to distribute land and resources equally."
+      },
+      "history": {
+        "zh": "前工業化國家（如俄國社會革命黨）常見的左派農民運動。",
+        "en": "A common left-wing peasant movement in pre-industrial countries (such as the Russian Socialist Revolutionary Party)."
+      }
     },
     {
-      "ideology": "北歐模式",
+      "ideology": {
+        "zh": "北歐模式",
+        "en": "Nordic Model"
+      },
       "tags": [
-        "當代主流",
-        "經濟學派"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" },
+        { "zh": "經濟學派", "en": "Economic School" }
       ],
       "x": -55,
       "y": -25,
       "category": "Libertarian Left",
-      "description": "結合自由市場資本主義與龐大的福利國家，依靠強大的工會與高稅收來實現高度的社會平權。",
-      "history": "當代瑞典、挪威、丹麥等國實行的成功社會民主制度。"
+      "description": {
+        "zh": "結合自由市場資本主義與龐大的福利國家，依靠強大的工會與高稅收來實現高度的社會平權。",
+        "en": "Combines free-market capitalism with a massive welfare state, relying on strong labor unions and high taxes to achieve high levels of social equality."
+      },
+      "history": {
+        "zh": "當代瑞典、挪威、丹麥等國實行的成功社會民主制度。",
+        "en": "The successful social democratic system implemented in contemporary Sweden, Norway, Denmark, etc."
+      }
     },
     {
-      "ideology": "喬治主義",
+      "ideology": {
+        "zh": "喬治主義",
+        "en": "Georgism"
+      },
       "tags": [
-        "經濟學派",
-        "歷史流派"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 10,
       "y": -40,
       "category": "Center",
-      "description": "認為人類自己創造的財富應歸個人所有，但自然界與土地的價值應屬於全社會，主張僅徵收單一土地價值稅。",
-      "history": "19世紀亨利·喬治提出，影響了許多現代土地改革理念。"
+      "description": {
+        "zh": "認為人類自己創造的財富應歸個人所有，但自然界與土地的價值應屬於全社會，主張僅徵收單一土地價值稅。",
+        "en": "Believes wealth created by people should belong to individuals, but the value of nature and land should belong to all of society, advocating only a single land value tax."
+      },
+      "history": {
+        "zh": "19世紀亨利·喬治提出，影響了許多現代土地改革理念。",
+        "en": "Proposed by Henry George in the 19th century, influencing many modern land reform concepts."
+      }
     },
     {
-      "ideology": "社會信用論",
+      "ideology": {
+        "zh": "社會信用論",
+        "en": "Social Credit"
+      },
       "tags": [
-        "經濟學派",
-        "歷史流派"
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -15,
       "y": 15,
       "category": "Center",
-      "description": "認為資本主義的問題在於購買力不足，主張政府應直接發放全民基本紅利，但不廢除私有制。",
-      "history": "1920年代由C.H. 道格拉斯提出的獨特經濟改良方案。"
+      "description": {
+        "zh": "認為資本主義的問題在於購買力不足，主張政府應直接發放全民基本紅利，但不廢除私有制。",
+        "en": "Believes the problem with capitalism is insufficient purchasing power, advocating for the government to issue universal basic dividends without abolishing private property."
+      },
+      "history": {
+        "zh": "1920年代由C.H. 道格拉斯提出的獨特經濟改良方案。",
+        "en": "A unique economic reform proposal from the 1920s by C.H. Douglas."
+      }
     },
     {
-      "ideology": "功利主義",
+      "ideology": {
+        "zh": "功利主義",
+        "en": "Utilitarianism"
+      },
       "tags": [
-        "歷史流派"
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": 0,
       "y": -10,
       "category": "Center",
-      "description": "所有的政策與道德判斷，都應以是否能為「最大多數人帶來最大幸福」為唯一標準。",
-      "history": "邊沁與彌爾奠定的倫理學，深刻影響現代公共政策評估。"
+      "description": {
+        "zh": "所有的政策與道德判斷，都應以是否能為「最大多數人帶來最大幸福」為唯一標準。",
+        "en": "All policy and moral judgments should be based solely on whether they bring 'the greatest happiness to the greatest number of people.'"
+      },
+      "history": {
+        "zh": "邊沁與彌爾奠定的倫理學，深刻影響現代公共政策評估。",
+        "en": "The ethics established by Bentham and Mill, profoundly influencing modern public policy assessment."
+      }
     },
     {
-      "ideology": "進步保守主義",
+      "ideology": {
+        "zh": "進步保守主義",
+        "en": "Progressive Conservatism"
+      },
       "tags": [
-        "當代主流"
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 15,
       "y": 15,
       "category": "Center",
-      "description": "支持社會安全網與適度的環保法規，但認為這些改革必須在維護傳統社會秩序與制度的框架下循序漸進。",
-      "history": "英國保守黨在一國保守主義時期的核心施政精神。",
+      "description": {
+        "zh": "支持社會安全網與適度的環保法規，但認為這些改革必須在維護傳統社會秩序與制度的框架下循序漸進。",
+        "en": "Supports social safety nets and moderate environmental regulations, but believes these reforms must proceed gradually within the framework of maintaining traditional social order and institutions."
+      },
+      "history": {
+        "zh": "英國保守黨在一國保守主義時期的核心施政精神。",
+        "en": "The core governance spirit of the British Conservative Party during the era of One Nation Conservatism."
+      },
       "type": "ideology"
     }
   ],
   "special_entities": [
     {
-      "ideology": "約瑟夫·史達林 (史達林主義)",
+      "ideology": {
+        "zh": "約瑟夫·史達林 (史達林主義)",
+        "en": "Joseph Stalin (Stalinism)"
+      },
       "category": "Authoritarian Left",
       "type": "figure",
       "x": -95,
       "y": 100,
       "avatar": "https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2016/03/15/160315093722__87974594_32be803c-efcf-47ef-9a17-197106074016.jpg.webp",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "史達林確立了蘇聯的指令經濟與極權體制，透過大規模工業化與政治清洗實現其主義實踐。",
-      "history": "1920-50年代蘇聯最高領導人。"
+      "description": {
+        "zh": "史達林確立了蘇聯的指令經濟與極權體制，透過大規模工業化與政治清洗實現其主義實踐。",
+        "en": "Stalin established the Soviet Union's command economy and totalitarian system, implementing his ideology through massive industrialization and political purges."
+      },
+      "history": {
+        "zh": "1920-50年代蘇聯最高領導人。",
+        "en": "Supreme leader of the Soviet Union from the 1920s to the 1950s."
+      }
     },
     {
-      "ideology": "金日成 (主體思想)",
+      "ideology": {
+        "zh": "金日成 (主體思想)",
+        "en": "Kim Il-sung (Juche)"
+      },
       "category": "Authoritarian Left",
       "type": "figure",
       "x": -85,
       "y": 95,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoqPfzkzykNvB_LegIS6SEb-76SHqvS_qVSw&s",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "當代主流"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
-      "description": "金日成創立的主體思想強調民族自力更生與領袖絕對崇拜，是北韓國家意識的核心。",
-      "history": "朝鮮民主主義人民共和國開國領袖。"
+      "description": {
+        "zh": "金日成創立的主體思想強調民族自力更生與領袖絕對崇拜，是北韓國家意識的核心。",
+        "en": "Juche, created by Kim Il-sung, emphasizes national self-reliance and absolute worship of the leader, serving as the core of North Korean national consciousness."
+      },
+      "history": {
+        "zh": "朝鮮民主主義人民共和國開國領袖。",
+        "en": "The founding leader of the Democratic People's Republic of Korea."
+      }
     },
     {
-      "ideology": "毛澤東 (毛澤東思想)",
+      "ideology": {
+        "zh": "毛澤東 (毛澤東思想)",
+        "en": "Mao Zedong (Maoism)"
+      },
       "category": "Authoritarian Left",
       "type": "figure",
       "x": -80,
       "y": 85,
       "avatar": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-527191268-copy.jpg",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "毛澤東將馬克思主義本土化，強調農村武裝革命與持續的階級鬥爭實踐。",
-      "history": "中華人民共和國主要締造者。"
+      "description": {
+        "zh": "毛澤東將馬克思主義本土化，強調農村武裝革命與持續的階級鬥爭實踐。",
+        "en": "Mao Zedong localized Marxism, emphasizing rural armed revolution and the practice of continuous class struggle."
+      },
+      "history": {
+        "zh": "中華人民共和國主要締造者。",
+        "en": "The primary founder of the People's Republic of China."
+      }
     },
     {
-      "ideology": "恩維爾·霍查 (霍查主義)",
+      "ideology": {
+        "zh": "恩維爾·霍查 (霍查主義)",
+        "en": "Enver Hoxha (Hoxhaism)"
+      },
       "category": "Authoritarian Left",
       "type": "figure",
       "x": -75,
       "y": 90,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuXosYy9_NnBH0HoX6rpQJ6SelvN2KA-MJoQ&s",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "霍查堅守教條式的史達林主義，將阿爾巴尼亞打造為極度孤立且高度武裝的社會體系。",
-      "history": "阿爾巴尼亞長期領導人。"
+      "description": {
+        "zh": "霍查堅守教條式的史達林主義，將阿爾巴尼亞打造為極度孤立且高度武裝的社會體系。",
+        "en": "Hoxha adhered to dogmatic Stalinism, turning Albania into an extremely isolated and highly armed social system."
+      },
+      "history": {
+        "zh": "阿爾巴尼亞長期領導人。",
+        "en": "Long-time leader of Albania."
+      }
     },
     {
-      "ideology": "列夫·托洛茨基 (托洛茨基主義)",
+      "ideology": {
+        "zh": "列夫·托洛茨基 (托洛茨基主義)",
+        "en": "Leon Trotsky (Trotskyism)"
+      },
       "category": "Authoritarian Left",
       "type": "figure",
       "x": -70,
       "y": 70,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdYz4aFQnpk1T0oz9wx8S871pWbWZ0-YYsgg&s",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "托洛茨基主張不斷革命論與工人民主，反對史達林主義的官僚體系與單一國家社會主義。",
-      "history": "蘇聯紅軍創建者，後遭清洗流亡。"
+      "description": {
+        "zh": "托洛茨基主張不斷革命論與工人民主，反對史達林主義的官僚體系與單一國家社會主義。",
+        "en": "Trotsky advocated for the theory of permanent revolution and workers' democracy, opposing the Stalinist bureaucracy and socialism in one country."
+      },
+      "history": {
+        "zh": "蘇聯紅軍創建者，後遭清洗流亡。",
+        "en": "Founder of the Soviet Red Army, later purged and exiled."
+      }
     },
     {
-      "ideology": "約瑟夫·狄托 (狄托主義)",
+      "ideology": {
+        "zh": "約瑟夫·狄托 (狄托主義)",
+        "en": "Josip Broz Tito (Titoism)"
+      },
       "type": "figure",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/1/13/Josip_Broz_Tito_uniform_portrait.jpg",
       "tags": [
-        "歷史人物",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -50,
       "y": 50,
       "category": "Authoritarian Left",
-      "description": "狄托在冷戰中維持中立，實行工人自治與較為寬鬆的市場社會主義。",
-      "history": "南斯拉夫社會主義聯邦共和國終身總統。"
+      "description": {
+        "zh": "狄托在冷戰中維持中立，實行工人自治與較為寬鬆的市場社會主義。",
+        "en": "Tito maintained neutrality during the Cold War, implementing workers' self-management and a relatively relaxed form of market socialism."
+      },
+      "history": {
+        "zh": "南斯拉夫社會主義聯邦共和國終身總統。",
+        "en": "President for Life of the Socialist Federal Republic of Yugoslavia."
+      }
     },
     {
-      "ideology": "阿道夫·希特勒 (納粹主義)",
+      "ideology": {
+        "zh": "阿道夫·希特勒 (納粹主義)",
+        "en": "Adolf Hitler (Nazism)"
+      },
       "category": "Authoritarian Right",
       "type": "figure",
       "x": 10,
       "y": 100,
       "avatar": "https://media.themoviedb.org/t/p/w235_and_h235_face/n6f81IUSes1a8jTzUIF7rJ5zZnP.jpg",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "希特勒實行極端的種族主義與生存空間擴張政策，透過極權統治帶領德國走向戰爭與浩劫。",
-      "history": "納粹德國元首。"
+      "description": {
+        "zh": "希特勒實行極端的種族主義與生存空間擴張政策，透過極權統治帶領德國走向戰爭與浩劫。",
+        "en": "Hitler implemented extreme racism and policies of Lebensraum expansion, leading Germany into war and catastrophe through totalitarian rule."
+      },
+      "history": {
+        "zh": "納粹德國元首。",
+        "en": "Führer of Nazi Germany."
+      }
     },
     {
-      "ideology": "貝尼托·墨索里尼 (法西斯主義)",
+      "ideology": {
+        "zh": "貝尼托·墨索里尼 (法西斯主義)",
+        "en": "Benito Mussolini (Fascism)"
+      },
       "category": "Authoritarian Right",
       "type": "figure",
       "x": 30,
       "y": 90,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDtfBZ_zDxv07ozWekVdKPGDvltieSyei9Xg&s",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "墨索里尼定義了法西斯主義，主張國家利益高於個人，並透過軍事擴張追求民族復興。",
-      "history": "義大利法西斯獨裁者。"
+      "description": {
+        "zh": "墨索里尼定義了法西斯主義，主張國家利益高於個人，並透過軍事擴張追求民族復興。",
+        "en": "Mussolini defined Fascism, advocating that national interests are superior to the individual and pursuing national rejuvenation through military expansion."
+      },
+      "history": {
+        "zh": "義大利法西斯獨裁者。",
+        "en": "Fascist dictator of Italy."
+      }
     },
     {
-      "ideology": "奧古斯托·皮諾切特 (皮諾切特主義)",
+      "ideology": {
+        "zh": "奧古斯托·皮諾切特 (皮諾切特主義)",
+        "en": "Augusto Pinochet (Pinochetism)"
+      },
       "category": "Authoritarian Right",
       "type": "figure",
       "x": 60,
       "y": 90,
       "avatar": "https://pic1.zhimg.com/50/v2-fe8c7f6ff7c92e0a5e842f3e2a13c97f_xl.jpg?source=54b3c3a5",
       "tags": [
-        "歷史人物",
-        "經濟學派",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "皮諾切特以軍事政權推行極端的自由市場經濟改革，同時實施嚴酷的政治鎮壓。",
-      "history": "智利軍事獨裁者。"
+      "description": {
+        "zh": "皮諾切特以軍事政權推行極端的自由市場經濟改革，同時實施嚴酷的政治鎮壓。",
+        "en": "Pinochet implemented extreme free-market economic reforms through a military regime while carrying out harsh political repression."
+      },
+      "history": {
+        "zh": "智利軍事獨裁者。",
+        "en": "Military dictator of Chile."
+      }
     },
     {
-      "ideology": "弗朗西斯科·佛朗哥 (佛朗哥主義)",
+      "ideology": {
+        "zh": "弗朗西斯科·佛朗哥 (佛朗哥主義)",
+        "en": "Francisco Franco (Francoism)"
+      },
       "category": "Authoritarian Right",
       "type": "figure",
       "x": 30,
       "y": 75,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTudWLTZ4gNWx6fEOdqsPc-PK-XaNDLX4a8zA&s",
       "tags": [
-        "歷史人物",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "佛朗哥結合了保守主義、天主教傳統與威權統治，在二戰後長期維持獨裁統治。",
-      "history": "西班牙國家元首。"
+      "description": {
+        "zh": "佛朗哥結合了保守主義、天主教傳統與威權統治，在二戰後長期維持獨裁統治。",
+        "en": "Franco combined conservatism, Catholic tradition, and authoritarian rule, maintaining a long-term dictatorship after WWII."
+      },
+      "history": {
+        "zh": "西班牙國家元首。",
+        "en": "Head of State of Spain."
+      }
     },
     {
-      "ideology": "艾茵·蘭德 (客觀主義)",
+      "ideology": {
+        "zh": "艾茵·蘭德 (客觀主義)",
+        "en": "Ayn Rand (Objectivism)"
+      },
       "category": "Libertarian Right",
       "type": "figure",
       "x": 80,
       "y": -70,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqdL1shITzMIT7l9S5DoiyvniPwR6zLAd1fg&s",
       "tags": [
-        "歷史人物",
-        "經濟學派",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "經濟學派", "en": "Economic School" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "蘭德強調個人理性與利己主義是最高美德，強烈支持完全放任的資本主義。",
-      "history": "俄裔美籍哲學家與小說家。"
+      "description": {
+        "zh": "蘭德強調個人理性與利己主義是最高美德，強烈支持完全放任的資本主義。",
+        "en": "Rand emphasized individual reason and self-interest as the highest virtues, strongly supporting laissez-faire capitalism."
+      },
+      "history": {
+        "zh": "俄裔美籍哲學家與小說家。",
+        "en": "Russian-American philosopher and novelist."
+      }
     },
     {
-      "ideology": "弗拉迪米爾·普丁 (普丁主義)",
+      "ideology": {
+        "zh": "弗拉迪米爾·普丁 (普丁主義)",
+        "en": "Vladimir Putin (Putinism)"
+      },
       "type": "figure",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Vladimir_Putin_%282020-02-20%29.jpg",
       "tags": [
-        "歷史人物",
-        "當代主流"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 40,
       "y": 70,
       "category": "Authoritarian Right",
-      "description": "普丁實行強人統治，結合國家安全、東正教傳統與保守主義價值觀。",
-      "history": "俄羅斯聯邦最高領導人。"
+      "description": {
+        "zh": "普丁實行強人統治，結合國家安全、東正教傳統與保守主義價值觀。",
+        "en": "Putin practices strongman rule, combining national security, Orthodox tradition, and conservative values."
+      },
+      "history": {
+        "zh": "俄羅斯聯邦最高領導人。",
+        "en": "The supreme leader of the Russian Federation."
+      }
     },
     {
-      "ideology": "托馬斯·桑卡拉 (桑卡拉主義)",
+      "ideology": {
+        "zh": "托馬斯·桑卡拉 (桑卡拉主義)",
+        "en": "Thomas Sankara (Sankarism)"
+      },
       "category": "Authoritarian Left",
       "type": "figure",
       "x": -70,
       "y": 60,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBqFnTwQJ1otGhZ_P074LS-FMa_8DfpkRjTg&s",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "桑卡拉被稱為非洲的切格瓦拉，推動了激進的自力更生、女性權益與反殖民計畫。",
-      "history": "布吉納法索革命家。"
+      "description": {
+        "zh": "桑卡拉被稱為非洲的切格瓦拉，推動了激進的自力更生、女性權益與反殖民計畫。",
+        "en": "Known as the 'Che Guevara of Africa,' Sankara promoted radical self-reliance, women's rights, and anti-colonial programs."
+      },
+      "history": {
+        "zh": "布吉納法索革命家。",
+        "en": "Revolutionary of Burkina Faso."
+      }
     },
     {
-      "ideology": "凱末爾 (凱末爾主義)",
+      "ideology": {
+        "zh": "凱末爾 (凱末爾主義)",
+        "en": "Mustafa Kemal Atatürk (Kemalism)"
+      },
       "category": "Center",
       "type": "figure",
       "x": -10,
       "y": 50,
       "avatar": "https://media.themoviedb.org/t/p/w235_and_h235_face/4wXG2xh7LViL46HIf7JgLc3ySDP.jpg",
       "tags": [
-        "歷史人物",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "凱末爾透過強勢國家力量實施世俗化與現代化改革，將土耳其轉化為民族國家。",
-      "history": "土耳其共和國國父。"
+      "description": {
+        "zh": "凱末爾透過強勢國家力量實施世俗化與現代化改革，將土耳其轉化為民族國家。",
+        "en": "Atatürk implemented secularization and modernization reforms through strong state power, transforming Turkey into a nation-state."
+      },
+      "history": {
+        "zh": "土耳其共和國國父。",
+        "en": "The founding father of the Republic of Turkey."
+      }
     },
     {
-      "ideology": "魯霍拉·霍梅尼 (霍梅尼主義)",
+      "ideology": {
+        "zh": "魯霍拉·霍梅尼 (霍梅尼主義)",
+        "en": "Ruhollah Khomeini (Khomeinism)"
+      },
       "category": "Authoritarian Right",
       "type": "figure",
       "x": 20,
       "y": 85,
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Ruhollah_Khomeini_by_Jamaran_1.jpg/250px-Ruhollah_Khomeini_by_Jamaran_1.jpg",
       "tags": [
-        "歷史人物",
-        "當代主流"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
-      "description": "霍梅尼建立了政教合一的伊斯蘭共和國，將宗教法典置於國家法律之上。",
-      "history": "伊朗伊斯蘭革命領導人。"
+      "description": {
+        "zh": "霍梅尼建立了政教合一的伊斯蘭共和國，將宗教法典置於國家法律之上。",
+        "en": "Khomeini established a theocratic Islamic Republic, placing religious codes above national laws."
+      },
+      "history": {
+        "zh": "伊朗伊斯蘭革命領導人。",
+        "en": "Leader of the Iranian Islamic Revolution."
+      }
     },
     {
-      "ideology": "胡安·庇隆 (庇隆主義)",
+      "ideology": {
+        "zh": "胡安·庇隆 (庇隆主義)",
+        "en": "Juan Perón (Peronism)"
+      },
       "category": "Center",
       "type": "figure",
       "x": 0,
       "y": 60,
       "avatar": "https://w9.talentsays.com/upload/famousphoto/Famous16829.png",
       "tags": [
-        "歷史人物",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "庇隆融合了民族主義、勞工利益與個人威望，建立了一套超越左右派的「第三位置」。",
-      "history": "阿根廷政治家。"
+      "description": {
+        "zh": "庇隆融合了民族主義、勞工利益與個人威望，建立了一套超越左右派的「第三位置。",
+        "en": "Perón integrated nationalism, labor interests, and personal prestige, establishing a 'Third Position' that transcended left and right."
+      },
+      "history": {
+        "zh": "阿根廷政治家。",
+        "en": "Argentine politician."
+      }
     },
     {
-      "ideology": "孫中山 (三民主義)",
+      "ideology": {
+        "zh": "孫中山 (三民主義)",
+        "en": "Sun Yat-sen (Three Principles of the People)"
+      },
       "category": "Center",
       "type": "figure",
       "x": -10,
       "y": 20,
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Sun_Yat-sen_2.jpg/250px-Sun_Yat-sen_2.jpg",
       "tags": [
-        "歷史人物",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "孫中山提出了民族、民權、民生三大核心理念，是近代中國民主革命的先驅。",
-      "history": "中華民國國父。"
+      "description": {
+        "zh": "孫中山提出了民族、民權、民生三大核心理念，是近代中國民主革命的先驅。",
+        "en": "Sun Yat-sen proposed the three core principles of Nationalism, Democracy, and Livelihood, serving as a pioneer of China's modern democratic revolution."
+      },
+      "history": {
+        "zh": "中華民國國父。",
+        "en": "The founding father of the Republic of China."
+      }
     },
     {
-      "ideology": "切·格瓦拉 (切·格瓦拉主義)",
+      "ideology": {
+        "zh": "切·格瓦拉 (切·格瓦拉主義)",
+        "en": "Che Guevara (Guevarism)"
+      },
       "type": "figure",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/5/58/CheHigh.jpg",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -85,
       "y": 65,
       "category": "Authoritarian Left",
-      "description": "格瓦拉主張透過農村游擊戰輸出革命，成為全球左翼反抗壓迫與帝國主義的象徵。",
-      "history": "古巴革命核心人物。"
+      "description": {
+        "zh": "格瓦拉主張透過農村游擊戰輸出革命，成為全球左翼反抗壓迫與帝國主義的象徵。",
+        "en": "Guevara advocated for exporting revolution through rural guerrilla warfare, becoming a global symbol of leftist resistance against oppression and imperialism."
+      },
+      "history": {
+        "zh": "古巴革命核心人物。",
+        "en": "A central figure of the Cuban Revolution."
+      }
     },
     {
-      "ideology": "斐代爾·卡斯楚 (卡斯楚主義)",
+      "ideology": {
+        "zh": "斐代爾·卡斯楚 (卡斯楚主義)",
+        "en": "Fidel Castro (Castroism)"
+      },
       "category": "Authoritarian Left",
       "type": "figure",
       "x": -80,
       "y": 75,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1BOSD6bypt4NahPyKFXwHkV3X4wY71ZOAWNs6B4m10C0_A8-H7o_Iy8TEkAO1swMUH4VK&s=10",
       "tags": [
-        "歷史人物",
-        "激進主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "激進主義", "en": "Radicalism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
-      "description": "卡斯楚在古巴實踐了社會主義統治，強調醫療與教育的公共化，並長期對抗美國影響。",
-      "history": "古巴長期最高領導人。"
+      "description": {
+        "zh": "卡斯楚在古巴實踐了社會主義統治，強調醫療與教育的公共化，並長期對抗美國影響。",
+        "en": "Castro practiced socialist rule in Cuba, emphasizing the socialization of healthcare and education, and long-term opposition to U.S. influence."
+      },
+      "history": {
+        "zh": "古巴長期最高領導人。",
+        "en": "Long-time supreme leader of Cuba."
+      }
     },
     {
-      "ideology": "甘地",
+      "ideology": {
+        "zh": "甘地",
+        "en": "Mahatma Gandhi"
+      },
       "type": "figure",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg",
       "tags": [
-        "歷史人物",
-        "和平主義",
-        "歷史流派"
+        { "zh": "歷史人物", "en": "Historical Figure" },
+        { "zh": "和平主義", "en": "Pacifism" },
+        { "zh": "歷史流派", "en": "Historical School" }
       ],
       "x": -10,
       "y": -80,
       "category": "Libertarian Left",
-      "description": "印度國父，主張非暴力不合作運動。",
-      "history": "帶領印度脫離英國殖民統治。"
+      "description": {
+        "zh": "印度國父，主張非暴力不合作運動。",
+        "en": "Father of the Nation of India, advocated for non-violent non-cooperation movement."
+      },
+      "history": {
+        "zh": "帶領印度脫離英國殖民統治。",
+        "en": "Led India to independence from British colonial rule."
+      }
     },
     {
-      "ideology": "美國共和黨",
+      "ideology": {
+        "zh": "美國共和黨",
+        "en": "Republican Party (USA)"
+      },
       "type": "party",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Republicanlogo.svg",
       "tags": [
-        "當代政黨",
-        "保守主義",
-        "當代主流"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "保守主義", "en": "Conservatism" },
+        { "zh": "當代主流", "en": "Contemporary Mainstream" }
       ],
       "x": 40,
       "y": 45,
       "category": "Authoritarian Right",
-      "description": "美國兩大政黨之一，傾向自由市場與保守社會價值。",
-      "history": "又稱大老黨 (GOP)。"
+      "description": {
+        "zh": "美國兩大政黨之一，傾向自由市場與保守社會價值。",
+        "en": "One of the two major parties in the U.S., favoring free markets and conservative social values."
+      },
+      "history": {
+        "zh": "又稱大老黨 (GOP)。",
+        "en": "Also known as the Grand Old Party (GOP)."
+      }
     },
     {
-      "ideology": "民主進步黨 (DPP)",
+      "ideology": {
+        "zh": "民主進步黨 (DPP)",
+        "en": "Democratic Progressive Party (DPP)"
+      },
       "category": "Libertarian Left",
       "type": "party",
       "x": -30,
       "y": -20,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUGCnHhk42E36ss25XeQIA90f6oo6wXcsh5g&s",
       "tags": [
-        "當代政黨",
-        "自由主義",
-        "台灣"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "自由主義", "en": "Liberalism" },
+        { "zh": "台灣", "en": "Taiwan" }
       ],
-      "description": "台灣主要政黨之一，主張台灣本土意識、社會福利與進步價值。",
-      "history": "成立於 1986 年戒嚴時期，由黨外運動演變而來。"
+      "description": {
+        "zh": "台灣主要政黨之一，主張台灣本土意識、社會福利與進步價值。",
+        "en": "One of Taiwan's major parties, advocating for Taiwanese identity, social welfare, and progressive values."
+      },
+      "history": {
+        "zh": "成立於 1986 年戒嚴時期，由黨外運動演變而來。",
+        "en": "Founded in 1986 during the martial law period, evolving from the Tangwai movement."
+      }
     },
     {
-      "ideology": "中國國民黨 (KMT)",
+      "ideology": {
+        "zh": "中國國民黨 (KMT)",
+        "en": "Kuomintang (KMT)"
+      },
       "category": "Authoritarian Right",
       "type": "party",
       "x": 35,
       "y": 25,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtxPZwcWQP5wZL82C7zWHK9GBg2p9hrmKhxg&s",
       "tags": [
-        "當代政黨",
-        "保守主義",
-        "台灣"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "保守主義", "en": "Conservatism" },
+        { "zh": "台灣", "en": "Taiwan" }
       ],
-      "description": "台灣主要政黨之一，主張中華民國憲政體制、兩岸和平與傳統保守價值。",
-      "history": "由孫中山創立，曾長期在中國大陸及台灣執政。"
+      "description": {
+        "zh": "台灣主要政黨之一，主張中華民國憲政體制、兩岸和平與傳統保守價值。",
+        "en": "One of Taiwan's major parties, advocating for the ROC constitutional system, cross-strait peace, and traditional conservative values."
+      },
+      "history": {
+        "zh": "由孫中山創立，曾長期在中國大陸及台灣執政。",
+        "en": "Founded by Sun Yat-sen, it ruled mainland China and later Taiwan for long periods."
+      }
     },
     {
-      "ideology": "美國民主黨",
+      "ideology": {
+        "zh": "美國民主黨",
+        "en": "Democratic Party (USA)"
+      },
       "category": "Center",
       "type": "party",
       "x": -15,
       "y": -20,
       "avatar": "https://m.media-amazon.com/images/I/61dLhl5ST3L._AC_UF894,1000_QL80_.jpg",
       "tags": [
-        "當代政黨",
-        "社會自由主義",
-        "美國"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "社會自由主義", "en": "Social Liberalism" },
+        { "zh": "美國", "en": "USA" }
       ],
-      "description": "美國兩大政黨之一，支持政府干預經濟以減少不平等，以及社會進步議題。",
-      "history": "世界上最古老的活躍政黨之一，自 20 世紀以來轉向現代自由主義。"
+      "description": {
+        "zh": "美國兩大政黨之一，支持政府干預經濟以減少不平等，以及社會進步議題。",
+        "en": "One of the two major parties in the U.S., supporting government intervention in the economy to reduce inequality and social progressive issues."
+      },
+      "history": {
+        "zh": "世界上最古老的活躍政黨之一，自 20 世紀以來轉向現代自由主義。",
+        "en": "One of the world's oldest active parties, it has shifted towards modern liberalism since the 20th century."
+      }
     },
     {
-      "ideology": "保守黨 (英國)",
+      "ideology": {
+        "zh": "保守黨 (英國)",
+        "en": "Conservative Party (UK)"
+      },
       "category": "Authoritarian Right",
       "type": "party",
       "x": 45,
       "y": 15,
       "avatar": "https://webfile.rti.org.tw/web/rti.org.tw/tw/code/public/assets/images/2024/01/17/cd16550b7108d402b5db7f2b86022311.jpg",
       "tags": [
-        "當代政黨",
-        "自由市場",
-        "英國"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "自由市場", "en": "Free Market" },
+        { "zh": "英國", "en": "UK" }
       ],
-      "description": "英國主要中右翼政黨，強調經濟自由、減稅與國家主權。",
-      "history": "通稱托利黨 (Tory)，是 19 與 20 世紀影響英國政壇的主導力量。"
+      "description": {
+        "zh": "英國主要中右翼政黨，強調經濟自由、減稅與國家主權。",
+        "en": "The primary center-right party in the UK, emphasizing economic freedom, tax cuts, and national sovereignty."
+      },
+      "history": {
+        "zh": "通稱托利黨 (Tory)，是 19 與 20 世紀影響英國政壇的主導力量。",
+        "en": "Commonly known as the Tory Party, it was a dominant force in British politics during the 19th and 20th centuries."
+      }
     },
     {
-      "ideology": "工黨 (英國)",
+      "ideology": {
+        "zh": "工黨 (英國)",
+        "en": "Labour Party (UK)"
+      },
       "category": "",
       "type": "party",
       "x": -40,
       "y": -10,
       "avatar": "https://logores.yrucd.com/wp-content/uploads/2024/03/Labour-Party-Logo-PNG_004.png!a",
       "tags": [
-        "當代政黨",
-        "社會民主主義",
-        "英國"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "社會民主主義", "en": "Social Democracy" },
+        { "zh": "英國", "en": "UK" }
       ],
-      "description": "英國主要中左翼政黨，代表勞工利益，支持公共服務與財富重分配。",
-      "history": "20 世紀初起源於工會運動，曾推動建立國民保健署 (NHS)。"
+      "description": {
+        "zh": "英國主要中左翼政黨，代表勞工利益，支持公共服務與財富重分配。",
+        "en": "The primary center-left party in the UK, representing labor interests and supporting public services and wealth redistribution."
+      },
+      "history": {
+        "zh": "20 世紀初起源於工會運動，曾推動建立國民保健署 (NHS)。",
+        "en": "Originating from the trade union movement in the early 20th century, it pushed for the establishment of the National Health Service (NHS)."
+      }
     },
     {
-      "ideology": "自由民主黨 (LDP)",
+      "ideology": {
+        "zh": "自由民主黨 (LDP)",
+        "en": "Liberal Democratic Party (LDP)"
+      },
       "category": "Authoritarian Right",
       "type": "party",
       "x": 40,
       "y": 35,
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Liberal_Democratic_Party_%28Japan%29_Flag.svg/250px-Liberal_Democratic_Party_%28Japan%29_Flag.svg.png",
       "tags": [
-        "當代政黨",
-        "保守主義",
-        "日本"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "保守主義", "en": "Conservatism" },
+        { "zh": "日本", "en": "Japan" }
       ],
-      "description": "日本長期執政黨，主張親美外交、振興經濟與修改憲法。",
-      "history": "1955 年成立，幾乎主導了戰後日本的所有政治發展。"
+      "description": {
+        "zh": "日本長期執政黨，主張親美外交、振興經濟與修改憲法。",
+        "en": "The long-term ruling party of Japan, advocating for pro-American diplomacy, economic revitalization, and constitutional reform."
+      },
+      "history": {
+        "zh": "1955 年成立，幾乎主導了戰後日本的所有政治發展。",
+        "en": "Founded in 1955, it has dominated almost all political developments in post-war Japan."
+      }
     },
     {
-      "ideology": "德國社會民主黨 (SPD)",
+      "ideology": {
+        "zh": "德國社會民主黨 (SPD)",
+        "en": "Social Democratic Party of Germany (SPD)"
+      },
       "category": "",
       "type": "party",
       "x": -35,
       "y": -5,
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_the_Social_Democratic_Party_of_Germany.svg/250px-Flag_of_the_Social_Democratic_Party_of_Germany.svg.png",
       "tags": [
-        "當代政黨",
-        "社會民主主義",
-        "德國"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "社會民主主義", "en": "Social Democracy" },
+        { "zh": "德國", "en": "Germany" }
       ],
-      "description": "德國最古老的政黨之一，強調社會公平、工人權利與歐洲一體化。",
-      "history": "19 世紀末成立，是世界社會民主主義運動的先驅。"
+      "description": {
+        "zh": "德國最古老的政黨之一，強調社會公平、工人權利與歐洲一體化。",
+        "en": "One of Germany's oldest parties, emphasizing social fairness, workers' rights, and European integration."
+      },
+      "history": {
+        "zh": "19 世紀末成立，是世界社會民主主義運動的先驅。",
+        "en": "Founded in the late 19th century, it is a pioneer of the world social democracy movement."
+      }
     },
     {
-      "ideology": "中國共產黨 (CCP)",
+      "ideology": {
+        "zh": "中國共產黨 (CCP)",
+        "en": "Communist Party of China (CPC)"
+      },
       "category": "Authoritarian Left",
       "type": "party",
       "x": -70,
       "y": 90,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_jRfjI9SH8zn6-J_1upO2mImDNv2jMsWWNw&s",
       "tags": [
-        "執政黨",
-        "馬克思列寧主義",
-        "中國"
+        { "zh": "執政黨", "en": "Ruling Party" },
+        { "zh": "馬克思列寧主義", "en": "Marxism-Leninism" },
+        { "zh": "中國", "en": "China" }
       ],
-      "description": "中華人民共和國唯一執政黨，實行一黨專政與中國特色社會主義。",
-      "history": "1921 年成立，1949 年建立政權，現為全球規模最大的政黨之一。"
+      "description": {
+        "zh": "中華人民共和國唯一執政黨，實行一黨專政與中國特色社會主義。",
+        "en": "The sole ruling party of the People's Republic of China, implementing one-party rule and socialism with Chinese characteristics."
+      },
+      "history": {
+        "zh": "1921 年成立，1949 年建立政權，現為全球規模最大的政黨之一。",
+        "en": "Founded in 1921, established the regime in 1949, it is now one of the world's largest political parties."
+      }
     },
     {
-      "ideology": "共同民主黨 (韓國)",
+      "ideology": {
+        "zh": "共同民主黨 (韓國)",
+        "en": "Democratic Party of Korea"
+      },
       "category": "",
       "type": "party",
       "x": -25,
       "y": -5,
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Democratic_Party_of_South_Korea_banner.svg/250px-Democratic_Party_of_South_Korea_banner.svg.png",
       "tags": [
-        "當代政黨",
-        "自由主義",
-        "韓國"
+        { "zh": "當代政黨", "en": "Contemporary Party" },
+        { "zh": "自由主義", "en": "Liberalism" },
+        { "zh": "韓國", "en": "South Korea" }
       ],
-      "description": "韓國主要自由派政黨，主張對北韓和談、擴大社會福利與改革財閥。",
-      "history": "多次更名與整合，曾支持金大中與文在寅等總統。"
+      "description": {
+        "zh": "韓國主要自由派政黨，主張對北韓和談、擴大社會福利與改革財閥。",
+        "en": "The primary liberal party in South Korea, advocating for peace talks with North Korea, expanding social welfare, and reforming chaebols."
+      },
+      "history": {
+        "zh": "多次更名與整合，曾支持金大中與文在寅等總統。",
+        "en": "Renamed and integrated multiple times, it supported presidents such as Kim Dae-jung and Moon Jae-in."
+      }
     }
   ],
   "questions": [
     {
-      "text": "政府應該全面控制並計畫市場經濟，以確保財富平均分配。",
+      "text": {
+        "zh": "政府應該全面控制並計畫市場經濟，以確保財富平均分配。",
+        "en": "The government should fully control and plan the market economy to ensure equal distribution of wealth."
+      },
       "effect_x": -20,
       "effect_y": 5
     },
     {
-      "text": "為了國家安全與社會穩定，政府監控人民的隱私是必要的。",
+      "text": {
+        "zh": "為了國家安全與社會穩定，政府監控人民的隱私是必要的。",
+        "en": "For national security and social stability, it is necessary for the government to monitor people's privacy."
+      },
       "effect_x": 0,
       "effect_y": 20
     },
     {
-      "text": "無論性別、宗教或種族，每個人都應該享有絕對的婚姻與言論自由。",
+      "text": {
+        "zh": "無論性別、宗教或種族，每個人都應該享有絕對的婚姻與言論自由。",
+        "en": "Regardless of gender, religion, or race, everyone should enjoy absolute freedom of marriage and speech."
+      },
       "effect_x": 0,
       "effect_y": -20
     },
     {
-      "text": "企業應該能夠完全自由競爭，政府不該課徵重稅或干預。",
+      "text": {
+        "zh": "企業應該能夠完全自由競爭，政府不該課徵重稅或干預。",
+        "en": "Businesses should be able to compete completely freely; the government should not impose heavy taxes or intervene."
+      },
       "effect_x": 20,
       "effect_y": 0
     },
     {
-      "text": "應該對富人徵收重稅，以提供全民基本收入和免費醫療。",
+      "text": {
+        "zh": "應該對富人徵收重稅，以提供全民基本收入和免費醫療。",
+        "en": "Heavy taxes should be imposed on the wealthy to provide universal basic income and free healthcare."
+      },
       "effect_x": -15,
       "effect_y": 0
     },
     {
-      "text": "毒品使用是個人選擇，政府應該將其除罪化或合法化。",
+      "text": {
+        "zh": "毒品使用是個人選擇，政府應該將其除罪化或合法化。",
+        "en": "Drug use is a personal choice; the government should decriminalize or legalize it."
+      },
       "effect_x": 0,
       "effect_y": -15
     },
     {
-      "text": "國家應該有強大的軍隊，並在必要時主動介入他國事務以維護利益。",
+      "text": {
+        "zh": "國家應該有強大的軍隊，並在必要時主動介入他國事務以維護利益。",
+        "en": "The country should have a strong military and proactively intervene in other countries' affairs when necessary to protect its interests."
+      },
       "effect_x": 5,
       "effect_y": 15
     },
     {
-      "text": "跨國企業的剝削是當今世界不平等的主要原因，必須受到嚴格限制。",
+      "text": {
+        "zh": "跨國企業的剝削是當今世界不平等的主要原因，必須受到嚴格限制。",
+        "en": "Exploitation by multinational corporations is the main cause of inequality in today's world and must be strictly limited."
+      },
       "effect_x": -15,
       "effect_y": 5
     },
     {
-      "text": "傳統價值觀和宗教道德是社會穩定的基石，政府應該予以保護和提倡。",
+      "text": {
+        "zh": "傳統價值觀和宗教道德是社會穩定的基石，政府應該予以保護和提倡。",
+        "en": "Traditional values and religious morality are the cornerstones of social stability; the government should protect and promote them."
+      },
       "effect_x": 0,
       "effect_y": 15
     },
     {
-      "text": "所有的土地 and 自然資源都應該由全體人民共同擁有，而非私人壟斷。",
+      "text": {
+        "zh": "所有的土地 and 自然資源都應該由全體人民共同擁有，而非私人壟斷。",
+        "en": "All land and natural resources should be collectively owned by all people rather than monopolized by private entities."
+      },
       "effect_x": -15,
       "effect_y": 5
     },
     {
-      "text": "槍枝管制只會剝奪好人保護自己的權利，符合條件的平民有權持有武器。",
+      "text": {
+        "zh": "槍枝管制只會剝奪好人保護自己的權利，符合條件的平民有權持有武器。",
+        "en": "Gun control only deprives good people of the right to protect themselves; qualified civilians have the right to possess weapons."
+      },
       "effect_x": 5,
       "effect_y": -15
     },
     {
-      "text": "政府應該提供更多的補貼來幫助弱勢群體，即使這意味著增加國債。",
+      "text": {
+        "zh": "政府應該提供更多的補貼來幫助弱勢群體，即使這意味著增加國債。",
+        "en": "The government should provide more subsidies to help vulnerable groups, even if it means increasing national debt."
+      },
       "effect_x": -15,
       "effect_y": 0
     },
     {
-      "text": "任何形式的審查制度都是對言論自由的侵犯，即使是仇恨言論也不該被封禁。",
+      "text": {
+        "zh": "任何形式的審查制度都是對言論自由的侵犯，即使是仇恨言論也不該被封禁。",
+        "en": "Any form of censorship is an infringement on freedom of speech; even hate speech should not be banned."
+      },
       "effect_x": 0,
       "effect_y": -15
     },
     {
-      "text": "為了經濟發展，適度犧牲環境和放寬環保法規是可接受的。",
+      "text": {
+        "zh": "為了經濟發展，適度犧牲環境和放寬環保法規是可接受的。",
+        "en": "For economic development, it is acceptable to moderately sacrifice the environment and loosen environmental regulations."
+      },
       "effect_x": 15,
       "effect_y": 0
     },
     {
-      "text": "同性伴侶應該與異性伴侶享有完全相同的合法收養小孩的權利。",
+      "text": {
+        "zh": "同性伴侶應該與異性伴侶享有完全相同的合法收養小孩的權利。",
+        "en": "Same-sex couples should have exactly the same legal rights to adopt children as opposite-sex couples."
+      },
       "effect_x": 0,
       "effect_y": -15
     },
     {
-      "text": "維護法律與秩序比保障嫌疑犯的權利更重要。",
+      "text": {
+        "zh": "維護法律與秩序比保障嫌疑犯的權利更重要。",
+        "en": "Maintaining law and order is more important than protecting the rights of suspects."
+      },
       "effect_x": 0,
       "effect_y": 15
     },
     {
-      "text": "醫療保健是基本人權，不應該被當作營利事業來經營。",
+      "text": {
+        "zh": "醫療保健是基本人權，不應該被當作營利事業來經營。",
+        "en": "Healthcare is a basic human right and should not be operated as a profit-making business."
+      },
       "effect_x": -15,
       "effect_y": 0
     },
     {
-      "text": "自由市場的自動調節能力遠勝過政府官僚的計畫經濟。",
+      "text": {
+        "zh": "自由市場的自動調節能力遠勝過政府官僚的計畫經濟。",
+        "en": "The self-regulating ability of the free market is far superior to a government-planned economy."
+      },
       "effect_x": 15,
       "effect_y": -5
     },
     {
-      "text": "國家元首或領袖應該擁有更高的決策權，以提高施政效率。",
+      "text": {
+        "zh": "國家元首或領袖應該擁有更高的決策權，以提高施政效率。",
+        "en": "The head of state or leader should have higher decision-making power to improve governance efficiency."
+      },
       "effect_x": 0,
       "effect_y": 15
     },
     {
-      "text": "學校的教育應該交由市場與家長決定，政府不該強制規定統一課綱。",
+      "text": {
+        "zh": "學校的教育應該交由市場與家長決定，政府不該強制規定統一課綱。",
+        "en": "School education should be decided by the market and parents; the government should not mandate a unified curriculum."
+      },
       "effect_x": 10,
       "effect_y": -15
     },
     {
-      "text": "工會勢力過大會阻礙企業發展，政府應該限制工會的罷工權。",
+      "text": {
+        "zh": "工會勢力過大會阻礙企業發展，政府應該限制工會的罷工權。",
+        "en": "Unions with too much power hinder business development; the government should limit the right of unions to strike."
+      },
       "effect_x": 15,
       "effect_y": 10
     },
     {
-      "text": "政府應該積極干預並打破大型企業的壟斷，以保護小商家的生存空間。",
+      "text": {
+        "zh": "政府應該積極干預並打破大型企業的壟斷，以保護小商家的生存空間。",
+        "en": "The government should actively intervene to break the monopolies of large corporations to protect the survival space of small businesses."
+      },
       "effect_x": -10,
       "effect_y": 5
     },
     {
-      "text": "無論國籍為何，所有和平的移民都應該有權自由跨越國界工作和生活。",
+      "text": {
+        "zh": "無論國籍為何，所有和平的移民都應該有權自由跨越國界工作和生活。",
+        "en": "Regardless of nationality, all peaceful immigrants should have the right to freely cross borders to work and live."
+      },
       "effect_x": 5,
       "effect_y": -15
     },
     {
-      "text": "犯罪者應該受到嚴厲的懲罰，死刑是維持社會正義的必要手段。",
+      "text": {
+        "zh": "犯罪者應該受到嚴厲的懲罰，死刑是維持社會正義的必要手段。",
+        "en": "Criminals should be severely punished; the death penalty is a necessary means to maintain social justice."
+      },
       "effect_x": 0,
       "effect_y": 15
     },
     {
-      "text": "最低工資法只會導致失業率上升，應該由勞資雙方自由協商薪資。",
+      "text": {
+        "zh": "最低工資法只會導致失業率上升，應該由勞資雙方自由協商薪資。",
+        "en": "Minimum wage laws only lead to higher unemployment; wages should be freely negotiated between employers and employees."
+      },
       "effect_x": 15,
       "effect_y": -5
     },
     {
-      "text": "國家應該直接分配工作或提供就業保障，不允許私人企業為了利潤隨意裁員。",
+      "text": {
+        "zh": "國家應該直接分配工作或提供就業保障，不允許私人企業為了利潤隨意裁員。",
+        "en": "The state should directly assign jobs or provide employment guarantees, not allowing private enterprises to lay off workers at will for profit."
+      },
       "effect_x": -15,
       "effect_y": 10
     },
     {
-      "text": "罷工與激進的工會活動會擾亂社會秩序，應該受到政府的嚴格管控與限制。",
+      "text": {
+        "zh": "罷工與激進的工會活動會擾亂社會秩序，應該受到政府的嚴格管控與限制。",
+        "en": "Strikes and radical union activities disrupt social order and should be strictly controlled and restricted by the government."
+      },
       "effect_x": 10,
       "effect_y": 15
     },
     {
-      "text": "所有的道路、橋樑等基礎設施都可以交由私人公司建設與自由收費。",
+      "text": {
+        "zh": "所有的道路、橋樑等基礎設施都可以交由私人公司建設與自由收費。",
+        "en": "All infrastructure such as roads and bridges can be built by private companies with free tolling."
+      },
       "effect_x": 20,
       "effect_y": -5
     },
     {
-      "text": "工廠與企業應該由在裡面工作的員工民主共同管理，而不是全憑老闆或股東決定。",
+      "text": {
+        "zh": "工廠與企業應該由在裡面工作的員工民主共同管理，而不是全憑老闆或股東決定。",
+        "en": "Factories and businesses should be democratically co-managed by the employees working in them, rather than being decided solely by owners or shareholders."
+      },
       "effect_x": -20,
       "effect_y": -10
     },
     {
-      "text": "為了防止假新聞與極端思想傳播，政府有責任過濾並審查網際網路上的資訊。",
+      "text": {
+        "zh": "為了防止假新聞與極端思想傳播，政府有責任過濾並審查網際網路上的資訊。",
+        "en": "To prevent the spread of fake news and extreme ideologies, the government has a responsibility to filter and censor information on the internet."
+      },
       "effect_x": 0,
       "effect_y": 20
     },
     {
-      "text": "房地產不該成為炒作的商品，政府應該嚴格管制房價或實行大規模的居住配給。",
+      "text": {
+        "zh": "房地產不該成為炒作的商品，政府應該嚴格管制房價或實行大規模的居住配給。",
+        "en": "Real estate should not be a speculative commodity; the government should strictly control housing prices or implement large-scale residential rationing."
+      },
       "effect_x": -20,
       "effect_y": 5
     },
     {
-      "text": "既然個人的身體屬於自己，那麼買賣器官或是自願安樂死都不該受到法律絕對禁止。",
+      "text": {
+        "zh": "既然個人的身體屬於自己，那麼買賣器官或是自願安樂死都不該受到法律絕對禁止。",
+        "en": "Since an individual's body belongs to themselves, selling organs or voluntary euthanasia should not be absolutely prohibited by law."
+      },
       "effect_x": 10,
       "effect_y": -20
     },
     {
-      "text": "在國家遭遇重大危難或傳染病時，政府有權強制徵用平民的財產與限制人身自由。",
+      "text": {
+        "zh": "在國家遭遇重大危難或傳染病時，政府有權強制徵用平民的財產與限制人身自由。",
+        "en": "In times of major national crisis or infectious disease, the government has the right to forcibly requisition civilian property and restrict personal freedom."
+      },
       "effect_x": 0,
       "effect_y": 20
     },
     {
-      "text": "專利與智慧財產權是保護創新的關鍵，政府應該嚴格執法打擊任何盜版與抄襲行為。",
+      "text": {
+        "zh": "專利與智慧財產權是保護創新的關鍵，政府應該嚴格執法打擊任何盜版與抄襲行為。",
+        "en": "Patent and intellectual property rights are key to protecting innovation; the government should strictly enforce laws to crack down on any piracy or plagiarism."
+      },
       "effect_x": 15,
       "effect_y": 5
     },
     {
-      "text": "賣淫等性工作只要是出於成人自願，就應該被視為合法的勞動並全面除罪化。",
+      "text": {
+        "zh": "賣淫等性工作只要是出於成人自願，就應該被視為合法的勞動並全面除罪化。",
+        "en": "Sex work such as prostitution, as long as it is between consenting adults, should be regarded as legal labor and fully decriminalized."
+      },
       "effect_x": -5,
       "effect_y": -15
     }
